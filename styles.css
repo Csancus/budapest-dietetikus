@@ -326,3 +326,19 @@
     .booking__mapwrap{max-width:1120px;margin:36px auto 0;padding:0 5%}
     .booking__mapwrap .map{min-height:340px}
     @media(max-width:640px){.form-card .f-row{grid-template-columns:1fr}}
+
+    /* NAV DROPDOWN (Szakterületek) */
+    .nav__has-sub{position:relative}
+    .nav__caret{font-size:.7em;margin-left:5px;display:inline-block}
+    .nav__dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:250px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);padding:8px;list-style:none;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .16s,transform .16s;z-index:1001}
+    .nav__has-sub:hover .nav__dropdown,.nav__has-sub:focus-within .nav__dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+    .nav__dropdown li{width:100%}
+    .nav__dropdown a{display:block;padding:10px 12px;border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink);white-space:nowrap}
+    .nav__dropdown a:hover{background:var(--brand-tint);color:var(--brand-dark)}
+    .nav__dropdown-sep{border-top:1px solid var(--line);margin-top:6px;padding-top:6px}
+    @media(max-width:640px){
+      .nav__caret{float:right}
+      .nav__dropdown{position:static;min-width:0;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;padding:0 0 6px 10px;display:none}
+      .nav__has-sub.open .nav__dropdown{display:block}
+      .nav__dropdown a{padding:10px 8px}
+    }

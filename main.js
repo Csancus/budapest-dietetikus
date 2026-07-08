@@ -5,7 +5,19 @@
       var o=m.classList.toggle('open');
       b.setAttribute('aria-expanded',o?'true':'false');
     });
-    m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open');});
+    m.addEventListener('click',function(e){if(e.target.tagName==='A'&&!e.target.classList.contains('nav__sub-toggle'))m.classList.remove('open');});
+  }
+  // Szakterületek legördülő – mobilon kattintásra nyílik
+  var subT=document.querySelector('.nav__sub-toggle');
+  if(subT){
+    subT.addEventListener('click',function(e){
+      if(window.innerWidth<=640){
+        e.preventDefault();
+        var li=subT.parentNode;
+        var o=li.classList.toggle('open');
+        subT.setAttribute('aria-expanded',o?'true':'false');
+      }
+    });
   }
   // nav árnyék görgetéskor
   var nav=document.querySelector('.nav');
