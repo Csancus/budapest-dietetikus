@@ -256,70 +256,54 @@
 <section class="booking reveal" id="idopont">
   <div class="booking__in">
     <div>
-      <p class="eyebrow" style="color:#9fd9bb">Időpontfoglalás</p>
-      <h2>Kezdjük el a gyógyulás útját</h2>
-      <p>Foglaljon időpontot online, telefonon vagy e-mailben. Online konzultációt is vállalunk, így bárhonnan elérhető a teljes terápiás program.</p>
-      <div class="booking__ctas">
-        <a href="https://naturmed-health.salonic.hu/" target="_blank" rel="noopener" class="btn btn--light">Online időpontfoglalás</a>
-        <a href="tel:+36209368458" class="btn btn--gold">📞 +36 20 936 8458</a>
-      </div>
+      <p class="eyebrow" style="color:#9fd9bb">Kapcsolat</p>
+      <h2>Készen áll a változásra?</h2>
+      <p>Írjon, vagy foglaljon időpontot – általában 1-2 munkanapon belül válaszolok. Online konzultációt is vállalok, így bárhonnan elérhető a teljes terápiás program.</p>
       <ul class="contact-list">
-        <li><span class="ic">📍</span><div>Naturmed Health magánrendelő<br><a href="https://maps.google.com/?q=Naturmed-health+Budapest+Váli+utca+5" target="_blank" rel="noopener">1117 Budapest, Váli u. 5. 1. em. 103. (az Allee oldalában)</a><small>Móricz Zsigmond körtér közelében</small></div></li>
+        <li><span class="ic">📍</span><div>Naturmed Health magánrendelő<br><a href="https://maps.google.com/?q=Budapest+Váli+utca+5" target="_blank" rel="noopener">1117 Budapest, Váli u. 5. 1. em. 103. (az Allee oldalában)</a><small>Móricz Zsigmond körtér közelében</small></div></li>
         <li><span class="ic">📞</span><div><a href="tel:+36209368458">+36 20 936 8458</a><small>Bejelentkezés</small></div></li>
         <li><span class="ic">✉️</span><div><a href="mailto:naturmed@ronaybarbara.hu">naturmed@ronaybarbara.hu</a><small>Online konzultációt is vállalunk</small></div></li>
       </ul>
+      <div class="booking__ctas" style="margin-top:22px">
+        <a href="https://naturmed-health.salonic.hu/" target="_blank" rel="noopener" class="btn btn--light">Online időpontfoglalás</a>
+        <a href="tel:+36209368458" class="btn btn--gold">📞 +36 20 936 8458</a>
+      </div>
     </div>
-    <div class="booking__right">
-      <form class="cform" id="contactForm" action="https://formsubmit.co/ajax/csanad.peter.czarth@gmail.com" method="POST" novalidate>
-        <h3 class="cform__title">Írjon nekünk</h3>
-        <p class="cform__lead">Írjon, vagy foglaljon időpontot – általában 1-2 munkanapon belül visszajelzünk.</p>
-        <div class="cform__row">
-          <label class="cform__field">
-            <span>Név <b>*</b></span>
-            <input type="text" name="Név" autocomplete="name" required placeholder="Kovács Anna" />
-          </label>
-          <label class="cform__field">
-            <span>E-mail <b>*</b></span>
-            <input type="email" name="E-mail" autocomplete="email" required placeholder="email@example.com" />
-          </label>
+    <div class="form-card">
+      <h3>Írjon nekem</h3>
+      <form action="https://formsubmit.co/csanad.peter.czarth@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Új megkeresés – budapest-dietetikus.hu">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="f-row">
+          <label>Neve *<input type="text" name="Név" required></label>
+          <label>E-mail *<input type="email" name="Email" required></label>
         </div>
-        <label class="cform__field">
-          <span>Telefonszám</span>
-          <input type="tel" name="Telefonszám" autocomplete="tel" placeholder="+36 30 123 4567" />
-        </label>
-        <label class="cform__field">
-          <span>Lakhely <small>(távolság vagy online alkalom miatt)</small></span>
-          <input type="text" name="Lakhely" placeholder="Település, kerület" />
-        </label>
-        <label class="cform__field">
-          <span>Melyik szolgáltatás érdekli?</span>
-          <select name="Szolgáltatás">
-            <option value="" selected>Válasszon szolgáltatást…</option>
+        <label>Telefonszám<input type="tel" name="Telefonszám"></label>
+        <label>Lakhely (budapesti vagy vidéki – online mód?)<input type="text" name="Lakhely"></label>
+        <label>Melyik módszer érdekli?
+          <select name="Érdeklődés">
+            <option value="">Válasszon…</option>
+            <option>Személyes konzultáció (Budapest)</option>
+            <option>Online konzultáció</option>
             <option>START konzultáció</option>
-            <option>Holisztikus dietetika – terápiás étrend</option>
+            <option>Holisztikus dietetika – étrend</option>
             <option>Hormontanácsadás</option>
-            <option>Online csomag</option>
-            <option>Alakformáló / fogyasztó kezelés</option>
-            <option>Egyéb / még nem tudom</option>
+            <option>Testsúlykontroll</option>
+            <option>Egyéb</option>
           </select>
         </label>
-        <label class="cform__field">
-          <span>Üzenet</span>
-          <textarea name="Üzenet" rows="4" placeholder="Írja le, miben szeretne segítséget kérni…"></textarea>
-        </label>
-        <label class="cform__consent">
-          <input type="checkbox" name="Hozzájárulás" value="Igen" required />
-          <span>Elolvastam és elfogadom az <a href="/adatkezelesi-tajekoztato" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>, és hozzájárulok adataim kezeléséhez.</span>
-        </label>
-        <!-- FormSubmit beállítások -->
-        <input type="hidden" name="_subject" value="Új üzenet – budapest-dietetikus.hu" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button type="submit" class="btn btn--gold cform__submit">Elküldöm →</button>
-        <p class="cform__status" id="cformStatus" role="status" aria-live="polite"></p>
-        <p class="cform__note">🔒 Adatait bizalmasan kezeljük, harmadik félnek nem adjuk át.</p>
+        <label>Üzenet<textarea name="Üzenet" rows="4" placeholder="Írja le néhány szóban, miben segíthetek…"></textarea></label>
+        <label class="f-check"><input type="checkbox" required> Elolvastam és elfogadom az <a href="/adatkezelesi-tajekoztato" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>, és hozzájárulok adataim kezeléséhez.</label>
+        <button type="submit" class="btn btn--gold" style="width:100%">Elküldöm →</button>
+        <p class="f-note">Adatait bizalmasan kezeljük, harmadik félnek nem adjuk ki.</p>
       </form>
+    </div>
+  </div>
+  <div class="booking__mapwrap">
+    <div class="map">
+      <iframe title="Naturmed Health – Rónay Barbara rendelő térkép" src="https://www.google.com/maps?q=Budapest%20V%C3%A1li%20utca%205%20Allee&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>

@@ -320,8 +320,9 @@
     .form-card input,.form-card select,.form-card textarea{width:100%;margin-top:5px;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font-family:var(--sans);font-size:.95rem;color:var(--ink);background:#fff}
     .form-card textarea{resize:vertical}
     .form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(47,107,79,.12)}
-    .form-card .f-check{display:flex;gap:9px;align-items:flex-start;font-weight:400;font-size:.82rem;color:var(--muted)}
-    .form-card .f-check input{width:auto;margin-top:3px}
+    .form-card .f-check{display:block;position:relative;padding-left:28px;font-weight:400;font-size:.82rem;color:var(--muted);line-height:1.5}
+    .form-card .f-check input{position:absolute;left:0;top:3px;width:auto;margin:0}
+    .form-card .f-check a{color:var(--brand);text-decoration:underline;font-weight:600}
     .form-card .f-note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:2px}
     .booking__mapwrap{max-width:1120px;margin:36px auto 0;padding:0 5%}
     .booking__mapwrap .map{min-height:340px}
