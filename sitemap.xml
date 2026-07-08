@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://budapest-dietetikus.hu/</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://budapest-dietetikus.hu/dietetikus-budapest-es-kornyeke</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/dietetikus-emesztorendszeri-panaszok</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/dietetikus-taplalekintolerancia</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/dietetikus-testsulykontroll</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/dietetikus-hormonalis-problemak</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/dietetikus-hajhullas</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/dietetikus-zsirbonto-kezelesek</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/magan-dietetikus</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://budapest-dietetikus.hu/orvos-dietetikus</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://budapest-dietetikus.hu/blog</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-emesztorendszeri-panaszok</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-taplalekintolerancia</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-testsulykontroll</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-hormonalis-problemak</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-hajhullas</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-zsirbonto-kezelesek</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/magan-dietetikus</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/orvos-dietetikus</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://budapest-dietetikus.hu/blog/immunerosites-gyerekeknek-betegseg-utan</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://budapest-dietetikus.hu/blog/puffadas-etelintolerancia-mikor-gyanakodj</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://budapest-dietetikus.hu/blog/ki-az-a-dietetikus</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -81,4 +81,16 @@
   <url><loc>https://budapest-dietetikus.hu/dietetikus-sulysap</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://budapest-dietetikus.hu/dietetikus-monor</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://budapest-dietetikus.hu/dietetikus-aszod</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-szigethalom</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-kerepes</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-pilis</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-tarnok</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-mogyorod</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-taksony</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-erdokertes</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-orbottyan</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-alsonemedi</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-nagytarcsa</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-urom</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://budapest-dietetikus.hu/dietetikus-paty</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

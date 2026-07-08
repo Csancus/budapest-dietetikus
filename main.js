@@ -59,4 +59,7 @@
         });
     });
   }
+  // aktuális évszám behelyettesítése (pl. Árak oldal – "árak 2026")
+  var yr=new Date().getFullYear();
+  document.querySelectorAll('.js-year').forEach(function(e){e.textContent=yr;});
 })();
