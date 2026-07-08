@@ -563,40 +563,55 @@
     </div>
     <div class="booking__right">
       <form class="cform" id="contactForm" action="https://formsubmit.co/ajax/csanad.peter.czarth@gmail.com" method="POST" novalidate>
-        <h3 class="cform__title">Írjon nekünk üzenetet</h3>
-        <p class="cform__lead">Hagyjon üzenetet, és 24 órán belül felvesszük Önnel a kapcsolatot.</p>
+        <h3 class="cform__title">Írjon nekünk</h3>
+        <p class="cform__lead">Írjon, vagy foglaljon időpontot – általában 1-2 munkanapon belül visszajelzünk.</p>
         <div class="cform__row">
           <label class="cform__field">
             <span>Név <b>*</b></span>
-            <input type="text" name="Név" autocomplete="name" required placeholder="Az Ön neve" />
+            <input type="text" name="Név" autocomplete="name" required placeholder="Kovács Anna" />
           </label>
           <label class="cform__field">
-            <span>Telefonszám</span>
-            <input type="tel" name="Telefonszám" autocomplete="tel" placeholder="+36 …" />
+            <span>E-mail <b>*</b></span>
+            <input type="email" name="E-mail" autocomplete="email" required placeholder="email@example.com" />
           </label>
         </div>
         <label class="cform__field">
-          <span>E-mail <b>*</b></span>
-          <input type="email" name="E-mail" autocomplete="email" required placeholder="pelda@email.hu" />
+          <span>Telefonszám</span>
+          <input type="tel" name="Telefonszám" autocomplete="tel" placeholder="+36 30 123 4567" />
         </label>
         <label class="cform__field">
-          <span>Üzenet <b>*</b></span>
-          <textarea name="Üzenet" rows="4" required placeholder="Miben segíthetünk? Írja le röviden, mi a célja…"></textarea>
+          <span>Lakhely <small>(távolság vagy online alkalom miatt)</small></span>
+          <input type="text" name="Lakhely" placeholder="Település, kerület" />
+        </label>
+        <label class="cform__field">
+          <span>Melyik szolgáltatás érdekli?</span>
+          <select name="Szolgáltatás">
+            <option value="" selected>Válasszon szolgáltatást…</option>
+            <option>START konzultáció</option>
+            <option>Holisztikus dietetika – terápiás étrend</option>
+            <option>Hormontanácsadás</option>
+            <option>Online csomag</option>
+            <option>Alakformáló / fogyasztó kezelés</option>
+            <option>Egyéb / még nem tudom</option>
+          </select>
+        </label>
+        <label class="cform__field">
+          <span>Üzenet</span>
+          <textarea name="Üzenet" rows="4" placeholder="Írja le, miben szeretne segítséget kérni…"></textarea>
+        </label>
+        <label class="cform__consent">
+          <input type="checkbox" name="Hozzájárulás" value="Igen" required />
+          <span>Elolvastam és elfogadom, hogy adataimat az időpontfoglalás és kapcsolatfelvétel céljából kezeljék.</span>
         </label>
         <!-- FormSubmit beállítások -->
         <input type="hidden" name="_subject" value="Új üzenet – budapest-dietetikus.hu" />
         <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <button type="submit" class="btn btn--gold cform__submit">Üzenet küldése</button>
+        <button type="submit" class="btn btn--gold cform__submit">Elküldöm →</button>
         <p class="cform__status" id="cformStatus" role="status" aria-live="polite"></p>
-        <p class="cform__note">Adatait bizalmasan kezeljük, harmadik félnek nem adjuk ki.</p>
+        <p class="cform__note">🔒 Adatait bizalmasan kezeljük, harmadik félnek nem adjuk át.</p>
       </form>
-      <div class="map">
-        <iframe
-          title="Naturmed Health – Rónay Barbara rendelő térkép, Budapest, Váli utca 5."
-          src="https://www.google.com/maps?q=Budapest%20V%C3%A1li%20utca%205%20Allee&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
     </div>
   </div>
 </section>

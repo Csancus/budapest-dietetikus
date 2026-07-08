@@ -237,8 +237,57 @@
         <li><span class="ic">✉️</span><div><a href="mailto:naturmed@ronaybarbara.hu">naturmed@ronaybarbara.hu</a><small>Online konzultációt is vállalunk</small></div></li>
       </ul>
     </div>
-    <div class="map">
-      <iframe title="Naturmed Health – Rónay Barbara rendelő térkép" src="https://www.google.com/maps?q=Budapest%20V%C3%A1li%20utca%205%20Allee&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="booking__right">
+      <form class="cform" id="contactForm" action="https://formsubmit.co/ajax/csanad.peter.czarth@gmail.com" method="POST" novalidate>
+        <h3 class="cform__title">Írjon nekünk</h3>
+        <p class="cform__lead">Írjon, vagy foglaljon időpontot – általában 1-2 munkanapon belül visszajelzünk.</p>
+        <div class="cform__row">
+          <label class="cform__field">
+            <span>Név <b>*</b></span>
+            <input type="text" name="Név" autocomplete="name" required placeholder="Kovács Anna" />
+          </label>
+          <label class="cform__field">
+            <span>E-mail <b>*</b></span>
+            <input type="email" name="E-mail" autocomplete="email" required placeholder="email@example.com" />
+          </label>
+        </div>
+        <label class="cform__field">
+          <span>Telefonszám</span>
+          <input type="tel" name="Telefonszám" autocomplete="tel" placeholder="+36 30 123 4567" />
+        </label>
+        <label class="cform__field">
+          <span>Lakhely <small>(távolság vagy online alkalom miatt)</small></span>
+          <input type="text" name="Lakhely" placeholder="Település, kerület" />
+        </label>
+        <label class="cform__field">
+          <span>Melyik szolgáltatás érdekli?</span>
+          <select name="Szolgáltatás">
+            <option value="" selected>Válasszon szolgáltatást…</option>
+            <option>START konzultáció</option>
+            <option>Holisztikus dietetika – terápiás étrend</option>
+            <option>Hormontanácsadás</option>
+            <option>Online csomag</option>
+            <option>Alakformáló / fogyasztó kezelés</option>
+            <option>Egyéb / még nem tudom</option>
+          </select>
+        </label>
+        <label class="cform__field">
+          <span>Üzenet</span>
+          <textarea name="Üzenet" rows="4" placeholder="Írja le, miben szeretne segítséget kérni…"></textarea>
+        </label>
+        <label class="cform__consent">
+          <input type="checkbox" name="Hozzájárulás" value="Igen" required />
+          <span>Elolvastam és elfogadom, hogy adataimat az időpontfoglalás és kapcsolatfelvétel céljából kezeljék.</span>
+        </label>
+        <!-- FormSubmit beállítások -->
+        <input type="hidden" name="_subject" value="Új üzenet – budapest-dietetikus.hu" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit" class="btn btn--gold cform__submit">Elküldöm →</button>
+        <p class="cform__status" id="cformStatus" role="status" aria-live="polite"></p>
+        <p class="cform__note">🔒 Adatait bizalmasan kezeljük, harmadik félnek nem adjuk át.</p>
+      </form>
     </div>
   </div>
 </section>
