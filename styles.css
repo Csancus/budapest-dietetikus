@@ -258,3 +258,12 @@
     .brand__logo{border-radius:9px;display:block;flex-shrink:0;box-shadow:0 2px 8px rgba(35,79,59,.18)}
     .brand__n{display:block}
     .brand__s{display:block}
+
+    /* FOOTER MEGA AREAS */
+    .footer-areas{padding:26px 0 6px;border-top:1px solid rgba(255,255,255,.1);margin-top:6px}
+    .footer-areas h4{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+    .footer-areas__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px 18px}
+    .footer-areas__grid a{color:rgba(255,255,255,.6);font-size:.82rem;margin:0;padding:3px 0;display:block}
+    .footer-areas__grid a:hover{color:#9fd9bb}
+    @media(max-width:940px){.footer-areas__grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:640px){.footer-areas__grid{grid-template-columns:repeat(2,1fr)}}
