@@ -267,3 +267,28 @@
     .footer-areas__grid a:hover{color:#9fd9bb}
     @media(max-width:940px){.footer-areas__grid{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:640px){.footer-areas__grid{grid-template-columns:repeat(2,1fr)}}
+
+    /* KAPCSOLATI ŰRLAP */
+    .booking__right{display:flex;align-items:flex-start}
+    .cform{width:100%;background:var(--surface);color:var(--ink);border-radius:18px;padding:34px 32px;box-shadow:var(--shadow-lg)}
+    .cform__title{font-family:var(--serif);font-size:1.55rem;color:var(--brand-dark);margin-bottom:6px}
+    .cform p.cform__lead{color:var(--muted);font-size:.96rem;margin-bottom:22px;line-height:1.5}
+    .cform__row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .cform__field{display:block;margin-bottom:15px}
+    .cform__field>span{display:block;font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+    .cform__field>span b{color:var(--accent);font-weight:700}
+    .cform__field>span small{font-weight:400;color:var(--muted);font-size:.82rem}
+    .cform input,.cform select,.cform textarea{width:100%;font-family:var(--sans);font-size:.98rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+    .cform input::placeholder,.cform textarea::placeholder{color:#9aa39c}
+    .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-tint)}
+    .cform textarea{resize:vertical;min-height:112px}
+    .cform__consent{display:flex;gap:10px;align-items:flex-start;margin:2px 0 18px;font-size:.84rem;color:var(--muted);line-height:1.5;cursor:pointer}
+    .cform__consent input{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--brand)}
+    .cform__consent a{color:var(--brand);text-decoration:underline;font-weight:600}
+    .cform__submit{width:100%;font-size:1.05rem}
+    .cform p.cform__note{font-size:.78rem;color:var(--muted);text-align:center;margin:12px 0 0}
+    .cform__status{font-size:.94rem;font-weight:600;margin-top:14px;text-align:center;display:none;line-height:1.5}
+    .cform__status.ok{display:block;color:var(--brand-dark);background:var(--brand-tint);border-radius:10px;padding:14px 16px;margin-top:0}
+    .cform__status.err{display:block;color:#b23b3b}
+    .cform.sent .cform__row,.cform.sent .cform__field,.cform.sent .cform__consent,.cform.sent .cform__submit,.cform.sent .cform__note,.cform.sent .cform__lead{display:none}
+    @media(max-width:640px){.cform__row{grid-template-columns:1fr}.cform{padding:26px 22px}}
