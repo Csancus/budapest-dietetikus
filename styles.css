@@ -387,3 +387,7 @@
 
     .card:hover .card__more{color:var(--brand-dark);gap:10px}
     a.card{text-decoration:none}
+
+    /* REVIEW BADGE (kiemelt box) */
+    .rev-badge{display:inline-flex;align-items:center;gap:9px;margin:4px auto 2px;padding:11px 22px;background:#fff;color:var(--brand-dark);border-radius:100px;font-weight:700;font-size:.95rem;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+    .rev-badge .s{color:var(--star);letter-spacing:1px}
