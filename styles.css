@@ -112,10 +112,10 @@
     .reviews .sec-head h2{color:#fff}
     .reviews .sec-head p{color:rgba(255,255,255,.8)}
     .rev-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .rev{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 24px}
+    .rev{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column}
     .rev__stars{color:var(--star);letter-spacing:2px;margin-bottom:12px}
     .rev__body{font-size:.96rem;line-height:1.65;color:rgba(255,255,255,.92);font-style:italic;margin-bottom:16px}
-    .rev__by{font-weight:700;font-size:.9rem}
+    .rev__by{font-weight:700;font-size:.9rem;margin-top:auto}
     .rev__src{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:2px}
     .reviews__foot{text-align:center;margin-top:38px}
     .reviews__foot a{color:#9fd9bb;font-weight:700;border-bottom:1px solid rgba(159,217,187,.4)}
