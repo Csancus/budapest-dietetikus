@@ -413,3 +413,6 @@
     .legal li{margin-bottom:6px;line-height:1.7}
     .legal a{color:var(--brand);font-weight:600}
     .legal strong{color:var(--brand-dark)}
+
+    /* Vízióm / about CTA mobilon középre */
+    @media(max-width:640px){.about__in .btn{display:block;width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}}
