@@ -114,7 +114,7 @@
     .reviews{background:var(--brand-dark);color:#fff}
     .reviews .sec-head h2{color:#fff}
     .reviews .sec-head p{color:rgba(255,255,255,.8)}
-    .rev-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .rev-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 22px}
     .rev{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column}
     .rev__stars{color:var(--star);letter-spacing:2px;margin-bottom:12px}
     .rev__body{font-size:.96rem;line-height:1.65;color:rgba(255,255,255,.92);font-style:italic;margin-bottom:16px}
