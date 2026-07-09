@@ -435,8 +435,9 @@
     html,body{overflow-x:clip}
     @media(max-width:640px){
       /* HERO átrendezés: eyebrow fent teljes szélességben, cím+lead balra, kép jobbra, CTA alul középen */
-      .hero__in{display:grid;grid-template-columns:1fr 40%;column-gap:14px;row-gap:2px;align-items:start;
+      .hero__in{display:grid;grid-template-columns:minmax(0,1fr) 40%;column-gap:14px;row-gap:2px;align-items:start;
         grid-template-areas:"eyebrow eyebrow" "h1 h1" "lead media" "cta cta"}
+      .hero h1,.hero__lead,.hero__body,.hero .eyebrow{overflow-wrap:break-word;word-break:break-word}
       .hero__content{display:contents}
       .hero .eyebrow{grid-area:eyebrow;font-size:.62rem;letter-spacing:1px;margin-bottom:10px}
       .hero h1{grid-area:h1;font-size:1.5rem;line-height:1.12;margin:0 0 8px}
