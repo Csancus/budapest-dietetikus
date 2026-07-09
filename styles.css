@@ -486,7 +486,8 @@
     .success-card__more summary::-webkit-details-marker{display:none}
     .success-card__more summary::after{content:"▾"}
     .success-card__more[open] summary::after{content:"▴"}
-    .success-card__full{margin-top:12px;display:flex;flex-direction:column;gap:10px}
+    .success-card__full{margin-top:12px;display:none;flex-direction:column;gap:10px}
+    .success-card__more[open] .success-card__full{display:flex}
     .success-card__full p{color:var(--muted);font-size:.88rem;line-height:1.6}
     .success-card__full ul{margin:0 0 0 18px;display:flex;flex-direction:column;gap:6px}
     .success-card__full li{color:var(--ink);font-size:.87rem;line-height:1.45}
