@@ -541,3 +541,9 @@
 
     /* about-stat + CTA (Vízióm) középre minden nézetben */
     .about__in .btn{display:block;width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}
+
+    /* Mobil hero: a portré-kép ne essen össze (aspect-ratio grid-bug fix) */
+    @media(max-width:640px){
+      .hero__media{align-self:stretch}
+      .hero .portrait{aspect-ratio:auto;height:100%;min-height:160px}
+    }
