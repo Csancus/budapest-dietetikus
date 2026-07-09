@@ -513,5 +513,5 @@
     .success-card__img{aspect-ratio:1/1;max-width:240px;margin:18px auto 0;border-radius:14px}
     @media(max-width:640px){.success-card__img{max-width:200px;margin-top:16px}}
 
-    /* Header a hero-tartalom szélességéhez igazítva (nav__in padding a .nav-ra kerül, mint a heronál) */
-    .nav{padding-left:5
+    /* Header a hero-tartalom szélességéhez igazítva */
+    .nav{padding:0 5%}
