@@ -43,7 +43,7 @@
     /* HERO */
     .hero{padding:76px 5% 68px;background:radial-gradient(1200px 500px at 80% -10%,var(--brand-tint) 0%,transparent 60%),linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
     .hero__in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:stretch}
-    .hero h1{font-size:clamp(2.3rem,5vw,3.7rem);color:var(--brand-dark);margin-bottom:18px}
+    .hero h1{font-size:clamp(2.1rem,4.2vw,3rem);color:var(--brand-dark);margin-bottom:18px}
     .hero h1 em{font-style:normal;color:var(--accent);display:block;white-space:nowrap}
     .hero__lead{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.2vw,1.5rem);color:var(--muted);margin-bottom:22px;line-height:1.4}
     .hero__body{font-size:1.06rem;color:var(--muted);max-width:52ch;margin-bottom:32px}
