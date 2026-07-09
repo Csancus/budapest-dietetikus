@@ -549,3 +549,6 @@
       .hero__media{align-self:stretch}
       .hero .portrait{aspect-ratio:auto;height:100%;min-height:160px}
     }
+
+    /* Rólam-blokk (about) csillag nagyobb, mint a heróban (felülírja a .about__stats span 0.85rem-ét) */
+    .about__stats .rstar{font-size:1.3em;vertical-align:-.06em}
