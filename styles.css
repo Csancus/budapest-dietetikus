@@ -113,15 +113,16 @@
     .pkg__price small{font-size:.8rem;color:var(--muted);font-weight:400;font-family:var(--sans)}
 
     /* REVIEWS */
-    .reviews{background:var(--brand-dark);color:#fff}
-    .reviews .sec-head h2{color:#fff}
-    .reviews .sec-head p{color:rgba(255,255,255,.8)}
+    .reviews{background:#f5eae5;color:var(--ink)}
+    .reviews .eyebrow{color:var(--brand)!important}
+    .reviews .sec-head h2{color:var(--brand-dark)}
+    .reviews .sec-head p{color:var(--muted)}
     .rev-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 22px}
-    .rev{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column}
+    .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
     .rev__stars{color:var(--star);letter-spacing:2px;margin-bottom:12px}
-    .rev__body{font-size:.96rem;line-height:1.65;color:rgba(255,255,255,.92);font-style:italic;margin-bottom:16px}
-    .rev__by{font-weight:700;font-size:.9rem;margin-top:auto}
-    .rev__src{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:2px}
+    .rev__body{font-size:.96rem;line-height:1.65;color:var(--ink);font-style:italic;margin-bottom:16px}
+    .rev__by{font-weight:700;font-size:.9rem;margin-top:auto;color:var(--brand-dark)}
+    .rev__src{font-size:.75rem;color:var(--muted);margin-top:2px}
     .reviews__foot{text-align:center;margin-top:38px}
     .reviews__foot a{color:#cdddc4;font-weight:700;border-bottom:1px solid rgba(159,217,187,.4)}
 
