@@ -475,12 +475,12 @@
     .success{max-width:1120px;margin:56px auto 0;padding:0 5%}
     .success__title{text-align:center;color:#fff;font-size:clamp(1.4rem,2.6vw,1.85rem);margin-bottom:8px}
     .success__sub{text-align:center;color:rgba(255,255,255,.8);font-size:1rem;margin-bottom:30px}
-    .success-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+    .success-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
     .success-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);display:flex;flex-direction:column}
-    .success-card__img{width:100%;height:auto;display:block}
-    .success-card__body{padding:22px 22px 24px}
+    .success-card__img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+    .success-card__body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
     .success-card__lead{color:var(--ink);font-size:.93rem;line-height:1.6;font-style:italic}
-    .success-card__more{margin-top:10px}
+    .success-card__more{margin-top:auto;padding-top:14px}
     .success-card__more summary{cursor:pointer;color:var(--brand);font-weight:700;font-size:.9rem;list-style:none;display:inline-flex;align-items:center;gap:4px}
     .success-card__more summary::-webkit-details-marker{display:none}
     .success-card__more summary::after{content:"▾"}
@@ -492,3 +492,10 @@
     @media(max-width:940px){.success-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.success-grid{grid-template-columns:1fr}}
     /* ===== /VÉLEMÉNYEK sikertörténetek ===== */
+
+    /* ===== RÓLAM kép mobilon: ne omoljon 0 magasságra (aspect-ratio+absolute miatt), folyjon természetesen (2026-07-09) ===== */
+    @media(max-width:940px){
+      .about__img{aspect-ratio:auto;min-width:0;max-width:380px}
+      .about__img img{position:static;width:100%;height:auto;display:block}
+    }
+    /* ===== /RÓLAM kép mobilon ===== */
