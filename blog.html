@@ -155,18 +155,6 @@
     .post__more{display:inline-flex;align-items:center;gap:6px;margin-top:auto;align-self:flex-start;padding:8px 16px;border-radius:999px;background:var(--brand,#2f6b4f);color:#fff;font-weight:700;font-size:.9rem;transition:background .15s}
     .post__b p{margin-bottom:16px}
     .post:hover .post__more{background:var(--brand-dark,#1f4a37)}
-    /* Kiemelt első poszt: teljes szélességű, vízszintes elrendezés (thumb balra, szöveg jobbra) */
-    .blog-grid .post:first-child{grid-column:1 / -1;flex-direction:row;align-items:stretch}
-    .blog-grid .post:first-child .post__thumb{flex:0 0 42%;min-height:230px;height:auto;font-size:3.6rem}
-    .blog-grid .post:first-child .post__b{flex:1;justify-content:center;padding:34px 36px}
-    .blog-grid .post:first-child h3{font-size:1.55rem;margin:10px 0 12px}
-    .blog-grid .post:first-child .post__b p{font-size:.98rem;line-height:1.6}
-    @media(max-width:900px){
-      .blog-grid .post:first-child{flex-direction:column}
-      .blog-grid .post:first-child .post__thumb{flex:0 0 auto;min-height:150px}
-      .blog-grid .post:first-child .post__b{padding:22px 22px 26px}
-      .blog-grid .post:first-child h3{font-size:1.3rem}
-    }
   </style>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog – dietetika, bélflóra, hormonok | Rónay Barbara" />
