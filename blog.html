@@ -146,7 +146,11 @@
 }
   </script>
   <style>
-    .post__more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:8px 16px;border-radius:999px;background:var(--brand,#2f6b4f);color:#fff;font-weight:700;font-size:.9rem;transition:background .15s}
+    /* Blog-kártya: azonos magasságú elrendezés, az „Elolvasom" gomb mindig az aljára igazítva */
+    .post{display:flex;flex-direction:column}
+    .post__b{display:flex;flex-direction:column;flex:1}
+    .post__more{display:inline-flex;align-items:center;gap:6px;margin-top:auto;align-self:flex-start;padding:8px 16px;border-radius:999px;background:var(--brand,#2f6b4f);color:#fff;font-weight:700;font-size:.9rem;transition:background .15s}
+    .post__b p{margin-bottom:16px}
     .post:hover .post__more{background:var(--brand-dark,#1f4a37)}
   </style>
   <meta name="twitter:card" content="summary_large_image" />
