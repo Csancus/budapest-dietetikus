@@ -523,3 +523,6 @@
 
     /* Header a hero-tartalom szélességéhez igazítva */
     .nav{padding:0 5%}
+
+    /* Scroll-fade kikapcsolva: minden szekció azonnal, teljesen látszik */
+    .reveal{opacity:1!important;transform:none!important;transition:none!important}
