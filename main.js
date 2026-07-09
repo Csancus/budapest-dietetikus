@@ -135,10 +135,8 @@
         var line='A(z) „'+name+'” csomag érdekel.';
         var prev=ta.getAttribute('data-pkg-auto');
         var cur=ta.value;
-        if(prev){ cur=cur.split(prev).join('').replace(/^s+|s+$/g,''); }
-        ta.value=(cur?cur+'
-
-':'')+line;
+        if(prev){ cur=cur.split(prev).join('').replace(/^\s+|\s+$/g,''); }
+        ta.value=(cur?cur+'\n\n':'')+line;
         ta.setAttribute('data-pkg-auto',line);
       }
       if(sel){
