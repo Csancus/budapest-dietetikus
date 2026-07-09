@@ -418,10 +418,13 @@
     @media(max-width:640px){.about__in .btn{display:block;width:-moz-fit-content;width:fit-content;margin-left:auto;margin-right:auto}}
 
     /* ===== MOBIL HERO: kép a cím mellé + kisebb cím/badge (2026-07-09, visszavonható) ===== */
-    html,body{overflow-x:hidden}
+    html,body{overflow-x:clip}
     @media(max-width:640px){
-      .hero__in{grid-template-columns:1.1fr .9fr;gap:14px;align-items:center}
+      .hero__in{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:14px;align-items:center}
       .hero__content,.hero__media{min-width:0}
+      /* mobil grid túlcsordulás-fix: az 1fr sávok zsugorodjanak a képernyőhöz (minmax 0), ne min-contentre */
+      .about__in,.booking__in{grid-template-columns:minmax(0,1fr)}
+      .about__in>*,.booking__in>*,.form-card{min-width:0}
       .hero__media{order:0;max-width:none;margin:0}
       .hero .eyebrow{font-size:.6rem;letter-spacing:1px;margin-bottom:8px}
       .hero h1{font-size:1.45rem;line-height:1.15;margin-bottom:10px}
