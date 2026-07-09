@@ -444,3 +444,13 @@
       .nav__mcta{font-size:.72rem;padding:7px 9px}
     }
     /* ===== /MOBIL HERO ===== */
+
+    /* ===== CSOMAG-KÁRTYA részletes tartalom (2026-07-09) ===== */
+    .pkg__body{flex:1;display:flex;flex-direction:column;gap:14px;margin:2px 0 20px}
+    .pkg__text{font-size:.86rem;color:var(--muted);line-height:1.6}
+    .pkg__group h4{font-size:.92rem;color:var(--brand-dark);font-weight:700;margin-bottom:7px}
+    .pkg__group ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+    .pkg__group li{font-size:.86rem;color:var(--ink);line-height:1.5;padding-left:18px;position:relative}
+    .pkg__group li::before{content:"–";position:absolute;left:2px;color:var(--brand);font-weight:700}
+    .pkg__note{font-size:.82rem;color:var(--muted);font-style:italic;line-height:1.5;padding-top:10px;border-top:1px solid var(--line)}
+    /* ===== /CSOMAG-KÁRTYA ===== */
