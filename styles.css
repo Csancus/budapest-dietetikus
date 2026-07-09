@@ -454,3 +454,14 @@
     .pkg__group li::before{content:"–";position:absolute;left:2px;color:var(--brand);font-weight:700}
     .pkg__note{font-size:.82rem;color:var(--muted);font-style:italic;line-height:1.5;padding-top:10px;border-top:1px solid var(--line)}
     /* ===== /CSOMAG-KÁRTYA ===== */
+
+    /* ===== VÉLEMÉNYEK: Magyarósi Csaba ajánlás-sáv (2026-07-09) ===== */
+    .rec-bar{max-width:560px;margin:0 auto 42px;display:flex;align-items:center;gap:16px;background:#fff;border-radius:100px;padding:10px 26px 10px 10px;box-shadow:var(--shadow-lg)}
+    .rec-bar__img{width:66px;height:66px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;border:2px solid var(--brand-tint)}
+    .rec-bar__txt{text-align:left;line-height:1.35}
+    .rec-bar__txt strong{display:block;color:var(--brand-dark);font-size:1.02rem;font-family:var(--serif)}
+    .rec-bar__txt small{color:var(--muted);font-size:.83rem}
+    .rec-bar__txt a{color:var(--brand);font-weight:700}
+    .rec-bar__txt a:hover{text-decoration:underline}
+    @media(max-width:640px){.rec-bar{flex-direction:column;text-align:center;padding:18px 22px;border-radius:20px}.rec-bar__txt{text-align:center}}
+    /* ===== /VÉLEMÉNYEK ajánlás-sáv ===== */
