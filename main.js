@@ -105,8 +105,12 @@
       });
       if(bad.length){ bad.forEach(function(el){mark(el,msgFor(el));}); bad[0].focus(); return; }
       var data=new FormData(form);
-      // háttérben elküldjük (fire-and-forget) – nem várunk a FormSubmit (néha lassú/522) válaszára
-      try{ fetch(form.action,{method:'POST',mode:'no-cors',body:data}); }catch(err){}
+      // háttérben elküldjük (nem várunk a FormSubmit néha lassú/522 válaszára);
+      // keepalive: true -> a kérés akkor is végigmegy, ha a user azonnal bezárja az oldalt.
+      // sendBeacon fallback (szintén túléli az oldal bezárását)
+      var sent=false;
+      try{ fetch(form.action,{method:'POST',mode:'no-cors',body:data,keepalive:true}); sent=true; }catch(err){}
+      if(!sent && navigator.sendBeacon){ try{ navigator.sendBeacon(form.action,data); }catch(e){} }
       // a köszönő üzenet AZONNAL megjelenik
       showSent();
     });
