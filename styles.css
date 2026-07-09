@@ -499,3 +499,9 @@
       .about__img img{position:static;width:100%;height:auto;display:block}
     }
     /* ===== /RÓLAM kép mobilon ===== */
+
+    /* Mobil: oldalsó tér a szekció-fejléceknek és a Magyarósi ajánló-sávnak */
+    @media(max-width:640px){
+      .sec-head{padding-left:22px;padding-right:22px}
+      .rec-bar{margin-left:22px;margin-right:22px}
+    }
