@@ -297,7 +297,8 @@
     @media(max-width:640px){.cform__row{grid-template-columns:1fr}.cform{padding:26px 22px}}
 
     /* BLOG / ARTICLE */
-    .breadcrumbs{max-width:1120px;margin:0 auto;padding:14px 5% 0;font-size:.85rem;color:var(--muted)}
+    .breadcrumbs{padding:14px 5% 0;font-size:.85rem;color:var(--muted)}
+    .breadcrumbs__in{display:block;max-width:1120px;margin:0 auto}
     .breadcrumbs a{color:var(--brand);font-weight:600}
     .article{padding:30px 0 46px}
     .article__wrap{max-width:820px;margin:0 auto;padding:0 5%}
