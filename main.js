@@ -1,3 +1,7 @@
+/* Web3Forms kapcsolati űrlap beállítások (a FormSubmit 2026-07-15-én leáll) */
+var WEB3FORMS_KEY='f3b13579-5895-4c30-960d-a4889dc949f0';
+var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@pelda.hu, harmadik@pelda.hu' */
+
 (function(){
   var b=document.getElementById('burger'),m=document.getElementById('menu');
   if(b&&m){
@@ -107,23 +111,24 @@
       var btn0=form.querySelector('button[type=submit]');
       var orig0=btn0?btn0.innerHTML:'';
       if(btn0){ btn0.disabled=true; btn0.textContent='Küldés…'; }
-      // JSON payload a FormSubmit /ajax/ végponthoz (ez az AKTIVÁLT, gyors végpont – nem a lassú/522-es nem-ajax)
-      var payload={};
+      // Web3Forms – ingyenes, korlátlan, megbízható (a FormSubmit 2026-07-15-én leáll)
+      var payload={ access_key: WEB3FORMS_KEY, subject: 'Új megkeresés – budapest-dietetikus.hu', from_name: 'budapest-dietetikus.hu' };
+      if(WEB3FORMS_CC) payload.cc = WEB3FORMS_CC;
       form.querySelectorAll('input,select,textarea').forEach(function(el){
-        if(!el.name||el.name==='_honey') return;
+        if(!el.name||el.name==='_honey'||el.name.charAt(0)==='_') return; // FormSubmit _mezők kihagyva
         if(el.type==='checkbox'){ payload[el.name]=el.checked?(el.value||'Igen'):''; }
         else payload[el.name]=el.value;
       });
-      var ajaxUrl=form.action.replace('formsubmit.co/','formsubmit.co/ajax/');
+      var em=form.querySelector('[name="Email"]'); if(em&&em.value) payload.replyto=em.value; // válasz a beküldőnek
       function fail(){
         if(btn0){ btn0.disabled=false; btn0.innerHTML=orig0; }
         var ban=document.createElement('p'); ban.className='f-banner';
         ban.innerHTML='A küldés most nem sikerült. Kérlek, próbáld újra, vagy írj közvetlenül: <a href="mailto:naturmed@ronaybarbara.hu">naturmed@ronaybarbara.hu</a>.';
         form.insertBefore(ban, btn0);
       }
-      fetch(ajaxUrl,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload),keepalive:true})
+      fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload),keepalive:true})
         .then(function(r){ return r.json().catch(function(){return {success:r.ok};}); })
-        .then(function(d){ if(d&&(d.success===true||d.success==='true'||d.success===undefined)) showSent(); else fail(); })
+        .then(function(d){ if(d&&(d.success===true||d.success==='true')) showSent(); else fail(); })
         .catch(fail);
     });
   });
