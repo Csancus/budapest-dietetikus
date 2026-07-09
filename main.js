@@ -11,7 +11,7 @@
   var subT=document.querySelector('.nav__sub-toggle');
   if(subT){
     subT.addEventListener('click',function(e){
-      if(window.innerWidth<=640){
+      if(window.innerWidth<=980){
         e.preventDefault();
         var li=subT.parentNode;
         var o=li.classList.toggle('open');

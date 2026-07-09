@@ -374,3 +374,16 @@
       .nav__mcta:hover{background:var(--brand-dark)}
       .burger{margin-left:2px}
     }
+
+    /* DROPDOWN CLICK FIX (hover-gap) */
+    .nav__dropdown{top:100%}
+    .nav__has-sub .nav__dropdown::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px}
+
+    /* SZAKTERÜLET KÁRTYA – Részletek gomb */
+    .card{display:flex;flex-direction:column}
+    .card__text{flex:1}
+    .card__more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.92rem;font-weight:700;color:var(--brand);align-self:flex-start;transition:gap .15s,color .15s}
+    .card__more:hover{color:var(--brand-dark);gap:10px}
+
+    .card:hover .card__more{color:var(--brand-dark);gap:10px}
+    a.card{text-decoration:none}
