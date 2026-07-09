@@ -69,6 +69,7 @@
 
     /* SECTION */
     section{padding:84px 0}
+    section[id],[id="velemenyek"],[id="rolam"],[id="szakteruletek"],[id="csomagok"],[id="idopont"],[id="gyik"],[id="folyamat"]{scroll-margin-top:88px}
     .sec-head{max-width:720px;margin:0 auto 50px;text-align:center}
     .sec-head h2{font-size:clamp(1.8rem,3.6vw,2.5rem);color:var(--brand-dark);margin-bottom:14px}
     .sec-head p{color:var(--muted);font-size:1.05rem}
