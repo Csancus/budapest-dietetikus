@@ -87,14 +87,28 @@
       <img class="brand__logo" src="/favicon.svg" alt="Rónay Barbara – Naturmed Health logó" width="38" height="38" />
       <span><span class="brand__n">Rónay Barbara</span><span class="brand__s">Dietetikus · Budapest</span></span>
     </a>
+    <a href="/#idopont" class="nav__mcta">Időpontfoglalás</a>
     <button class="burger" id="burger" aria-label="Menü megnyitása" aria-expanded="false">☰</button>
     <ul class="nav__links" id="menu">
-      <li><a href="#szakteruletek">Szakterületek</a></li>
-      <li><a href="#rolam">Rólam</a></li>
-      <li><a href="#velemenyek">Vélemények</a></li>
+      <li class="nav__has-sub">
+        <a href="/#szakteruletek" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">Szakterületek<span class="nav__caret" aria-hidden="true">▾</span></a>
+        <ul class="nav__dropdown">
+          <li><a href="/dietetikus-emesztorendszeri-panaszok">Emésztőrendszeri panaszok</a></li>
+          <li><a href="/dietetikus-taplalekintolerancia">Táplálékintolerancia</a></li>
+          <li><a href="/dietetikus-testsulykontroll">Testsúlykontroll, fogyás</a></li>
+          <li><a href="/dietetikus-hormonalis-problemak">Hormonális problémák</a></li>
+          <li><a href="/dietetikus-hajhullas">Hajhullás, hajgyógyászat</a></li>
+          <li><a href="/dietetikus-zsirbonto-kezelesek">Zsírbontó kezelések</a></li>
+          <li class="nav__dropdown-sep"><a href="/magan-dietetikus">Magándietetikus</a></li>
+          <li><a href="/orvos-dietetikus">Orvos dietetikus</a></li>
+        </ul>
+      </li>
+      <li><a href="/arak">Árak</a></li>
+      <li><a href="/#rolam">Rólam</a></li>
+      <li><a href="/#velemenyek">Vélemények</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="/dietetikus-budapest-es-kornyeke">Területek</a></li>
-      <li><a href="#idopont" class="nav__cta">Időpontfoglalás</a></li>
+      <li><a href="tel:+36209368458" class="nav__phone">📞 +36 20 936 8458</a></li>
+      <li><a href="/#idopont" class="nav__cta">Időpontfoglalás</a></li>
     </ul>
   </div>
 </nav>
