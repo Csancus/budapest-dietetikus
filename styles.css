@@ -508,7 +508,7 @@
     }
 
     /* Vélemények: csillagok sárgák (zöld háttéren jól látszanak) */
-    .rev__stars,.rev-badge .s{color:#e8a21a}
+    .rev__stars{color:#e8a21a}
 
     /* Sikertörténet-képek: teljes szélesség, EGYFORMA fix magasság (feleakkora), object-fit cover */
     .success-card__img{width:100%;max-width:none;height:220px;aspect-ratio:auto;object-fit:cover;object-position:center 28%;margin:0;border-radius:0;display:block}
