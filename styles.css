@@ -64,7 +64,7 @@
     .hero__badge small{display:block;color:var(--muted);font-size:.75rem}
 
     /* TRUST STRIP */
-    .strip{background:#f3ede3;color:var(--brand-dark);padding:22px 5%}
+    .strip{background:#ece1d2;color:var(--brand-dark);padding:20px 5%;border-top:1px solid rgba(70,79,49,.14);border-bottom:1px solid rgba(70,79,49,.14)}
     .strip__in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;font-size:.95rem;font-weight:600}
     .strip__in span{display:inline-flex;align-items:center;gap:8px}
     .strip__in .ic{color:var(--brand)}
