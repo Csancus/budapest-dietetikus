@@ -62,4 +62,61 @@
   // aktuális évszám behelyettesítése (pl. Árak oldal – "árak 2026")
   var yr=new Date().getFullYear();
   document.querySelectorAll('.js-year').forEach(function(e){e.textContent=yr;});
+
+  // .form-card űrlapok – AJAX beküldés, oldalon belüli köszönő + szép validáció
+  document.querySelectorAll('.form-card form').forEach(function(form){
+    form.setAttribute('novalidate','novalidate');
+    var card=form.closest('.form-card');
+    function clearField(el){
+      if(el.classList) el.classList.remove('is-invalid');
+      var lab=el.closest('label');
+      if(lab){ lab.classList.remove('is-invalid-check'); var fe=lab.querySelector('.f-err'); if(fe&&el.type==='checkbox') fe.remove(); }
+      var sib=el.nextElementSibling;
+      if(sib&&sib.classList&&sib.classList.contains('f-err')) sib.remove();
+    }
+    function msgFor(el){
+      var v=el.validity;
+      if(el.type==='checkbox') return 'Kérjük, fogadja el az adatkezelési tájékoztatót a folytatáshoz.';
+      if(v.valueMissing) return 'Kérjük, töltse ki ezt a mezőt.';
+      if(v.typeMismatch&&el.type==='email') return 'Adjon meg egy érvényes e-mail címet (pl. nev@example.hu) – ne maradjon ki a @ jel.';
+      return 'Kérjük, ellenőrizze ezt a mezőt.';
+    }
+    function mark(el,msg){
+      var span=document.createElement('span');span.className='f-err';span.textContent=msg;
+      if(el.type==='checkbox'){var l=el.closest('label');l.classList.add('is-invalid-check');l.appendChild(span);}
+      else{el.classList.add('is-invalid');el.insertAdjacentElement('afterend',span);}
+    }
+    form.addEventListener('input',function(e){clearField(e.target);});
+    form.addEventListener('change',function(e){clearField(e.target);});
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      form.querySelectorAll('.f-err').forEach(function(n){n.remove();});
+      form.querySelectorAll('.is-invalid').forEach(function(n){n.classList.remove('is-invalid');});
+      form.querySelectorAll('.is-invalid-check').forEach(function(n){n.classList.remove('is-invalid-check');});
+      var b=form.querySelector('.f-banner'); if(b) b.remove();
+      var bad=[];
+      form.querySelectorAll('input,select,textarea').forEach(function(el){
+        if(el.type==='hidden'||el.name==='_honey') return;
+        if(!el.checkValidity()) bad.push(el);
+      });
+      if(bad.length){ bad.forEach(function(el){mark(el,msgFor(el));}); bad[0].focus(); return; }
+      var btn=form.querySelector('button[type=submit]');
+      var orig=btn.innerHTML; btn.disabled=true; btn.textContent='Küldés…';
+      var url=form.action.replace('formsubmit.co/','formsubmit.co/ajax/');
+      fetch(url,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+        .then(function(r){return r.json();})
+        .then(function(d){
+          if(d&&(d.success===true||d.success==='true')){
+            card.innerHTML='<div class="form-sent"><div class="form-sent__ic">✓</div><h3>Köszönjük az üzenetét!</h3><p>Megkaptuk a megkeresését, és általában 1–2 munkanapon belül válaszolunk.<br>Sürgős esetben hívjon minket: <a href="tel:+36209368458">+36 20 936 8458</a>.</p></div>';
+            card.scrollIntoView({behavior:'smooth',block:'center'});
+          } else { throw new Error('nem sikerült'); }
+        })
+        .catch(function(){
+          btn.disabled=false; btn.innerHTML=orig;
+          var ban=document.createElement('p'); ban.className='f-banner';
+          ban.innerHTML='A küldés most nem sikerült. Kérjük, próbálja újra, vagy írjon közvetlenül: <a href="mailto:naturmed@ronaybarbara.hu">naturmed@ronaybarbara.hu</a>.';
+          form.insertBefore(ban, btn);
+        });
+    });
+  });
 })();
