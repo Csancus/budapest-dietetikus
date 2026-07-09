@@ -24,32 +24,111 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://budapest-dietetikus.hu/#clinic",
+      "name": "Naturmed Health – Rónay Barbara dietetikus és hormontanácsadó",
+      "description": "Dietetika, funkcionális táplálkozás és hormontanácsadás Budapesten. Emésztőrendszeri panaszok, hormonális problémák, testsúlykontroll és táplálékintolerancia holisztikus kezelése.",
+      "url": "https://budapest-dietetikus.hu/",
+      "telephone": "+36209368458",
+      "email": "naturmed@ronaybarbara.hu",
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "priceRange": "29.000 Ft – 120.000 Ft",
+      "medicalSpecialty": "Dietetics",
+      "currenciesAccepted": "HUF",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Váli u. 5. 1. emelet 103. (az Allee oldalában)",
+        "addressLocality": "Budapest",
+        "postalCode": "1117",
+        "addressCountry": "HU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.4762,
+        "longitude": 19.0491
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Budapest"
+      },
+      "sameAs": [
+        "https://ronaybarbara.hu/",
+        "https://www.facebook.com/ronaybarbaranaturmedhealth",
+        "https://www.youtube.com/channel/UCGQzVMhv19NDe-GuHOX6VfA"
+      ],
+      "founder": {
+        "@id": "https://budapest-dietetikus.hu/#barbara"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://budapest-dietetikus.hu/#barbara",
+      "name": "Dr. Rónay Barbara",
+      "jobTitle": "Klinikai dietetikus, funkcionális táplálkozási és hormontanácsadó",
+      "worksFor": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      },
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "url": "https://budapest-dietetikus.hu/",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Semmelweis Egyetem"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Pécsi Tudományegyetem"
+        }
+      ],
+      "knowsAbout": [
+        "Dietetika",
+        "Funkcionális táplálkozás",
+        "Hormontanácsadás",
+        "Inzulinrezisztencia",
+        "Pajzsmirigy alulműködés",
+        "Testsúlykontroll",
+        "Táplálékintolerancia",
+        "Holisztikus táplálkozás"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://budapest-dietetikus.hu/#website",
+      "url": "https://budapest-dietetikus.hu/",
+      "name": "Rónay Barbara – Dietetikus Budapest",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      }
+    },
+    {
       "@type": "BlogPosting",
       "headline": "Ki az a dietetikus és mivel foglalkozik?",
       "description": "Ki az a dietetikus és mivel foglalkozik? Miért hatékonyabb a személyre szabott étrend a divatdiétáknál, és hogyan segít a szakember a fogyásban és a megelőzésben.",
       "datePublished": "2025-04-24",
       "dateModified": "2025-04-24",
       "author": {
-        "@type": "Person",
-        "name": "Rónay Barbara",
-        "jobTitle": "Klinikai dietetikus, funkcionális táplálkozási és hormontanácsadó",
-        "url": "https://budapest-dietetikus.hu/"
+        "@id": "https://budapest-dietetikus.hu/#barbara"
       },
       "publisher": {
-        "@type": "Organization",
-        "name": "Naturmed Health",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://budapest-dietetikus.hu/favicon.svg"
-        }
+        "@id": "https://budapest-dietetikus.hu/#clinic"
       },
       "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://budapest-dietetikus.hu/blog/ki-az-a-dietetikus" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://budapest-dietetikus.hu/blog/ki-az-a-dietetikus"
+      },
       "articleSection": "Fogyás",
       "inLanguage": "hu-HU",
       "wordCount": 244,
       "timeRequired": "PT2M",
-      "keywords": "Fogyás, dietetikus, Rónay Barbara, Naturmed Health, funkcionális táplálkozás, holisztikus dietetika"
+      "keywords": "Fogyás, dietetikus, Rónay Barbara, Naturmed Health, funkcionális táplálkozás, holisztikus dietetika",
+      "isPartOf": {
+        "@id": "https://budapest-dietetikus.hu/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -76,7 +155,7 @@
     }
   ]
 }
-  </script>
+</script>
   <style>
     .toc{background:var(--brand-tint,#eef5f0);border:1px solid var(--brand,#2f6b4f);border-left-width:4px;border-radius:10px;padding:16px 22px;margin:0 0 30px}
     .toc__title{font-weight:700;color:var(--brand-dark,#1f4a37);margin:0 0 10px;font-size:1.02rem;letter-spacing:.01em}
@@ -86,6 +165,10 @@
     .toc__list a:hover{text-decoration:underline}
     .prose h2{scroll-margin-top:92px}
   </style>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ki az a dietetikus és mivel foglalkozik? | Rónay Barbara" />
+  <meta name="twitter:description" content="Ki az a dietetikus és mivel foglalkozik? Miért hatékonyabb a személyre szabott étrend a divatdiétáknál, és hogyan segít a szakember a fogyásban és a megelőzésben." />
+  <meta name="twitter:image" content="https://budapest-dietetikus.hu/images/ronay-barbara.jpg" />
 </head>
 <body>
 <a class="skip" href="#szakteruletek">Ugrás a tartalomra</a>

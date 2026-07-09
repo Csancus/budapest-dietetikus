@@ -22,26 +22,141 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://budapest-dietetikus.hu/#clinic",
+      "name": "Naturmed Health – Rónay Barbara dietetikus és hormontanácsadó",
+      "description": "Dietetika, funkcionális táplálkozás és hormontanácsadás Budapesten. Emésztőrendszeri panaszok, hormonális problémák, testsúlykontroll és táplálékintolerancia holisztikus kezelése.",
+      "url": "https://budapest-dietetikus.hu/",
+      "telephone": "+36209368458",
+      "email": "naturmed@ronaybarbara.hu",
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "priceRange": "29.000 Ft – 120.000 Ft",
+      "medicalSpecialty": "Dietetics",
+      "currenciesAccepted": "HUF",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Váli u. 5. 1. emelet 103. (az Allee oldalában)",
+        "addressLocality": "Budapest",
+        "postalCode": "1117",
+        "addressCountry": "HU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.4762,
+        "longitude": 19.0491
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Budapest"
+      },
+      "sameAs": [
+        "https://ronaybarbara.hu/",
+        "https://www.facebook.com/ronaybarbaranaturmedhealth",
+        "https://www.youtube.com/channel/UCGQzVMhv19NDe-GuHOX6VfA"
+      ],
+      "founder": {
+        "@id": "https://budapest-dietetikus.hu/#barbara"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://budapest-dietetikus.hu/#barbara",
+      "name": "Dr. Rónay Barbara",
+      "jobTitle": "Klinikai dietetikus, funkcionális táplálkozási és hormontanácsadó",
+      "worksFor": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      },
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "url": "https://budapest-dietetikus.hu/",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Semmelweis Egyetem"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Pécsi Tudományegyetem"
+        }
+      ],
+      "knowsAbout": [
+        "Dietetika",
+        "Funkcionális táplálkozás",
+        "Hormontanácsadás",
+        "Inzulinrezisztencia",
+        "Pajzsmirigy alulműködés",
+        "Testsúlykontroll",
+        "Táplálékintolerancia",
+        "Holisztikus táplálkozás"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://budapest-dietetikus.hu/#website",
+      "url": "https://budapest-dietetikus.hu/",
+      "name": "Rónay Barbara – Dietetikus Budapest",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      }
+    },
+    {
       "@type": "HowTo",
       "name": "A közös munka 4 lépésben – Rónay Barbara dietetikus",
       "description": "Így zajlik a közös munka az első kapcsolatfelvételtől a tartós eredményig.",
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Időpontfoglalás & kérdőív", "text": "Foglalj online vagy telefonon, majd töltsd ki a részletes állapotfelmérő kérdőívet." },
-        { "@type": "HowToStep", "position": 2, "name": "Állapotfelmérés & labor", "text": "Body Shape testösszetétel-analízis, hormonprofil és laborvizsgálatok funkcionális szemléletben." },
-        { "@type": "HowToStep", "position": 3, "name": "Személyre szabott terv", "text": "Egyéni terápiás étrend, célzott táplálékkiegészítők és életmódbeli javaslatok az okokra szabva." },
-        { "@type": "HowToStep", "position": 4, "name": "Kontroll & követés", "text": "Rendszeres kontroll és folyamatos támogatás a fenntartható, hosszú távú eredményért." }
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Időpontfoglalás & kérdőív",
+          "text": "Foglalj online vagy telefonon, majd töltsd ki a részletes állapotfelmérő kérdőívet."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Állapotfelmérés & labor",
+          "text": "Body Shape testösszetétel-analízis, hormonprofil és laborvizsgálatok funkcionális szemléletben."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Személyre szabott terv",
+          "text": "Egyéni terápiás étrend, célzott táplálékkiegészítők és életmódbeli javaslatok az okokra szabva."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Kontroll & követés",
+          "text": "Rendszeres kontroll és folyamatos támogatás a fenntartható, hosszú távú eredményért."
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://budapest-dietetikus.hu/" },
-        { "@type": "ListItem", "position": 2, "name": "Így dolgozunk", "item": "https://budapest-dietetikus.hu/igy-dolgozunk" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Főoldal",
+          "item": "https://budapest-dietetikus.hu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Így dolgozunk",
+          "item": "https://budapest-dietetikus.hu/igy-dolgozunk"
+        }
       ]
     }
   ]
 }
-  </script>
+</script>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Így dolgozunk – a közös munka 4 lépésben | Rónay Barbara" />
+  <meta name="twitter:description" content="Átlátható, 4 lépéses folyamat az első kapcsolatfelvételtől a tartós eredményig – Rónay Barbara dietetikus." />
+  <meta name="twitter:image" content="https://budapest-dietetikus.hu/images/ronay-barbara-dietetikus-naturmed-health.jpg" />
 </head>
 <body>
 <a class="skip" href="#folyamat">Ugrás a tartalomra</a>

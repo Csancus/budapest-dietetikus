@@ -22,18 +22,114 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://budapest-dietetikus.hu/#clinic",
+      "name": "Naturmed Health – Rónay Barbara dietetikus és hormontanácsadó",
+      "description": "Dietetika, funkcionális táplálkozás és hormontanácsadás Budapesten. Emésztőrendszeri panaszok, hormonális problémák, testsúlykontroll és táplálékintolerancia holisztikus kezelése.",
+      "url": "https://budapest-dietetikus.hu/",
+      "telephone": "+36209368458",
+      "email": "naturmed@ronaybarbara.hu",
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "priceRange": "29.000 Ft – 120.000 Ft",
+      "medicalSpecialty": "Dietetics",
+      "currenciesAccepted": "HUF",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Váli u. 5. 1. emelet 103. (az Allee oldalában)",
+        "addressLocality": "Budapest",
+        "postalCode": "1117",
+        "addressCountry": "HU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.4762,
+        "longitude": 19.0491
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Budapest"
+      },
+      "sameAs": [
+        "https://ronaybarbara.hu/",
+        "https://www.facebook.com/ronaybarbaranaturmedhealth",
+        "https://www.youtube.com/channel/UCGQzVMhv19NDe-GuHOX6VfA"
+      ],
+      "founder": {
+        "@id": "https://budapest-dietetikus.hu/#barbara"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://budapest-dietetikus.hu/#barbara",
+      "name": "Dr. Rónay Barbara",
+      "jobTitle": "Klinikai dietetikus, funkcionális táplálkozási és hormontanácsadó",
+      "worksFor": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      },
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "url": "https://budapest-dietetikus.hu/",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Semmelweis Egyetem"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Pécsi Tudományegyetem"
+        }
+      ],
+      "knowsAbout": [
+        "Dietetika",
+        "Funkcionális táplálkozás",
+        "Hormontanácsadás",
+        "Inzulinrezisztencia",
+        "Pajzsmirigy alulműködés",
+        "Testsúlykontroll",
+        "Táplálékintolerancia",
+        "Holisztikus táplálkozás"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://budapest-dietetikus.hu/#website",
+      "url": "https://budapest-dietetikus.hu/",
+      "name": "Rónay Barbara – Dietetikus Budapest",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      }
+    },
+    {
       "@type": "CollectionPage",
       "url": "https://budapest-dietetikus.hu/mediamegjelenesek",
       "name": "Médiamegjelenések – Rónay Barbara a médiában",
       "description": "Rónay Barbara klinikai dietetikus és hormontanácsadó médiamegjelenései: szakértői interjúk és ismeretterjesztő videók a funkcionális táplálkozásról és a hormonokról.",
       "inLanguage": "hu-HU",
-      "about": { "@type": "MedicalBusiness", "name": "Naturmed Health" },
+      "about": {
+        "@type": "MedicalBusiness",
+        "name": "Naturmed Health"
+      },
       "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "url": "https://www.youtube.com/watch?v=A7DcyNTRVDY" },
-          { "@type": "ListItem", "position": 2, "url": "https://www.youtube.com/watch?v=eAco5tIA1Jc" },
-          { "@type": "ListItem", "position": 3, "url": "https://www.youtube.com/watch?v=aZDS-U2GPjE" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://www.youtube.com/watch?v=A7DcyNTRVDY"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://www.youtube.com/watch?v=eAco5tIA1Jc"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://www.youtube.com/watch?v=aZDS-U2GPjE"
+          }
         ]
       }
     },
@@ -45,7 +141,9 @@
       "uploadDate": "2021-01-01",
       "contentUrl": "https://www.youtube.com/watch?v=A7DcyNTRVDY",
       "embedUrl": "https://www.youtube-nocookie.com/embed/A7DcyNTRVDY",
-      "publisher": { "@id": "https://budapest-dietetikus.hu/#clinic" }
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      }
     },
     {
       "@type": "VideoObject",
@@ -55,7 +153,9 @@
       "uploadDate": "2020-01-01",
       "contentUrl": "https://www.youtube.com/watch?v=eAco5tIA1Jc",
       "embedUrl": "https://www.youtube-nocookie.com/embed/eAco5tIA1Jc",
-      "publisher": { "@id": "https://budapest-dietetikus.hu/#clinic" }
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      }
     },
     {
       "@type": "VideoObject",
@@ -65,18 +165,34 @@
       "uploadDate": "2024-01-01",
       "contentUrl": "https://www.youtube.com/watch?v=aZDS-U2GPjE",
       "embedUrl": "https://www.youtube-nocookie.com/embed/aZDS-U2GPjE",
-      "publisher": { "@id": "https://budapest-dietetikus.hu/#clinic" }
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://budapest-dietetikus.hu/" },
-        { "@type": "ListItem", "position": 2, "name": "Médiamegjelenések", "item": "https://budapest-dietetikus.hu/mediamegjelenesek" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Főoldal",
+          "item": "https://budapest-dietetikus.hu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Médiamegjelenések",
+          "item": "https://budapest-dietetikus.hu/mediamegjelenesek"
+        }
       ]
     }
   ]
 }
-  </script>
+</script>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Médiamegjelenések – Rónay Barbara a médiában" />
+  <meta name="twitter:description" content="Rónay Barbara klinikai dietetikus és hormontanácsadó médiamegjelenései: szakértői interjúk és ismeretterjesztő videók a funkcionális táplálkozásról és a hormonokról." />
+  <meta name="twitter:image" content="https://budapest-dietetikus.hu/images/ronay-barbara.jpg" />
 </head>
 <body>
 <a class="skip" href="#fo">Ugrás a tartalomra</a>
