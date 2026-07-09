@@ -35,8 +35,8 @@
     .btn:hover{transform:translateY(-2px)}
     .btn--primary{background:var(--brand);color:#fff;box-shadow:0 6px 20px rgba(47,107,79,.30)}
     .btn--primary:hover{background:var(--brand-dark);box-shadow:0 10px 28px rgba(47,107,79,.40)}
-    .btn--gold{background:var(--accent);color:#fff;box-shadow:0 6px 20px rgba(201,138,58,.3)}
-    .btn--gold:hover{background:#b0762c}
+    .btn--gold{background:var(--brand);color:#fff;box-shadow:0 6px 18px rgba(70,79,49,.28)}
+    .btn--gold:hover{background:var(--brand-dark)}
     .btn--outline{background:transparent;color:var(--brand-dark);border:2px solid var(--brand)}
     .btn--outline:hover{background:var(--brand);color:#fff}
 
