@@ -88,19 +88,12 @@
     }
     form.addEventListener('input',function(e){clearField(e.target);});
     form.addEventListener('change',function(e){clearField(e.target);});
-    // Rejtett iframe cél: normál FormSubmit POST (nincs CORS, aktiválás-barát), az oldalon marad
-    var fname='fsframe_'+Date.now()+'_'+Math.floor(Math.random()*1e6);
-    var frame=document.createElement('iframe');
-    frame.name=fname; frame.style.display='none'; frame.setAttribute('aria-hidden','true');
-    document.body.appendChild(frame);
-    form.setAttribute('target',fname);
-    var sending=false;
-    frame.addEventListener('load',function(){
-      if(!sending) return; sending=false;
-      card.innerHTML='<div class="form-sent"><div class="form-sent__ic">✓</div><h3>Köszönjük az üzenetét!</h3><p>Megkaptuk a megkeresését, és általában 1–2 munkanapon belül válaszolunk.<br>Sürgős esetben hívjon minket: <a href="tel:+36209368458">+36 20 936 8458</a>.</p></div>';
+    function showSent(){
+      card.innerHTML='<div class="form-sent"><div class="form-sent__ic">✓</div><h3>Köszönöm az üzeneted!</h3><p>Általában pár órán belül, de maximum 48 órán belül felveszem veled a kapcsolatot!</p></div>';
       card.scrollIntoView({behavior:'smooth',block:'center'});
-    });
+    }
     form.addEventListener('submit',function(e){
+      e.preventDefault();
       form.querySelectorAll('.f-err').forEach(function(n){n.remove();});
       form.querySelectorAll('.is-invalid').forEach(function(n){n.classList.remove('is-invalid');});
       form.querySelectorAll('.is-invalid-check').forEach(function(n){n.classList.remove('is-invalid-check');});
@@ -110,11 +103,18 @@
         if(el.type==='hidden'||el.name==='_honey') return;
         if(!el.checkValidity()) bad.push(el);
       });
-      if(bad.length){ e.preventDefault(); bad.forEach(function(el){mark(el,msgFor(el));}); bad[0].focus(); return; }
-      // érvényes → hagyjuk normál POST-ként elmenni a rejtett iframe-be (nincs preventDefault, nincs CORS)
+      if(bad.length){ bad.forEach(function(el){mark(el,msgFor(el));}); bad[0].focus(); return; }
       var btn=form.querySelector('button[type=submit]');
       btn.disabled=true; btn.textContent='Küldés…';
-      sending=true;
+      // no-cors POST: a küldés eljut a FormSubmithez, nincs CORS-hiba és nincs iframe/X-Frame gond
+      fetch(form.action,{method:'POST',mode:'no-cors',body:new FormData(form)})
+        .then(showSent)
+        .catch(function(){
+          btn.disabled=false; btn.textContent='Elküldöm →';
+          var ban=document.createElement('p'); ban.className='f-banner';
+          ban.innerHTML='A küldés most nem sikerült. Kérlek, próbáld újra, vagy írj közvetlenül: <a href="mailto:naturmed@ronaybarbara.hu">naturmed@ronaybarbara.hu</a>.';
+          form.insertBefore(ban, btn);
+        });
     });
   });
 })();
