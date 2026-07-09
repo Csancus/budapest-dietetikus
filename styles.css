@@ -363,3 +363,14 @@
       .nav__dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;padding:0 0 6px 12px;min-width:0;display:none}
       .nav__has-sub.open .nav__dropdown{display:block}
     }
+
+    /* Header: telefonszám a fejlécben + mobil időpont-gomb (v8) */
+    .nav__phone{color:var(--brand-dark)!important;font-weight:700!important;white-space:nowrap}
+    .nav__phone:hover{color:#fff!important;background:var(--brand)!important}
+    .nav__mcta{display:none}
+    @media(max-width:640px){
+      .nav__in .brand{margin-right:auto}
+      .nav__mcta{display:inline-flex;align-items:center;background:var(--brand);color:#fff;font-weight:700;font-size:.86rem;line-height:1;padding:10px 14px;border-radius:8px;box-shadow:0 4px 14px rgba(47,107,79,.28);white-space:nowrap;text-decoration:none}
+      .nav__mcta:hover{background:var(--brand-dark)}
+      .burger{margin-left:2px}
+    }
