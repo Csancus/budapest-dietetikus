@@ -508,3 +508,7 @@
 
     /* Vélemények: csillagok sárgák (zöld háttéren jól látszanak) */
     .rev__stars,.rev-badge .s{color:#e8a21a}
+
+    /* Sikertörténet-képek: kisebb, négyzetes thumbnail (kevesebb görgetés) */
+    .success-card__img{aspect-ratio:1/1;max-width:240px;margin:18px auto 0;border-radius:14px}
+    @media(max-width:640px){.success-card__img{max-width:200px;margin-top:16px}}
