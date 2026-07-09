@@ -168,10 +168,10 @@
           <label>Neved *<input type="text" name="Név" required></label>
           <label>E-mail *<input type="email" name="Email" required></label>
         </div>
-        <label>Telefonszám<input type="tel" name="Telefonszám"></label>
-        <label>Lakhely (budapesti vagy vidéki – online mód?)<input type="text" name="Lakhely"></label>
-        <label>Melyik módszer érdekel?
-          <select name="Érdeklődés">
+        <label>Telefonszám *<input type="tel" name="Telefonszám" required></label>
+        <label>Lakcím<input type="text" name="Lakcím"></label>
+        <label>Melyik módszer érdekel? *
+          <select name="Érdeklődés" required>
             <option value="">Válassz…</option>
             <option>Személyes konzultáció (Budapest)</option>
             <option>Online konzultáció</option>
@@ -182,7 +182,7 @@
             <option>Egyéb</option>
           </select>
         </label>
-        <label>Üzenet<textarea name="Üzenet" rows="4" placeholder="Írd le néhány szóban, miben segíthetek…"></textarea></label>
+        <label>Üzenet *<textarea name="Üzenet" rows="4" required placeholder="Írd le néhány szóban, miben segíthetek…"></textarea></label>
         <label class="f-check"><input type="checkbox" required> Hozzájárulok az adataim kezeléséhez a megkeresés megválaszolása céljából.</label>
         <button type="submit" class="btn btn--gold" style="width:100%">Elküldöm →</button>
         <p class="f-note">Adataidat bizalmasan kezelem, harmadik félnek nem adom ki.</p>
