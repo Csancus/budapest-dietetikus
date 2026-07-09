@@ -330,6 +330,10 @@
     .form-card .f-check input{position:absolute;left:0;top:3px;width:auto;margin:0}
     .form-card .f-check a{color:var(--brand);text-decoration:underline;font-weight:600}
     .form-card .f-note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:2px}
+    .form-sent{text-align:center;padding:26px 8px}
+    .form-sent__ic{width:60px;height:60px;border-radius:50%;background:var(--brand);color:#fff;font-size:1.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+    .form-sent h3{font-family:var(--serif);color:var(--brand-dark);font-size:1.4rem;margin-bottom:12px}
+    .form-sent p{color:var(--muted);font-size:1.02rem;line-height:1.6;max-width:38ch;margin:0 auto}
     .booking__mapwrap{max-width:1120px;margin:36px auto 0;padding:0 5%}
     .booking__mapwrap .map{min-height:340px}
     @media(max-width:640px){.form-card .f-row{grid-template-columns:1fr}}

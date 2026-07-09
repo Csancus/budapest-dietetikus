@@ -104,17 +104,11 @@
         if(!el.checkValidity()) bad.push(el);
       });
       if(bad.length){ bad.forEach(function(el){mark(el,msgFor(el));}); bad[0].focus(); return; }
-      var btn=form.querySelector('button[type=submit]');
-      btn.disabled=true; btn.textContent='Küldés…';
-      // no-cors POST: a küldés eljut a FormSubmithez, nincs CORS-hiba és nincs iframe/X-Frame gond
-      fetch(form.action,{method:'POST',mode:'no-cors',body:new FormData(form)})
-        .then(showSent)
-        .catch(function(){
-          btn.disabled=false; btn.textContent='Elküldöm →';
-          var ban=document.createElement('p'); ban.className='f-banner';
-          ban.innerHTML='A küldés most nem sikerült. Kérlek, próbáld újra, vagy írj közvetlenül: <a href="mailto:naturmed@ronaybarbara.hu">naturmed@ronaybarbara.hu</a>.';
-          form.insertBefore(ban, btn);
-        });
+      var data=new FormData(form);
+      // háttérben elküldjük (fire-and-forget) – nem várunk a FormSubmit (néha lassú/522) válaszára
+      try{ fetch(form.action,{method:'POST',mode:'no-cors',body:data}); }catch(err){}
+      // a köszönő üzenet AZONNAL megjelenik
+      showSent();
     });
   });
 })();
@@ -147,4 +141,15 @@
       }
     });
   });
+})();
+
+/* Lazy-load beágyazott térkép (Google Maps) – csak közeledéskor tölt be */
+(function(){
+  var frames=document.querySelectorAll("iframe[data-src]");
+  if(!frames.length) return;
+  function load(fr){ var s=fr.getAttribute("data-src"); if(s){ fr.src=s; fr.removeAttribute("data-src"); } }
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ load(e.target); io.unobserve(e.target); } });},{rootMargin:"300px"});
+    Array.prototype.forEach.call(frames,function(fr){ io.observe(fr); });
+  } else { Array.prototype.forEach.call(frames,load); }
 })();
