@@ -131,8 +131,9 @@
     a.addEventListener('click',function(){
       var card=a.closest('.pkg'); if(!card) return;
       var h=card.querySelector('h3'); var name=h?h.textContent.trim():''; if(!name) return;
+      var pe=card.querySelector('.pkg__price'); var price=pe?pe.textContent.trim():'';
       if(ta){
-        var line='A(z) „'+name+'” csomag érdekel.';
+        var line='A(z) „'+name+'” csomag'+(price?' ('+price+')':'')+' érdekel.';
         var prev=ta.getAttribute('data-pkg-auto');
         var cur=ta.value;
         if(prev){ cur=cur.split(prev).join('').replace(/^\s+|\s+$/g,''); }

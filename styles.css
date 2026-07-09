@@ -527,3 +527,6 @@
 
     /* Scroll-fade kikapcsolva: minden szekció azonnal, teljesen látszik */
     .reveal{opacity:1!important;transform:none!important;transition:none!important}
+
+    /* Kapcsolat: a két CTA-gomb egyforma széles */
+    .booking__ctas .btn{flex:1 1 0}
