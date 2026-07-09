@@ -26,15 +26,15 @@
     .nav__links{display:flex;align-items:center;gap:6px;list-style:none}
     .nav__links a{font-size:.9rem;font-weight:600;color:var(--muted);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
     .nav__links a:hover{color:var(--brand-dark);background:var(--brand-tint)}
-    .nav__cta{background:var(--brand)!important;color:#fff!important;padding:10px 18px!important;box-shadow:0 4px 14px rgba(47,107,79,.28)}
-    .nav__cta:hover{background:var(--brand-dark)!important}
+    .nav__cta{background:#cbbc96!important;color:var(--brand-dark)!important;padding:10px 18px!important;box-shadow:0 4px 14px rgba(120,105,70,.26)}
+    .nav__cta:hover{background:#bcab80!important}
     .burger{display:none;font-size:1.6rem;background:none;border:none;color:var(--brand-dark);cursor:pointer;min-width:44px;min-height:44px}
 
     /* BUTTONS */
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:13px 28px;border-radius:10px;font-size:1rem;font-weight:700;font-family:var(--sans);cursor:pointer;border:none;transition:transform .16s,box-shadow .16s,background .16s;white-space:nowrap}
     .btn:hover{transform:translateY(-2px)}
-    .btn--primary{background:var(--brand);color:#fff;box-shadow:0 6px 20px rgba(47,107,79,.30)}
-    .btn--primary:hover{background:var(--brand-dark);box-shadow:0 10px 28px rgba(47,107,79,.40)}
+    .btn--primary{background:#cbbc96;color:var(--brand-dark);box-shadow:0 6px 18px rgba(120,105,70,.28)}
+    .btn--primary:hover{background:#bcab80;box-shadow:0 10px 26px rgba(120,105,70,.36)}
     .btn--gold{background:var(--accent);color:#fff;box-shadow:0 6px 20px rgba(201,138,58,.3)}
     .btn--gold:hover{background:#b0762c}
     .btn--outline{background:transparent;color:var(--brand-dark);border:2px solid var(--brand)}
@@ -64,10 +64,10 @@
     .hero__badge small{display:block;color:var(--muted);font-size:.75rem}
 
     /* TRUST STRIP */
-    .strip{background:var(--brand-dark);color:#fff;padding:22px 5%}
+    .strip{background:#e0d6bf;color:var(--brand-dark);padding:22px 5%}
     .strip__in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;font-size:.95rem;font-weight:600}
     .strip__in span{display:inline-flex;align-items:center;gap:8px}
-    .strip__in .ic{color:#cdddc4}
+    .strip__in .ic{color:var(--brand)}
     @media(max-width:640px){.strip__in{flex-direction:column;align-items:flex-start;gap:12px;width:-moz-fit-content;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}}
 
     /* SECTION */
@@ -113,15 +113,16 @@
     .pkg__price small{font-size:.8rem;color:var(--muted);font-weight:400;font-family:var(--sans)}
 
     /* REVIEWS */
-    .reviews{background:var(--brand-dark);color:#fff}
-    .reviews .sec-head h2{color:#fff}
-    .reviews .sec-head p{color:rgba(255,255,255,.8)}
+    .reviews{background:#ece3d0;color:var(--ink)}
+    .reviews .eyebrow{color:var(--brand)!important}
+    .reviews .sec-head h2{color:var(--brand-dark)}
+    .reviews .sec-head p{color:var(--muted)}
     .rev-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 22px}
-    .rev{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column}
+    .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
     .rev__stars{color:var(--star);letter-spacing:2px;margin-bottom:12px}
-    .rev__body{font-size:.96rem;line-height:1.65;color:rgba(255,255,255,.92);font-style:italic;margin-bottom:16px}
-    .rev__by{font-weight:700;font-size:.9rem;margin-top:auto}
-    .rev__src{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:2px}
+    .rev__body{font-size:.96rem;line-height:1.65;color:var(--ink);font-style:italic;margin-bottom:16px}
+    .rev__by{font-weight:700;font-size:.9rem;margin-top:auto;color:var(--brand-dark)}
+    .rev__src{font-size:.75rem;color:var(--muted);margin-top:2px}
     .reviews__foot{text-align:center;margin-top:38px}
     .reviews__foot a{color:#cdddc4;font-weight:700;border-bottom:1px solid rgba(159,217,187,.4)}
 
