@@ -36,138 +36,258 @@
 
   <!-- Structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["MedicalClinic", "LocalBusiness"],
-        "@id": "https://budapest-dietetikus.hu/#clinic",
-        "name": "Naturmed Health – Rónay Barbara dietetikus és hormontanácsadó",
-        "description": "Dietetika, funkcionális táplálkozás és hormontanácsadás Budapesten. Emésztőrendszeri panaszok, hormonális problémák, testsúlykontroll és táplálékintolerancia holisztikus kezelése.",
-        "url": "https://budapest-dietetikus.hu/",
-        "telephone": "+36209368458",
-        "email": "naturmed@ronaybarbara.hu",
-        "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
-        "priceRange": "29.000 Ft – 120.000 Ft",
-        "medicalSpecialty": "Dietetics",
-        "currenciesAccepted": "HUF",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Váli u. 5. 1. emelet 103. (az Allee oldalában)",
-          "addressLocality": "Budapest",
-          "postalCode": "1117",
-          "addressCountry": "HU"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://budapest-dietetikus.hu/#clinic",
+      "name": "Naturmed Health – Rónay Barbara dietetikus és hormontanácsadó",
+      "description": "Dietetika, funkcionális táplálkozás és hormontanácsadás Budapesten. Emésztőrendszeri panaszok, hormonális problémák, testsúlykontroll és táplálékintolerancia holisztikus kezelése.",
+      "url": "https://budapest-dietetikus.hu/",
+      "telephone": "+36209368458",
+      "email": "naturmed@ronaybarbara.hu",
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "priceRange": "29.000 Ft – 120.000 Ft",
+      "medicalSpecialty": "Dietetics",
+      "currenciesAccepted": "HUF",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Váli u. 5. 1. emelet 103. (az Allee oldalában)",
+        "addressLocality": "Budapest",
+        "postalCode": "1117",
+        "addressCountry": "HU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.4762,
+        "longitude": 19.0491
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Csömör"
+      },
+      "sameAs": [
+        "https://ronaybarbara.hu/",
+        "https://www.facebook.com/ronaybarbaranaturmedhealth",
+        "https://www.youtube.com/channel/UCGQzVMhv19NDe-GuHOX6VfA"
+      ],
+      "founder": {
+        "@id": "https://budapest-dietetikus.hu/#barbara"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Mária"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Életem egyik legjobb döntése volt, mikor először mentem el Barbarához. Egyben nézi a testet, keresi a problémát és a megoldást. A kezelések hatékonyak, a gyógymódok személyre szabottak."
         },
-        "geo": { "@type": "GeoCoordinates", "latitude": 47.4762, "longitude": 19.0491 },
-        "areaServed": { "@type": "City", "name": "Csömör" },
-        "sameAs": [
-          "https://ronaybarbara.hu/",
-          "https://www.facebook.com/ronaybarbaranaturmedhealth",
-          "https://www.youtube.com/channel/UCGQzVMhv19NDe-GuHOX6VfA"
-        ],
-        "founder": { "@id": "https://budapest-dietetikus.hu/#barbara" },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Mária" },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Életem egyik legjobb döntése volt, mikor először mentem el Barbarához. Egyben nézi a testet, keresi a problémát és a megoldást. A kezelések hatékonyak, a gyógymódok személyre szabottak."
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Mariann"
           },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Mariann" },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Emésztési panaszokkal fordultam Barbihoz. Hamar kiderítette, honnan erednek a panaszaim és hatékony megoldást javasolt. Sokkal energikusabban, egészségesebben érzem magam!"
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
           },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Évi Juhász-Szabó" },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Régóta voltak problémáim, már az első vizsgálat során kiderült, melyik hormon működik helytelenül. A javaslatokat követve egy hónap alatt rendbe jöttem és 7 kilót fogytam."
+          "reviewBody": "Emésztési panaszokkal fordultam Barbihoz. Hamar kiderítette, honnan erednek a panaszaim és hatékony megoldást javasolt. Sokkal energikusabban, egészségesebben érzem magam!"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Évi Juhász-Szabó"
           },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Kata P." },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Barbihoz több mint 13 éve járok és szívből ajánlom mindenkinek. Végtelen kedvességgel, szenvedéllyel végzi a munkáját és folyamatosan képzi magát."
-          }
-        ]
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Régóta voltak problémáim, már az első vizsgálat során kiderült, melyik hormon működik helytelenül. A javaslatokat követve egy hónap alatt rendbe jöttem és 7 kilót fogytam."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Kata P."
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Barbihoz több mint 13 éve járok és szívből ajánlom mindenkinek. Végtelen kedvességgel, szenvedéllyel végzi a munkáját és folyamatosan képzi magát."
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://budapest-dietetikus.hu/#barbara",
+      "name": "Dr. Rónay Barbara",
+      "jobTitle": "Klinikai dietetikus, funkcionális táplálkozási és hormontanácsadó",
+      "worksFor": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
       },
-      {
-        "@type": "Person",
-        "@id": "https://budapest-dietetikus.hu/#barbara",
-        "name": "Dr. Rónay Barbara",
-        "jobTitle": "Klinikai dietetikus, funkcionális táplálkozási és hormontanácsadó",
-        "worksFor": { "@id": "https://budapest-dietetikus.hu/#clinic" },
-        "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
-        "url": "https://budapest-dietetikus.hu/",
-        "alumniOf": [
-          { "@type": "CollegeOrUniversity", "name": "Semmelweis Egyetem" },
-          { "@type": "CollegeOrUniversity", "name": "Pécsi Tudományegyetem" }
-        ],
-        "knowsAbout": [
-          "Dietetika", "Funkcionális táplálkozás", "Hormontanácsadás", "Inzulinrezisztencia",
-          "Pajzsmirigy alulműködés", "Testsúlykontroll", "Táplálékintolerancia", "Holisztikus táplálkozás"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://budapest-dietetikus.hu/#website",
-        "url": "https://budapest-dietetikus.hu/",
-        "name": "Rónay Barbara – Dietetikus Budapest",
-        "inLanguage": "hu-HU",
-        "publisher": { "@id": "https://budapest-dietetikus.hu/#clinic" }
-      },
-      {
-        "@type": "OfferCatalog",
-        "name": "Terápiás programok és csomagok",
-        "itemListElement": [
-          { "@type": "Offer", "name": "START konzultáció", "price": "29000", "priceCurrency": "HUF", "url": "https://budapest-dietetikus.hu/#csomagok" },
-          { "@type": "Offer", "name": "Holisztikus dietetika – terápiás étrend beállítás", "price": "90000", "priceCurrency": "HUF", "url": "https://budapest-dietetikus.hu/#csomagok" },
-          { "@type": "Offer", "name": "Hozd magad formába kívül, belül – online csomag", "price": "120000", "priceCurrency": "HUF", "url": "https://budapest-dietetikus.hu/#csomagok" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Mennyibe kerül egy dietetikus konzultáció Budapesten?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A személyre szabott életmódváltás első lépése a START konzultáció, amelynek ára 29.000 Ft. A komplex terápiás étrend beállítás csomag 90.000 Ft. A teljes online program 120.000 Ft." }
-          },
-          {
-            "@type": "Question",
-            "name": "Hol található a rendelő?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A Naturmed Health magánrendelő Budapesten, a XI. kerületben, az Allee Bevásárlóközpontnál található (Váli utca 5.), a Móricz Zsigmond körtér közelében." }
-          },
-          {
-            "@type": "Question",
-            "name": "Milyen panaszokkal fordulhatok dietetikushoz?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Emésztőrendszeri egyensúlytalanság, táplálékintolerancia, testsúlykontroll, hormonális problémák (inzulinrezisztencia, pajzsmirigy, PCO), hajhullás és fogyás terén tudok segíteni holisztikus, funkcionális szemlélettel." }
-          },
-          {
-            "@type": "Question",
-            "name": "Van lehetőség online konzultációra?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Igen, azoknak, akik nem tudnak személyesen megjelenni, online konzultációt biztosítok terápiás étrend programmal." }
-          },
-          {
-            "@type": "Question",
-            "name": "Hogyan foglalhatok időpontot?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Időpontot online foglalhatsz a naturmed-health.salonic.hu felületen, illetve telefonon a +36 20 936 8458 számon." }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://budapest-dietetikus.hu/" },
-          { "@type": "ListItem", "position": 2, "name": "Területek", "item": "https://budapest-dietetikus.hu/dietetikus-budapest-es-kornyeke" },
-          { "@type": "ListItem", "position": 3, "name": "Csömör", "item": "https://budapest-dietetikus.hu/dietetikus-csomor" }
-        ]
+      "image": "https://budapest-dietetikus.hu/images/ronay-barbara.jpg",
+      "url": "https://budapest-dietetikus.hu/",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Semmelweis Egyetem"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Pécsi Tudományegyetem"
+        }
+      ],
+      "knowsAbout": [
+        "Dietetika",
+        "Funkcionális táplálkozás",
+        "Hormontanácsadás",
+        "Inzulinrezisztencia",
+        "Pajzsmirigy alulműködés",
+        "Testsúlykontroll",
+        "Táplálékintolerancia",
+        "Holisztikus táplálkozás"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://budapest-dietetikus.hu/#website",
+      "url": "https://budapest-dietetikus.hu/",
+      "name": "Rónay Barbara – Dietetikus Budapest",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@id": "https://budapest-dietetikus.hu/#clinic"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Terápiás programok és csomagok",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "START konzultáció",
+          "price": "29000",
+          "priceCurrency": "HUF",
+          "url": "https://budapest-dietetikus.hu/#csomagok"
+        },
+        {
+          "@type": "Offer",
+          "name": "Holisztikus dietetika – terápiás étrend beállítás",
+          "price": "90000",
+          "priceCurrency": "HUF",
+          "url": "https://budapest-dietetikus.hu/#csomagok"
+        },
+        {
+          "@type": "Offer",
+          "name": "Hozd magad formába kívül, belül – online csomag",
+          "price": "120000",
+          "priceCurrency": "HUF",
+          "url": "https://budapest-dietetikus.hu/#csomagok"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Van dietetikus Csömör környékén?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rendelőm Budapesten, a XI. kerületben, az Allee mellett (Váli u. 5.) várja a(z) Csömör környékéről érkező vendégeket. Online konzultációt is tartok, így Csömörön sem kell lemondanod a személyre szabott dietetikai terápiáról. Bejelentkezés: +36 20 936 8458."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Csömör lakóinak online is elérhető a terápia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Igen – online konzultációt és állapotfelmérést is tartok terápiás étrend programmal, így a teljes program Csömörön is elérhető. Ha személyesen jönnél, a XI. kerületi rendelőm könnyen megközelíthető."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mennyibe kerül egy dietetikus konzultáció Budapesten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A személyre szabott életmódváltás első lépése a START konzultáció, amelynek ára 29.000 Ft. A komplex terápiás étrend beállítás csomag 90.000 Ft. A teljes online program 120.000 Ft."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hol található a rendelő?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Naturmed Health magánrendelő Budapesten, a XI. kerületben, az Allee Bevásárlóközpontnál található (Váli utca 5.), a Móricz Zsigmond körtér közelében."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Milyen panaszokkal fordulhatok dietetikushoz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Emésztőrendszeri egyensúlytalanság, táplálékintolerancia, testsúlykontroll, hormonális problémák (inzulinrezisztencia, pajzsmirigy, PCO), hajhullás és fogyás terén tudok segíteni holisztikus, funkcionális szemlélettel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Van lehetőség online konzultációra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Igen, azoknak, akik nem tudnak személyesen megjelenni, online konzultációt biztosítok terápiás étrend programmal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hogyan foglalhatok időpontot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Időpontot online foglalhatsz a naturmed-health.salonic.hu felületen, illetve telefonon a +36 20 936 8458 számon."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Főoldal",
+          "item": "https://budapest-dietetikus.hu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Területek",
+          "item": "https://budapest-dietetikus.hu/dietetikus-budapest-es-kornyeke"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Csömör",
+          "item": "https://budapest-dietetikus.hu/dietetikus-csomor"
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <link rel="stylesheet" href="/styles.css?v=127" />
 </head>
@@ -522,6 +642,8 @@
     <h2>Amit érdemes tudni</h2>
   </div>
   <div class="faq__list">
+    <details class="faq__item"><summary>Van dietetikus Csömör környékén?</summary><div class="faq__a">A rendelőm Budapesten, a XI. kerületben, az Allee mellett (Váli u. 5.) várja a(z) Csömör környékéről érkező vendégeket. Online konzultációt is tartok, így Csömörön sem kell lemondanod a személyre szabott dietetikai terápiáról. Bejelentkezés: +36 20 936 8458.</div></details>
+    <details class="faq__item"><summary>Csömör lakóinak online is elérhető a terápia?</summary><div class="faq__a">Igen – online konzultációt és állapotfelmérést is tartok terápiás étrend programmal, így a teljes program Csömörön is elérhető. Ha személyesen jönnél, a XI. kerületi rendelőm könnyen megközelíthető.</div></details>
     <details class="faq__item">
       <summary>Mennyibe kerül egy dietetikus konzultáció Budapesten?</summary>
       <div class="faq__a">A személyre szabott életmódváltás első lépése a START konzultáció, amelynek ára 29.000 Ft. A komplex terápiás étrend beállítás 90.000 Ft, a teljes online program 120.000 Ft.</div>
