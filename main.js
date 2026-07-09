@@ -120,3 +120,34 @@
     });
   });
 })();
+
+(function(){
+  // Csomag CTA (Időpontot foglalok / Jelentkezem): #idopont-hoz görget + a kiválasztott csomagot beírja az űrlapba
+  var btns=document.querySelectorAll('.pkg a[href="#idopont"]');
+  if(!btns.length) return;
+  var ta=document.querySelector('textarea[name="Üzenet"]');
+  var sel=document.querySelector('select[name="Érdeklődés"]');
+  btns.forEach(function(a){
+    a.addEventListener('click',function(){
+      var card=a.closest('.pkg'); if(!card) return;
+      var h=card.querySelector('h3'); var name=h?h.textContent.trim():''; if(!name) return;
+      if(ta){
+        var line='A(z) „'+name+'” csomag érdekel.';
+        var prev=ta.getAttribute('data-pkg-auto');
+        var cur=ta.value;
+        if(prev){ cur=cur.split(prev).join('').replace(/^s+|s+$/g,''); }
+        ta.value=(cur?cur+'
+
+':'')+line;
+        ta.setAttribute('data-pkg-auto',line);
+      }
+      if(sel){
+        var want=null;
+        if(/START/i.test(name)) want=/START/i;
+        else if(/Holisztikus/i.test(name)) want=/Holisztikus/i;
+        else if(/Hozd magad/i.test(name)) want=/online/i;
+        if(want){ for(var i=0;i<sel.options.length;i++){ if(want.test(sel.options[i].text)){ sel.selectedIndex=i; break; } } }
+      }
+    });
+  });
+})();
