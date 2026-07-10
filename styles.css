@@ -420,7 +420,7 @@
     .about__stats{display:flex;gap:36px;flex-wrap:wrap;justify-content:center;text-align:center;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
     .about__stats b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--brand-dark);line-height:1}
     .about__stats span{font-size:.85rem;color:var(--muted);font-weight:600}
-    .about__stats b .rstar{font-size:1.65em;font-weight:inherit} /* a ★ nagy legyen (mint a heróban) – felülírja a .about__stats span kisebb méretét */
+    .about__stats b .rstar{font-size:1.5em;font-weight:inherit;line-height:0;vertical-align:middle} /* a ★ nagy legyen (mint a heróban) – felülírja a .about__stats span kisebb méretét */
 
     /* LEGAL (adatkezelési tájékoztató) */
     .legal{padding:56px 0 70px;background:var(--bg)}
