@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://budapest-dietetikus.hu/sitemap.xml
+Sitemap: https://www.budapest-dietetikus.hu/sitemap.xml
