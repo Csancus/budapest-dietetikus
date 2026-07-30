@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Számok – budapest-dietetikus.hu</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <style>
+    :root{--ink:#22251f;--muted:#5d6157;--line:#e3e5dd;--brand:#6b7f3a;--brand-dark:#4d5c2a;--bg:#faf9f5;--surface:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{max-width:1080px;margin:0 auto;padding:40px 5% 80px}
+    h1{font-size:clamp(1.6rem,4vw,2.1rem);margin:0 0 6px}
+    .sub{color:var(--muted);margin:0 0 28px;font-size:.95rem}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+    label{display:block;font-weight:600;margin-bottom:8px}
+    input[type=password]{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font-size:1rem;background:#fff;color:var(--ink)}
+    button{margin-top:12px;padding:11px 20px;border:0;border-radius:9px;background:var(--brand);color:#fff;font-weight:700;font-size:1rem;cursor:pointer}
+    button:hover{background:var(--brand-dark)}
+    button:disabled{opacity:.55;cursor:default}
+    .err{color:#a3352c;margin-top:12px;font-size:.93rem}
+    .tablewrap{overflow-x:auto;margin-top:8px}
+    table{border-collapse:collapse;width:100%;min-width:640px;font-variant-numeric:tabular-nums}
+    th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+    th:first-child,td:first-child{text-align:left}
+    thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);border-bottom:2px solid var(--line)}
+    tbody tr:hover{background:#f4f5ef}
+    tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:0}
+    .zero{color:#b9bdb2}
+    .legend{margin-top:22px;font-size:.88rem;color:var(--muted);line-height:1.7}
+    .legend b{color:var(--ink)}
+    .note{margin-top:26px;padding:14px 16px;background:#f1f3ea;border-radius:10px;font-size:.86rem;color:var(--muted)}
+    .hide{display:none}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Számok</h1>
+  <p class="sub">Kattintásmérés – budapest-dietetikus.hu</p>
+
+  <div class="card" id="login">
+    <label for="pw">Jelszó</label>
+    <input type="password" id="pw" autocomplete="current-password" />
+    <button id="go">Belépek</button>
+    <p class="err hide" id="err"></p>
+  </div>
+
+  <div id="out" class="hide"></div>
+</div>
+
+<script>
+(function(){
+  var pw=document.getElementById('pw'), go=document.getElementById('go'),
+      err=document.getElementById('err'), out=document.getElementById('out'),
+      login=document.getElementById('login');
+
+  var LABEL={
+    foglalas:'Online foglalás',
+    foglalas_gomb:'Foglalás gomb',
+    telefon:'Telefon',
+    form_kuldes:'Elküldöm',
+    form_siker:'Kitöltés'
+  };
+
+  function fail(m){ err.textContent=m; err.classList.remove('hide'); go.disabled=false; go.textContent='Belépek'; }
+
+  function render(r){
+    var ev=r.events, h='';
+    h+='<div class="tablewrap"><table><thead><tr><th>Dátum</th>';
+    ev.forEach(function(e){ h+='<th>'+(LABEL[e]||e)+'</th>'; });
+    h+='</tr></thead><tbody>';
+    if(!r.days.length){
+      h+='<tr><td colspan="'+(ev.length+1)+'" style="text-align:center;color:#8b8f84;padding:26px">Még nincs adat.</td></tr>';
+    }
+    r.days.forEach(function(d){
+      h+='<tr><td>'+d+'</td>';
+      ev.forEach(function(e){
+        var v=(r.data[d]&&r.data[d][e])||0;
+        h+='<td'+(v?'':' class="zero"')+'>'+v+'</td>';
+      });
+      h+='</tr>';
+    });
+    h+='</tbody><tfoot><tr><td>Összesen</td>';
+    ev.forEach(function(e){ h+='<td>'+(r.total[e]||0)+'</td>'; });
+    h+='</tr></tfoot></table></div>';
+
+    h+='<div class="legend">'
+      +'<b>Online foglalás</b> – az „Online időpontfoglalás” gomb, ami a salonic.hu-ra visz. Ez a tényleges foglalási szándék.<br>'
+      +'<b>Foglalás gomb</b> – a fejlécben és a csomagoknál lévő „Időpontfoglalás”, ami csak az űrlaphoz görget.<br>'
+      +'<b>Telefon</b> – a telefonszámra kattintás (mobilon tárcsázás).<br>'
+      +'<b>Elküldöm</b> – az űrlap elküldése gombra kattintás.<br>'
+      +'<b>Kitöltés</b> – ténylegesen kiment az üzenet. <b>Ez a „hány kitöltés”.</b> '
+      +'Az „Elküldöm” és a „Kitöltés” különbsége a lemorzsolódás.'
+      +'</div>';
+
+    h+='<div class="note">Nyers kattintásszám, nincs egyedi-látogató szűrés: ha valaki kétszer nyomja meg '
+      +'a telefonszámot, az két kattintás. Sütit és eszközön tárolt adatot nem használunk, '
+      +'IP-t nem tárolunk – csak ezeket az összesített számokat.</div>';
+
+    login.classList.add('hide');
+    out.innerHTML=h; out.classList.remove('hide');
+  }
+
+  function load(){
+    var v=pw.value.trim();
+    if(!v){ fail('Add meg a jelszót.'); return; }
+    go.disabled=true; go.textContent='Töltés…'; err.classList.add('hide');
+    fetch('/api/stats?pw='+encodeURIComponent(v))
+      .then(function(res){
+        if(res.status===401){ fail('Hibás jelszó.'); return null; }
+        if(!res.ok){ return res.json().catch(function(){return {};}).then(function(j){ fail(j.error||('Hiba: '+res.status)); return null; }); }
+        return res.json();
+      })
+      .then(function(j){ if(j) render(j); })
+      .catch(function(){ fail('Nem sikerült lekérni az adatokat.'); });
+  }
+
+  go.addEventListener('click', load);
+  pw.addEventListener('keydown', function(e){ if(e.key==='Enter') load(); });
+})();
+</script>
+</body>
+</html>

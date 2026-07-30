@@ -1,0 +1,9 @@
+{
+  "name": "budapest-dietetikus",
+  "private": true,
+  "type": "module",
+  "description": "Statikus oldal + két serverless függvény a /szamok kattintásméréshez.",
+  "dependencies": {
+    "@vercel/blob": "^2.0.0"
+  }
+}

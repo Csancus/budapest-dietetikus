@@ -2,6 +2,35 @@
 var WEB3FORMS_KEY='f3b13579-5895-4c30-960d-a4889dc949f0';
 var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@pelda.hu, harmadik@pelda.hu' */
 
+/* ---------------------------------------------------------------------------
+ * Kattintásmérés (/szamok)
+ *
+ * ADATVÉDELEM: nem tesz le sütit, nem ír localStorage/sessionStorage-ba,
+ * és semmilyen azonosítót nem küld – csak az esemény nevét. A szerver
+ * kizárólag egy napi darabszámot növel. Ezért nem sütis kérdés.
+ * ------------------------------------------------------------------------- */
+(function(){
+  window.bdTrack=function(name){
+    try{
+      var body=JSON.stringify({e:name});
+      if(navigator.sendBeacon){
+        navigator.sendBeacon('/api/track',new Blob([body],{type:'application/json'}));
+      }else{
+        fetch('/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true}).catch(function(){});
+      }
+    }catch(e){/* a mérés sose törje el az oldalt */}
+  };
+
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest?ev.target.closest('a'):null;
+    if(!a) return;
+    var href=a.getAttribute('href')||'';
+    if(href.indexOf('salonic')>-1)      bdTrack('foglalas');       // valódi foglalási szándék
+    else if(href.indexOf('tel:')===0)   bdTrack('telefon');
+    else if(href.indexOf('#idopont')>-1) bdTrack('foglalas_gomb'); // csak az űrlaphoz görget
+  },true);
+})();
+
 (function(){
   var b=document.getElementById('burger'),m=document.getElementById('menu');
   if(b&&m){
@@ -108,6 +137,7 @@ var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@peld
         if(!el.checkValidity()) bad.push(el);
       });
       if(bad.length){ bad.forEach(function(el){mark(el,msgFor(el));}); bad[0].focus(); return; }
+      if(window.bdTrack) bdTrack('form_kuldes');
       var btn0=form.querySelector('button[type=submit]');
       var orig0=btn0?btn0.innerHTML:'';
       if(btn0){ btn0.disabled=true; btn0.textContent='Küldés…'; }
@@ -128,7 +158,7 @@ var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@peld
       }
       fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload),keepalive:true})
         .then(function(r){ return r.json().catch(function(){return {success:r.ok};}); })
-        .then(function(d){ if(d&&(d.success===true||d.success==='true')) showSent(); else fail(); })
+        .then(function(d){ if(d&&(d.success===true||d.success==='true')){ if(window.bdTrack) bdTrack('form_siker'); showSent(); } else fail(); })
         .catch(fail);
     });
   });
