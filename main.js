@@ -12,7 +12,7 @@ var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@peld
 (function(){
   window.bdTrack=function(name){
     try{
-      var body=JSON.stringify({e:name});
+      var body=JSON.stringify({e:name,p:location.pathname});
       if(navigator.sendBeacon){
         navigator.sendBeacon('/api/track',new Blob([body],{type:'application/json'}));
       }else{
