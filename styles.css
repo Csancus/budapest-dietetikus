@@ -216,6 +216,11 @@
     .local strong{color:var(--ink)}
     .local h3{font-size:clamp(1.15rem,2.2vw,1.35rem);color:var(--ink);margin:26px 0 10px;font-weight:700}
 
+    /* TÁJÉKOZTATÓ KITÉTEL (blogcikkek alján) */
+    .med-note{margin-top:34px;padding:16px 18px;background:#f4f5ef;border:1px solid var(--line);
+      border-left:4px solid var(--brand);border-radius:10px;font-size:.9rem;line-height:1.65;color:var(--muted)}
+    .med-note strong{color:var(--ink)}
+
     /* KOMPAKT CSOMAGLISTA (városoldal – egyelőre csak a Vác-mintán) */
     .pkg-mini{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
     .pkg-mini__row{display:flex;align-items:center;justify-content:space-between;gap:16px;
