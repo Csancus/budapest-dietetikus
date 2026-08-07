@@ -4,7 +4,20 @@
  *
  * A jelszó a SZAMOK_PW környezeti változóból jön.
  */
-import { EVENTS, PAGES_KEY, TEST_KEY, META_KEYS, readCounters, markAsTest } from './_store.js';
+import { EVENTS, PAGES_KEY, TEST_KEY, META_KEYS, readCounters, markAsTest, today } from './_store.js';
+
+/** Hézagmentes YYYY-MM-DD lista from..to között (növekvő). Üres, ha nincs kezdőnap. */
+function fillDays(from, to) {
+  if (!from) return [];
+  const out = [];
+  const cur = new Date(from + 'T00:00:00Z');
+  const end = new Date(to + 'T00:00:00Z');
+  while (cur <= end && out.length < 3660) {   // ~10 év biztonsági plafon
+    out.push(cur.toISOString().slice(0, 10));
+    cur.setUTCDate(cur.getUTCDate() + 1);
+  }
+  return out;
+}
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
@@ -28,7 +41,11 @@ export default async function handler(req, res) {
     const testPages = test.pages || {};
     const allPages = data[PAGES_KEY] || {};
 
-    const days = Object.keys(data).filter(d => !META_KEYS.includes(d)).sort().reverse();
+    // A tárolóban csak azok a napok szerepelnek, amelyeken volt esemény.
+    // A táblázatban viszont a nullás napok is kellenek, ezért az első mért
+    // naptól MA-ig (Budapest szerint) minden naptári napot felsorolunk.
+    const recorded = Object.keys(data).filter(d => !META_KEYS.includes(d)).sort();
+    const days = fillDays(recorded[0], today()).reverse();
 
     const total = {}, testTotal = {};
     EVENTS.forEach(e => {
