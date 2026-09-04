@@ -13,7 +13,7 @@ SEO-optimalizált egyoldalas (one-pager) weboldal **Rónay Barbara** dietetikusn
    - `images/ronay-barbara.jpg` (hero + Person schema + OG)
    - `images/ronay-barbara-2.jpg` (Rólam szekció)
    Amíg nincsenek, a helyükön elegáns „RB" placeholder jelenik meg.
-3. **Kapcsolat**: tel +36 70 794 9434, cím 1117 Budapest, Váli u. 5. (Allee), foglalás: naturmed-health.salonic.hu.
+3. **Kapcsolat**: tel +36 70 794 9434, cím 1097 Budapest, Vágóhíd utca 12-16. (IX. kerület, Ferencváros), foglalás: naturmed-health.salonic.hu.
 
 ## Következő lépések
 - Almenük (aloldalak): Blog (saját cikkekkel), külön szolgáltatásoldalak, videós oldal.
