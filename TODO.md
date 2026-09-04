@@ -1,7 +1,7 @@
 # TODO – budapest-dietetikus.hu
 
-Állapot: **2026-09-04** · ág: `main` · utolsó commit: `4045656` (**lokál, NINCS pusholva**)
-Előző pusholt állapot: `ca673fc` (= `origin/main`)
+Állapot: **2026-09-04** (GBP újra-ellenőrizve) · ág: `main` · utolsó commit: **lokál, NINCS pusholva**
+Előző pusholt állapot: `ca673fc` (= `origin/main`) — az élő oldalon még ez van
 
 Ez a fájl a Google cégprofil (GBP) beállítása körüli munkamenetet rögzíti, hogy
 gépújraindítás után folytatható legyen.
@@ -21,6 +21,15 @@ A weboldal teljesen a Váli utcára épül: JSON-LD `streetAddress`, geo `47.476
 (= Allee), footer, és a 72 városoldal útbaigazítása is („Allee mélygarázsában tudsz
 parkolni", „Móricz Zsigmond körtér közelében"). A beágyazott térkép viszont a GBP-listát
 mutatja (`cid=7848903939045467291`) → a szövegben Váli, a térképen Vágóhíd.
+
+🔥 **SÚLYOSBODOTT (2026-09-04): a cégprofil most önmagával mond ellent.** A beírt GBP-leírás
+azt állítja, hogy „**Budapest XI. kerületében, az Allee mellett** fogadlak", miközben a
+profil „Vállalkozás helye" mezője **Vágóhíd utca 12-16, 1097** (IX. kerület). A látogató
+magán a profilon két különböző helyszínt lát: a térkép a Vágóhídra navigál, a szöveg az
+Allee-ba hívja. **Ez már nem várhat.**
+- Ha **Váli u. 5.** a valódi → GBP-cím átírása; a leírás jó, ahogy van.
+- Ha **Vágóhíd u. 12-16.** a valódi → a leírásból ki kell venni az „XI. kerületében, az
+  Allee mellett" részt, **és a weboldal 104 oldalát is át kell írni**.
 
 **Döntés kell:** hol fogadja valójában a pácienseket?
 
@@ -47,16 +56,31 @@ menjen a GBP-be „további telefonszám"-ként. GBP-ben nemzetközi formátum: 
 ### 1.3 Vállalkozás neve – felfüggesztés-kockázat
 
 A Google neve-szabálya: csak a valós, kint használt cégnév; kulcsszó, szlogen,
-tapasztalat-évszám tilos. Mindkét eddigi változat sérti:
+tapasztalat-évszám tilos.
 
-- `Naturmed-health magánrendelő, Rónay Barbara dietetikus, hormonterapeuta, Táplálkozási szakértő, Zsirbontó kezelések` → kulcsszóhalmozás
-- `Rónay Barbara klinikai dietetikus és hormontanácsadó - 25 év tapasztalat` → szlogen + képesítés
+**2026-09-04 állapot:** az 5-kulcsszavas változat eltűnt (ez javulás ✅), de most ez az
+**ÉLŐ** név, és továbbra is sérti a szabályt:
+
+> `Rónay Barbara klinikai dietetikus és hormontanácsadó - 25 év tapasztalat`
+
+- a `- 25 év tapasztalat` **szlogen** → kizárja a neve-szabály
+- a `klinikai` képesítés-állítás → csak akkor maradhat, ha tényleg megvan (→ 1.4)
 
 Bárki bejelentheti → nevet visszaállítják vagy **felfüggesztik a listát** (visszaszerzés
 hetek, a vélemények is veszélyben). A kulcsszó a névben **nem** ad rangsorelőnyt.
 
 **Javaslat:** `Naturmed Health – Rónay Barbara dietetikus`
 (vagy pontosan az, ami a rendelő ajtaján / a számlán szerepel).
+
+### 1.6 ⚠️ SORREND-SZABÁLY a GBP-módosításokhoz
+
+**Ne módosítsd egyszerre a nevet, a címet és a telefont.** A Google több egyidejű
+alapadat-változásra hajlamos felülvizsgálatot/felfüggesztést indítani. Egyenként,
+a jóváhagyást megvárva:
+
+1. **Cím** (a legkockázatosabb, videós verifikációt is kérhet) →
+2. **Telefon** →
+3. **Név**
 
 ### 1.4 „Klinikai dietetikus" – igaz-e?
 
@@ -89,14 +113,17 @@ Döntés + hosting-hozzáférés kell.
   a *látható* vélemény-szekció (`class="rev"`) változatlan
 - CRLF sorvégek megőrizve, minden JSON-LD blokk újra-validálva, tag-egyenleg változatlan
 
-### Google cégprofil (user oldalán, kész)
+### Google cégprofil (user oldalán — 2026-09-04-én ellenőrizve, ÉL)
 
-- Elsődleges kategória → **Dietetikus**; másodlagos: Táplálkozási szakértő,
-  Egészségközpont, Fogyasztás; **Szépségszalon törölve**
-- Leírás átírva (E/1 + tegezés, 25 év, Budapest + Allee, elírások javítva)
-- Foglalási link + UTM beállítva
-- Szolgáltatási terület: Budapest + Pest megye (rendben, fizikai címmel nem érdemes bővíteni)
-- Rövid név: `ronaybarbara` → a vélemény-link **https://g.page/ronaybarbara** működik
+- Elsődleges kategória → **Dietetikus** ✅; másodlagos: Egészségközpont,
+  Táplálkozási szakértő, Fogyasztás; **Szépségszalon törölve** ✅
+- Leírás beírva ✅ (E/1 + tegezés, 25 év, elírások javítva) — ⚠️ de a helymegjelölése
+  ütközik a profil címével, lásd 1.1
+- Mind az 5 közösségi profil él ✅ (a Google átvette; a weboldal `sameAs`-e is 6 elemű)
+- Szolgáltatási terület: Budapest + Pest megye ✅ (fizikai címmel nem érdemes bővíteni)
+- Nyitvatartás: H–P 10:00–20:00, szo/vas zárva ✅ (a weboldalon is, `4045656`)
+- Foglalási link + UTM beállítva ✅
+- Rövid név: `ronaybarbara` → a vélemény-link **https://g.page/ronaybarbara** működik ✅
 
 ---
 
@@ -128,7 +155,8 @@ A *kínált* szolgáltatások szerkesztője:
 - **Google Search**, bejelentkezve: keress rá a cégre (vagy `my business`) → felül a
   cégprofil-panel → akciógombok között **„Szolgáltatások szerkesztése"**
 - **Google Maps app**: alul „Vállalkozás" → Szolgáltatások
-- A szerkesztő **kategóriafüggő**, és a kategóriaváltás jóváhagyása után jelenik meg;
+- A szerkesztő **kategóriafüggő** — a `Dietetikus` elsődleges kategória
+  **2026-09-04-re jóváhagyva**, tehát a szerkesztőnek most már meg kell jelennie;
   a mobilappban gyakran ott van, amikor a weben nem
 - Ha egyáltalán nincs: a **Termékek** szekció a helyettesítő (kép + név + ár + leírás + link)
 
@@ -149,7 +177,12 @@ A nevek szándékosan egyeznek az aloldalak címeivel (entitás-egyezés):
 
 ### 4.2 Attribútumok felülvizsgálata
 
-- **„Ingyenes termékeket vagy szolgáltatásokat nyújt"** — ez igaz? Ha nem, vedd ki
+- 🔴 **„Ingyenes termékeket vagy szolgáltatásokat nyújt" — BE VAN JELÖLVE.**
+  (A Google a *nem* beállított attribútumokat „Nem jelenik meg, hogy…" formában írja ki;
+  ez nem úgy szerepel.) Ha Barbara nem ad ingyenes szolgáltatást, **vedd ki** — a
+  megtévesztő attribútum bejelenthető, és ingyenes-keresésekbe sorolja be.
+- **A „Van WC" attribútum eltűnt** (2026-09-03-án még ott volt a „Van nemsemleges mosdó"
+  mellett) → tedd vissza, magánrendelőnél triviálisan igaz és a Google kiírja.
 - **Parkolás**: az Allee-nál a helyes = *Fizetős parkolóház* + *Fizetős utcai parkolás*;
   díjmentes egyik sem. Ellenőrizd, hogy ne legyen ellentmondás
 - **„Női tulajdonú"** ✅ hagyd — a Google jelvényként kiírja, konverziót javít
