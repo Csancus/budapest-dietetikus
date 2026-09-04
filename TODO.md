@@ -27,15 +27,14 @@ azt állítja, hogy „**Budapest XI. kerületében, az Allee mellett** fogadlak
 profil „Vállalkozás helye" mezője **Vágóhíd utca 12-16, 1097** (IX. kerület). A látogató
 magán a profilon két különböző helyszínt lát: a térkép a Vágóhídra navigál, a szöveg az
 Allee-ba hívja. **Ez már nem várhat.**
-- Ha **Váli u. 5.** a valódi → GBP-cím átírása; a leírás jó, ahogy van.
-- Ha **Vágóhíd u. 12-16.** a valódi → a leírásból ki kell venni az „XI. kerületében, az
-  Allee mellett" részt, **és a weboldal 104 oldalát is át kell írni**.
 
-**Döntés kell:** hol fogadja valójában a pácienseket?
+**DÖNTÉS KELL: hol fogadja Barbara valójában a pácienseket?**
 
-- Ha **Váli u. 5.** → a GBP címét kell átírni (felülvizsgálat 1–3 nap, lehet videós verifikáció).
-- Ha **Vágóhíd u. 12-16.** → a 104 oldalt kell átírni (cím, geo, schema, városoldalak
-  útbaigazítása, parkolás-szöveg) → scripttel megoldható.
+- Ha **Váli u. 5. (Allee)** → a GBP címét kell átírni (felülvizsgálat 1–3 nap, videós
+  verifikációt is kérhet); a beírt GBP-leírás akkor jó, ahogy van.
+- Ha **Vágóhíd u. 12-16.** → a GBP-leírásból ki kell venni az „XI. kerületében, az Allee
+  mellett" részt, **és a weboldal 104 oldalát is át kell írni** (cím, geo, schema, a 72
+  városoldal útbaigazítása, parkolás-szöveg) → scripttel megoldható.
 - Ha **mindkettő él** → GBP-be az, ahol több a rendelés; a webre „Rendelőim" szekció
   mindkettővel; hosszabb távon 2 külön GBP-lista + 2 külön aloldal.
 
@@ -72,16 +71,6 @@ hetek, a vélemények is veszélyben). A kulcsszó a névben **nem** ad rangsore
 **Javaslat:** `Naturmed Health – Rónay Barbara dietetikus`
 (vagy pontosan az, ami a rendelő ajtaján / a számlán szerepel).
 
-### 1.6 ⚠️ SORREND-SZABÁLY a GBP-módosításokhoz
-
-**Ne módosítsd egyszerre a nevet, a címet és a telefont.** A Google több egyidejű
-alapadat-változásra hajlamos felülvizsgálatot/felfüggesztést indítani. Egyenként,
-a jóváhagyást megvárva:
-
-1. **Cím** (a legkockázatosabb, videós verifikációt is kérhet) →
-2. **Telefon** →
-3. **Név**
-
 ### 1.4 „Klinikai dietetikus" – igaz-e?
 
 Megvan-e a klinikai dietetikus képesítés? Ha nem, ki kell venni:
@@ -95,6 +84,16 @@ Megvan-e a klinikai dietetikus képesítés? Ha nem, ki kell venni:
 Mind a 104 oldal hivatkozik rá (`sameAs` + footer). Két weboldal ugyanarra a
 vállalkozásra megosztja a jeleket. Ha az a régi oldal → **301 átirányítás** ide a legjobb.
 Döntés + hosting-hozzáférés kell.
+
+### 1.6 ⚠️ SORREND-SZABÁLY a GBP-módosításokhoz
+
+**Ne módosítsd egyszerre a nevet, a címet és a telefont.** A Google több egyidejű
+alapadat-változásra hajlamos felülvizsgálatot/felfüggesztést indítani. Egyenként,
+a jóváhagyást megvárva:
+
+1. **Cím** (a legkockázatosabb, videós verifikációt is kérhet) →
+2. **Telefon** →
+3. **Név**
 
 ---
 
