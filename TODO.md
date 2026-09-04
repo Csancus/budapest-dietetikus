@@ -1,163 +1,115 @@
 # TODO – budapest-dietetikus.hu
 
-Állapot: **2026-09-04** (GBP újra-ellenőrizve) · ág: `main` · utolsó commit: **lokál, NINCS pusholva**
-Előző pusholt állapot: `ca673fc` (= `origin/main`) — az élő oldalon még ez van
-
-Ez a fájl a Google cégprofil (GBP) beállítása körüli munkamenetet rögzíti, hogy
-gépújraindítás után folytatható legyen.
+Állapot: **2026-09-04** · ág: `main` · pusholt: `05b00a1` · lokál: `9a69ee3` (NAP-szinkron, **még nincs pusholva**)
 
 ---
 
-## 1. Döntésre vár (ezek blokkolnak mindent) 🔴
+## 1. Döntések – MEGVANNAK ✅
 
-### 1.1 Cím-ütközés
-
-| Hol | Érték |
+| Kérdés | Döntés (2026-09-04) |
 |---|---|
-| Google cégprofil | Budapest, **Vágóhíd utca 12-16, 1097** (IX. kerület) |
-| Weboldal (mind a 104 oldal) | **Váli u. 5. 1. em. 103. (az Allee oldalában), 1117** (XI. kerület) |
+| Cím | **Vágóhíd utca 12-16., 1097 Budapest** (IX. ker., Ferencváros) — a GBP címe marad, a **weboldal** lett hozzáigazítva |
+| Telefon | **+36 70 794 9434** (a GBP száma) — a weboldal lett átírva; a 20-as mehet a GBP-be „további telefonszám"-ként |
+| „Klinikai dietetikus" | **megvan a képesítés** → marad a schemában és a szövegekben |
 
-A weboldal teljesen a Váli utcára épül: JSON-LD `streetAddress`, geo `47.4762 / 19.0491`
-(= Allee), footer, és a 72 városoldal útbaigazítása is („Allee mélygarázsában tudsz
-parkolni", „Móricz Zsigmond körtér közelében"). A beágyazott térkép viszont a GBP-listát
-mutatja (`cid=7848903939045467291`) → a szövegben Váli, a térképen Vágóhíd.
+### 1.1 Nyitva maradt: cégnév 🔴
 
-🔥 **SÚLYOSBODOTT (2026-09-04): a cégprofil most önmagával mond ellent.** A beírt GBP-leírás
-azt állítja, hogy „**Budapest XI. kerületében, az Allee mellett** fogadlak", miközben a
-profil „Vállalkozás helye" mezője **Vágóhíd utca 12-16, 1097** (IX. kerület). A látogató
-magán a profilon két különböző helyszínt lát: a térkép a Vágóhídra navigál, a szöveg az
-Allee-ba hívja. **Ez már nem várhat.**
+A Google **elutasította** a névmódosítást („A vállalkozás identitása megváltozott"), mert a
+beadott név *átrendezte* a nevet és új blokkot tett bele.
 
-**DÖNTÉS KELL: hol fogadja Barbara valójában a pácienseket?**
+Élő név: `Naturmed-health magánrendelő, Rónay Barbara dietetikus, hormonterapeuta, Táplálkozási szakértő, Zsirbontó kezelések`
 
-- Ha **Váli u. 5. (Allee)** → a GBP címét kell átírni (felülvizsgálat 1–3 nap, videós
-  verifikációt is kérhet); a beírt GBP-leírás akkor jó, ahogy van.
-- Ha **Vágóhíd u. 12-16.** → a GBP-leírásból ki kell venni az „XI. kerületében, az Allee
-  mellett" részt, **és a weboldal 104 oldalát is át kell írni** (cím, geo, schema, a 72
-  városoldal útbaigazítása, parkolás-szöveg) → scripttel megoldható.
-- Ha **mindkettő él** → GBP-be az, ahol több a rendelés; a webre „Rendelőim" szekció
-  mindkettővel; hosszabb távon 2 külön GBP-lista + 2 külön aloldal.
+**Módszer: csak törölni szabad, változtatni nem.** Az elejét karakterre pontosan hagyd meg:
 
-### 1.2 Telefonszám-ütközés
+```
+Naturmed-health magánrendelő, Rónay Barbara dietetikus
+```
 
-| Hol | Érték |
-|---|---|
-| Google cégprofil | **06 70 794 9434** |
-| Weboldal (fejléc, 72 városoldal, schema) | **+36 20 936 8458** |
-| **README „Teendők élesítés előtt"** (eredeti brief) | **+36 70 794 9434** + Váli u. 5. |
+- ne írd át `Naturmed Health`-re (nagybetű/kötőjel = módosítás, nem törlés)
+- ne told előre a „Rónay Barbara"-t, ne tegyél bele újat
+- ne fellebbezz az elutasított néven — add be újra a rövidebbet
+- ha átment és megült (2–4 hét), jöhet egy második apró lépés: `Naturmed Health – Rónay Barbara dietetikus`
 
-⚠️ A README az eredeti briefben a **70-es** számot rendeli a Váli utcai rendelőhöz →
-elképzelhető, hogy a weboldalra került 20-as szám a hibás. **Meg kell kérdezni Barbarát.**
+### 1.2 Nyitva maradt: ronaybarbara.hu
 
-A kiválasztott szám legyen mindenhol az elsődleges (GBP + web + schema), a másik
-menjen a GBP-be „további telefonszám"-ként. GBP-ben nemzetközi formátum: `+36 70 794 9434`.
-
-### 1.3 Vállalkozás neve – felfüggesztés-kockázat
-
-A Google neve-szabálya: csak a valós, kint használt cégnév; kulcsszó, szlogen,
-tapasztalat-évszám tilos.
-
-**2026-09-04 állapot:** az 5-kulcsszavas változat eltűnt (ez javulás ✅), de most ez az
-**ÉLŐ** név, és továbbra is sérti a szabályt:
-
-> `Rónay Barbara klinikai dietetikus és hormontanácsadó - 25 év tapasztalat`
-
-- a `- 25 év tapasztalat` **szlogen** → kizárja a neve-szabály
-- a `klinikai` képesítés-állítás → csak akkor maradhat, ha tényleg megvan (→ 1.4)
-
-Bárki bejelentheti → nevet visszaállítják vagy **felfüggesztik a listát** (visszaszerzés
-hetek, a vélemények is veszélyben). A kulcsszó a névben **nem** ad rangsorelőnyt.
-
-**Javaslat:** `Naturmed Health – Rónay Barbara dietetikus`
-(vagy pontosan az, ami a rendelő ajtaján / a számlán szerepel).
-
-### 1.4 „Klinikai dietetikus" – igaz-e?
-
-Megvan-e a klinikai dietetikus képesítés? Ha nem, ki kell venni:
-
-- GBP névből/leírásból
-- **a weboldal schemájából is**: `Person.jobTitle` = „Klinikai dietetikus, funkcionális
-  táplálkozási és hormontanácsadó" (104 fájl)
-
-### 1.5 ronaybarbara.hu
-
-Mind a 104 oldal hivatkozik rá (`sameAs` + footer). Két weboldal ugyanarra a
-vállalkozásra megosztja a jeleket. Ha az a régi oldal → **301 átirányítás** ide a legjobb.
-Döntés + hosting-hozzáférés kell.
-
-### 1.6 ⚠️ SORREND-SZABÁLY a GBP-módosításokhoz
-
-**Ne módosítsd egyszerre a nevet, a címet és a telefont.** A Google több egyidejű
-alapadat-változásra hajlamos felülvizsgálatot/felfüggesztést indítani. Egyenként,
-a jóváhagyást megvárva:
-
-1. **Cím** (a legkockázatosabb, videós verifikációt is kérhet) →
-2. **Telefon** →
-3. **Név**
+Mind a 105 oldal hivatkozik rá (`sameAs` + footer). Két weboldal ugyanarra a vállalkozásra
+megosztja a jeleket. Ha az a régi oldal → **301 átirányítás** ide. Döntés + hosting-hozzáférés kell.
 
 ---
 
-## 2. Kész ebben a munkamenetben ✅
+## 2. Kész ✅
 
-### Weboldal (commit `4045656`, 104 fájl, lokál)
+### 2.1 Űrlap-fallback (commit `05b00a1`, **pusholva + élő**)
 
-- `openingHoursSpecification` a `MedicalClinic`/`LocalBusiness` (`#clinic`) node-ba:
-  H–P 10:00–20:00, szo/vas zárva (a GBP-vel egyezően) — eddig **egy fájlban sem volt**
-- `hasMap` → `https://www.google.com/maps?cid=7848903939045467291`
-- `sameAs` 3 → **6**: + Instagram, LinkedIn, TikTok
-- Látható nyitvatartás: új sor a kapcsolat-listában (óra-ikon) + a footer Kapcsolat oszlopában
-- Footer: Instagram / TikTok / LinkedIn linkek a Facebook + YouTube mellé
-- **Self-serving `review[]` + `aggregateRating` (4.5 / 22) eltávolítva 73 oldalról**
-  (a Google 2019 óta ignorálja/szankcionálja a saját oldalon beírt véleményjelölést);
-  a *látható* vélemény-szekció (`class="rev"`) változatlan
-- CRLF sorvégek megőrizve, minden JSON-LD blokk újra-validálva, tag-egyenleg változatlan
+Mind a 104 űrlap `action`-je a 2026-07-15-én leállt `formsubmit.co`-ra ment; JS nélkül minden
+beküldés elveszett.
 
-### Google cégprofil (user oldalán — 2026-09-04-én ellenőrizve, ÉL)
+- `action` → `https://api.web3forms.com/submit`, rejtett `access_key` + `subject` + `from_name` + `redirect`
+- honeypot `_honey` → `botcheck` (a Web3Forms saját mezőneve, szerveroldalon is szűr)
+- új **`/koszonom`** oldal (noindex) a JS nélküli beküldés landolásához
+- `main.js`: a `redirect` nem kerül az AJAX payloadba; `main.js?v=30 → v=31` mind a 105 HTML-ben
+- adatkezelési tájékoztató: adatfeldolgozó FormSubmit → Web3Forms
 
-- Elsődleges kategória → **Dietetikus** ✅; másodlagos: Egészségközpont,
-  Táplálkozási szakértő, Fogyasztás; **Szépségszalon törölve** ✅
-- Leírás beírva ✅ (E/1 + tegezés, 25 év, elírások javítva) — ⚠️ de a helymegjelölése
-  ütközik a profil címével, lásd 1.1
-- Mind az 5 közösségi profil él ✅ (a Google átvette; a weboldal `sameAs`-e is 6 elemű)
-- Szolgáltatási terület: Budapest + Pest megye ✅ (fizikai címmel nem érdemes bővíteni)
-- Nyitvatartás: H–P 10:00–20:00, szo/vas zárva ✅ (a weboldalon is, `4045656`)
-- Foglalási link + UTM beállítva ✅
-- Rövid név: `ronaybarbara` → a vélemény-link **https://g.page/ronaybarbara** működik ✅
+### 2.2 NAP-szinkron (commit `9a69ee3`, **lokál, nincs pusholva**)
+
+- schema `streetAddress` / `postalCode` `1097` + geo **47.47176 / 19.07559** (a házszámra geokódolva)
+  + `geo.position` / `ICBM` meta — 105 fájl
+- telefon `+36 20 936 8458` → **`+36 70 794 9434`** (1271 előfordulás: látható, `tel:`, schema)
+- látható cím a kapcsolat-listában, a footerben és a jogi oldalon
+- **72 városoldal útbaigazítása újraírva**: az új végpont a **Közvágóhíd** (H6 HÉV végállomás +
+  2-es villamos, pár perc séta); a fővárosi útvonalak Fővám tér / Boráros tér átszállással;
+  a „Petőfi hídon Budára" autós útvonalak a pesti oldalra javítva; Allee mélygarázs →
+  fizetős utcai parkolás
+- kerületi oldalak: a **XI. (Újbuda) már nem a rendelő helye**, a **IX. igen** — a szöveg átírva
+- **távolságok újraszámolva** városonként (geokódolt légvonal-delta): 40 helyen változott
+- README kapcsolati adatok
+- ellenőrizve: 105/105 JSON-LD blokk parse-olható, **0 régi NAP-előfordulás**, tag-egyensúly változatlan
+- a beágyazott térkép (`cid=7848903939045467291`) eddig is a Vágóhíd utcát mutatta → most a szöveg is egyezik
+
+### 2.3 Korábbi GBP-szinkron (commit `4045656`)
+
+`openingHoursSpecification` (H–P 10–20), `hasMap`, `sameAs` 3→6, látható nyitvatartás,
+footer közösségi linkek, a self-serving `review[]` + `aggregateRating` kivezetve 73 oldalról.
 
 ---
 
-## 3. Következő lépések – weboldal (Claude csinálja, szólásra) 🛠️
+## 3. Következő lépések – weboldal 🛠️
 
-1. **Halott form-fallback javítása** (független a fenti döntésektől, mehet azonnal)
-   Mind a **101** űrlap `action`-je `https://formsubmit.co/csanad.peter.czarth@gmail.com`,
-   pedig a **FormSubmit 2026-07-15-én leállt**. A `main.js` elfogja a küldést és
-   Web3Forms-ra megy (`WEB3FORMS_KEY` a `main.js` tetején), tehát normál esetben működik —
-   de ha a JS nem fut le, a beküldés a semmibe megy.
-   → `action` átírása `https://api.web3forms.com/submit`-re + rejtett `access_key` mező,
-   hogy JS nélkül is átmenjen.
+1. **`9a69ee3` pusholása** → Vercel deploy (a NAP-váltás csak utána él)
 2. **Márkanév egységesítése** → `Naturmed Health`
-   Jelenleg 4-féleképp: `Naturmed Health` (1058×), `Naturmed-health` (77×),
-   `naturmed-health` (666×), `naturmedhealth` (176×)
-3. **`jobTitle` javítása**, ha nincs klinikai dietetikus képesítés (→ 1.4)
-4. **NAP-javítás** az 1.1 / 1.2 döntés szerint (cím és/vagy telefon a 104 oldalon)
-5. Foglalási linkek UTM-esítése az oldalon is, hogy a `/szamok` mérni tudja a GBP-forgalmat
+   Jelenleg 4-féleképp: `Naturmed Health`, `Naturmed-health`, `naturmed-health`, `naturmedhealth`
+   (URL-eket és fájlneveket nem szabad bántani)
+3. Foglalási linkek UTM-esítése az oldalon is, hogy a `/szamok` mérni tudja a GBP-forgalmat
+4. **GSC**: a NAP-váltás után érdemes újra beküldeni a sitemapet; a videó-riportban
+   „Érvényesítés kérése" a `/media/*` watch page-ekre, ha még nem történt meg
 
 ---
 
 ## 4. Következő lépések – Google cégprofil (user csinálja) 📋
 
-### 4.1 Szolgáltatások felvitele (a legnagyobb kihasználatlan lehetőség)
+### 4.0 SÜRGŐS: a leírás helymegjelölése
+
+A GBP-leírás azt állítja, hogy „**Budapest XI. kerületében, az Allee mellett** fogadlak",
+miközben a profil címe **Vágóhíd utca 12-16., 1097** (IX. kerület). **Ki kell venni**
+az „XI. kerületében, az Allee mellett" részt — a weboldal már a IX. kerületre íródott át.
+
+### 4.1 Név (lásd 1.1) — csak törléses módosítás
+
+### 4.2 Telefon
+
+A 70-es szám az elsődleges (a weboldal + schema is ezt írja). A 20-as mehet be
+„további telefonszám"-ként.
+
+### 4.3 Szolgáltatások felvitele (a legnagyobb kihasználatlan lehetőség)
 
 ⚠️ Nem az attribútumok „Szolgáltatások" alszekciója (mosdó/WC) — az felszereltség.
 A *kínált* szolgáltatások szerkesztője:
 
-- **Google Search**, bejelentkezve: keress rá a cégre (vagy `my business`) → felül a
-  cégprofil-panel → akciógombok között **„Szolgáltatások szerkesztése"**
+- **Google Search**, bejelentkezve: keress rá a cégre (vagy `my business`) → cégprofil-panel →
+  **„Szolgáltatások szerkesztése"**
 - **Google Maps app**: alul „Vállalkozás" → Szolgáltatások
-- A szerkesztő **kategóriafüggő** — a `Dietetikus` elsődleges kategória
-  **2026-09-04-re jóváhagyva**, tehát a szerkesztőnek most már meg kell jelennie;
-  a mobilappban gyakran ott van, amikor a weben nem
-- Ha egyáltalán nincs: a **Termékek** szekció a helyettesítő (kép + név + ár + leírás + link)
+- A szerkesztő kategóriafüggő; a `Dietetikus` elsődleges kategória jóvá van hagyva
+- Ha egyáltalán nincs: a **Termékek** szekció a helyettesítő
 
 A nevek szándékosan egyeznek az aloldalak címeivel (entitás-egyezés):
 
@@ -174,33 +126,26 @@ A nevek szándékosan egyeznek az aloldalak címeivel (entitás-egyezés):
 | Zsírbontó kezelések | Készülékes zsírbontás étrendi és hormonális háttérrendezéssel kombinálva. |
 | Online konzultáció | Ugyanaz a teljes program, videóhívásban, bárhonnan. |
 
-### 4.2 Attribútumok felülvizsgálata
+### 4.4 Attribútumok felülvizsgálata
 
 - 🔴 **„Ingyenes termékeket vagy szolgáltatásokat nyújt" — BE VAN JELÖLVE.**
-  (A Google a *nem* beállított attribútumokat „Nem jelenik meg, hogy…" formában írja ki;
-  ez nem úgy szerepel.) Ha Barbara nem ad ingyenes szolgáltatást, **vedd ki** — a
-  megtévesztő attribútum bejelenthető, és ingyenes-keresésekbe sorolja be.
-- **A „Van WC" attribútum eltűnt** (2026-09-03-án még ott volt a „Van nemsemleges mosdó"
-  mellett) → tedd vissza, magánrendelőnél triviálisan igaz és a Google kiírja.
-- **Parkolás**: az Allee-nál a helyes = *Fizetős parkolóház* + *Fizetős utcai parkolás*;
-  díjmentes egyik sem. Ellenőrizd, hogy ne legyen ellentmondás
-- **„Női tulajdonú"** ✅ hagyd — a Google jelvényként kiírja, konverziót javít
-- **Megnyitás ideje: 1999** = 27 év, miközben mindenhol 25 évet írunk →
-  a „több mint 25 év" mindkettőt lefedi, de legyen egységes
+  Ha Barbara nem ad ingyenes szolgáltatást, **vedd ki**.
+- **„Van WC"** eltűnt → tedd vissza.
+- **Parkolás**: a Vágóhíd utcánál a helyes = *Fizetős utcai parkolás* (az Allee-s parkolóház
+  már nem releváns) — a weboldal is így írja
+- **„Női tulajdonú"** ✅ hagyd
+- **Megnyitás ideje: 1999** = 27 év, miközben mindenhol 25 évet írunk → a „több mint 25 év"
+  mindkettőt lefedi, de legyen egységes
 
-### 4.3 Folyamatos (hatás szerint sorban)
+### 4.5 Folyamatos (hatás szerint sorban)
 
 1. **Vélemények** — a kategória után a második legerősebb rangsortényező.
-   Link: **https://g.page/ronaybarbara** → tedd a Web3Forms köszönő-üzenetbe,
-   e-mail aláírásba, QR-kóddal a rendelőbe. Válaszolj **minden** véleményre.
-2. **Fotók** — min. 10–15: bejárat kívülről, váró, rendelő, portré, BODY SHAPE mérés,
-   logó a logó-slotba, borítókép. A rendszeres feltöltés önmagában is jel.
-3. **Kérdések és válaszok** — a saját GYIK 5 kérdését te magad kérdezd fel és
-   válaszold meg (tulajdonosi Q&A engedélyezett, megjelenik a profilon).
+   Link: **https://g.page/ronaybarbara** → tedd a Web3Forms köszönő-üzenetbe és a `/koszonom`
+   oldalra, e-mail aláírásba, QR-kóddal a rendelőbe. Válaszolj **minden** véleményre.
+2. **Fotók** — min. 10–15: bejárat kívülről, váró, rendelő, portré, BODY SHAPE mérés, logó, borítókép.
+3. **Kérdések és válaszok** — a saját GYIK 5 kérdését te magad kérdezd fel és válaszold meg.
 4. **Bejegyzések** — hetente 1, a 12 blogcikkből, közvetlen linkkel a cikkre.
 5. **Videók** — a 3 média-megjelenés (Trendmánia, Beauty Fórum, Belfóra) mehet a profilra is.
-6. **GSC**: a videó-riportban „Érvényesítés kérése" (a `/media/*` watch page-ek után),
-   ha még nem történt meg.
 
 ---
 
@@ -210,10 +155,13 @@ A nevek szándékosan egyeznek az aloldalak címeivel (entitás-egyezés):
   (`vercel.json` **kell**, nélküle minden URL 404)
 - **Minden HTML fájl CRLF sorvégű** → tömeges string-cseréhez CRLF-aware script kell
   (LF-re normalizál → csere → CRLF-fel visszaír)
-- CSS/JS módosítás után `?v=N` bump kell **mind a 104 HTML fájlban** (cache-bust)
+- CSS/JS módosítás után `?v=N` bump kell **mind a 105 HTML fájlban** (cache-bust)
+- A `#clinic` JSON-LD node `@type`-ja **tömb** (`["MedicalClinic","LocalBusiness"]`) → a
+  `"@type": "..."` grep nem találja meg
 - Foglalórendszer: `naturmed-health.salonic.hu`
 - Saját statisztika: `/szamok` (jelszóvédett, `noindex`) — `api/track.js` + `api/stats.js`
-- Web3Forms anti-bot **403-mal blokkolja a headless böngészőt/curl-t** → az űrlap CSAK
-  valódi (headful) böngészőből tesztelhető
+- Űrlap: **Web3Forms** (`WEB3FORMS_KEY` a `main.js` tetején + rejtett `access_key` az űrlapokban).
+  Az anti-bot **403-mal blokkolja a headless böngészőt/curl-t** → CSAK valódi (headful)
+  böngészőből tesztelhető
 - ⚠️ Régebben előfordult, hogy **párhuzamosan futó másik Claude-session újragenerálta a
   városoldalakat** és letörölte a módosításokat → tömeges városoldal-editet azonnal commitolj
