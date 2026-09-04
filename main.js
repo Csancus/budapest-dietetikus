@@ -145,7 +145,7 @@ var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@peld
       var payload={ access_key: WEB3FORMS_KEY, subject: 'Új megkeresés – budapest-dietetikus.hu', from_name: 'budapest-dietetikus.hu' };
       if(WEB3FORMS_CC) payload.cc = WEB3FORMS_CC;
       form.querySelectorAll('input,select,textarea').forEach(function(el){
-        if(!el.name||el.name==='_honey'||el.name.charAt(0)==='_') return; // FormSubmit _mezők kihagyva
+        if(!el.name||el.name==='redirect'||el.name.charAt(0)==='_') return; // a redirect csak a JS nélküli fallbackhez kell
         if(el.type==='checkbox'){ payload[el.name]=el.checked?(el.value||'Igen'):''; }
         else payload[el.name]=el.value;
       });

@@ -181,7 +181,7 @@
     <p>A célja az Ön megkeresésére való válaszadás, kapcsolatfelvétel és időpont-egyeztetés. Az adatkezelés jogalapja az Ön <strong>önkéntes hozzájárulása</strong> (GDPR 6. cikk (1) bekezdés a) pont), amelyet az űrlapon található jelölőnégyzet bepipálásával ad meg.</p>
 
     <h2>4. Adatfeldolgozó, adattovábbítás</h2>
-    <p>Az űrlapon megadott adatokat a <strong>FormSubmit</strong> (formsubmit.co) szolgáltatás továbbítja e-mail formájában az adatkezelő postafiókjába. A FormSubmit ehhez az adatokat technikailag feldolgozza; adatait harmadik félnek marketing célból nem adom át, és nem értékesítem.</p>
+    <p>Az űrlapon megadott adatokat a <strong>Web3Forms</strong> (web3forms.com) szolgáltatás továbbítja e-mail formájában az adatkezelő postafiókjába. A Web3Forms ehhez az adatokat technikailag feldolgozza; adatait harmadik félnek marketing célból nem adom át, és nem értékesítem.</p>
 
     <h2>5. Az adatok tárolásának ideje</h2>
     <p>Az adatokat a megkeresés megválaszolásához, illetve az esetleges ellátási kapcsolat fennállásáig, de legfeljebb a hozzájárulás visszavonásáig kezelem. A visszavonás után adatait törlöm, kivéve, ha jogszabály (pl. egészségügyi vagy számviteli előírás) a megőrzést előírja.</p>
@@ -217,11 +217,12 @@
     </div>
     <div class="form-card">
       <h3>Írjon nekem</h3>
-      <form action="https://formsubmit.co/csanad.peter.czarth@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Új megkeresés – budapest-dietetikus.hu">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f3b13579-5895-4c30-960d-a4889dc949f0">
+        <input type="hidden" name="subject" value="Új megkeresés – budapest-dietetikus.hu">
+        <input type="hidden" name="from_name" value="budapest-dietetikus.hu">
+        <input type="hidden" name="redirect" value="https://www.budapest-dietetikus.hu/koszonom">
+        <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="f-row">
           <label>Neve *<input type="text" name="Név" required></label>
           <label>E-mail *<input type="email" name="Email" required></label>
@@ -304,6 +305,6 @@
     <p class="footer__copy">&copy; 2001–2026 Rónay Barbara · Naturmed Health. Minden jog fenntartva. · <a href="/adatkezelesi-tajekoztato" style="color:rgba(255,255,255,.6)">Adatkezelési tájékoztató</a></p>
   </div>
 </footer>
-<script src="/main.js?v=30" defer></script>
+<script src="/main.js?v=31" defer></script>
 </body>
 </html>

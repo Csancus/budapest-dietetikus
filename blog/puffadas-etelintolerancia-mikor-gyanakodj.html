@@ -403,11 +403,12 @@
     </div>
     <div class="form-card">
       <h3>Írj nekem</h3>
-      <form action="https://formsubmit.co/csanad.peter.czarth@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Új megkeresés – budapest-dietetikus.hu">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f3b13579-5895-4c30-960d-a4889dc949f0">
+        <input type="hidden" name="subject" value="Új megkeresés – budapest-dietetikus.hu">
+        <input type="hidden" name="from_name" value="budapest-dietetikus.hu">
+        <input type="hidden" name="redirect" value="https://www.budapest-dietetikus.hu/koszonom">
+        <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="f-row">
           <label>Neved *<input type="text" name="Név" required></label>
           <label>E-mail *<input type="email" name="Email" required></label>
@@ -492,6 +493,6 @@
     <p class="footer__copy">&copy; 2001–2026 Rónay Barbara · Naturmed Health. Minden jog fenntartva. · <a href="/adatkezelesi-tajekoztato" style="color:rgba(255,255,255,.6)">Adatkezelési tájékoztató</a></p>
   </div>
 </footer>
-<script src="/main.js?v=30" defer></script>
+<script src="/main.js?v=31" defer></script>
 </body>
 </html>
