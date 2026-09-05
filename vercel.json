@@ -34,6 +34,16 @@
       "source": "/blog/mellekvese-kimerultseg-tunetei-etrend",
       "destination": "/blog/tartos-faradtsag-etrend-vercukor",
       "permanent": true
+    },
+    {
+      "source": "/blog/magas-vernyomas-csokkentese-etrenddel",
+      "destination": "/magas-vernyomas",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ki-az-a-dietetikus",
+      "destination": "/blog/ki-a-dietetikus",
+      "permanent": true
     }
   ]
 }
