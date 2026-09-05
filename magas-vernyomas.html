@@ -21,7 +21,7 @@
   <meta property="og:image" content="https://www.budapest-dietetikus.hu/images/blog/magas-vernyomas-csokkentese-etrend.webp" />
   <meta name="geo.region" content="HU-BU" />
   <meta name="geo.placename" content="Budapest" />
-  <link rel="stylesheet" href="/styles.css?v=159" />
+  <link rel="stylesheet" href="/styles.css?v=160" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -225,7 +225,8 @@
     .toc__list a{color:var(--brand-dark,#1f4a37);text-decoration:none}
     .toc__list a:hover{text-decoration:underline}
     .fig{margin:26px 0;padding:0}
-    .fig img{display:block;width:100%;height:auto;border-radius:14px}
+    .fig img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 30%;border-radius:14px}
+    @media(max-width:640px){.fig img{aspect-ratio:16/9}}
     .fig figcaption{margin-top:10px;font-size:.9rem;color:var(--muted,#6b7280);text-align:center;line-height:1.5}
     .tblwrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line,#e2e4d8);border-radius:12px}
     .tbl{border-collapse:collapse;width:100%;min-width:460px;font-size:.95rem}
@@ -253,6 +254,11 @@
     .conv ul{margin:0 0 16px;padding-left:1.15em}
     .conv li{margin:.3em 0}
     .prose h2{scroll-margin-top:92px}
+    .midcta{margin:34px 0;padding:20px 24px;background:#fff;border:1px solid var(--line,#e2e4d8);border-left:4px solid var(--brand,#64704a);border-radius:12px}
+    .midcta__t{margin:0 0 14px;font-weight:700;color:var(--brand-dark,#1f4a37);font-size:1.03rem;line-height:1.4}
+    .midcta__b{display:flex;gap:10px;flex-wrap:wrap}
+    .midcta__b .btn{margin:0}
+    @media(max-width:520px){.midcta__b .btn{width:100%;text-align:center;justify-content:center}}
   </style>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Magas vérnyomás – amit a táplálkozásról tudnod kell | Rónay Barbara" />
@@ -334,7 +340,14 @@
 </table>
 </div>
 <p class="tblnote">A besorolás tájékoztató jellegű. A diagnózist minden esetben orvos állítja fel, több alkalommal, több mérés átlaga alapján – egyetlen magas érték önmagában még nem jelent magas vérnyomást.</p>
-<p>Ha a felső és az alsó érték különböző kategóriába esik, mindig a <em>magasabb</em> kategória számít. Részletesen a <a href="/mennyi-a-magas-vernyomas">mennyi a magas vérnyomás</a> oldalon írok az értékekről és a helyes mérésről, külön pedig arról, <a href="/vernyomas-also-ertek-magas">mit jelent, ha csak az alsó érték magas</a>.</p>
+<p>Ha a felső és az alsó érték különböző kategóriába esik, mindig a <em>magasabb</em> kategória számít. Részletesen a <a href="/magas-vernyomas/mennyi-szamit-magasnak">mennyi a magas vérnyomás</a> oldalon írok az értékekről és a helyes mérésről, külön pedig arról, <a href="/magas-vernyomas/also-ertek-magas">mit jelent, ha csak az alsó érték magas</a>.</p>
+<div class="midcta">
+  <p class="midcta__t">Foglalj időpontot, és nézzük meg együtt a te helyzetedet.</p>
+  <div class="midcta__b">
+    <a href="#idopont" class="btn btn--primary">Foglalj időpontot konzultációra</a>
+    <a href="/arak#arak" target="_blank" rel="noopener" class="btn btn--outline">Kezdd a Start csomaggal (29.000 Ft)</a>
+  </div>
+</div>
 <h2 id="miert-szamit-ennyit-az-etrend">Miért számít ennyit az étrend?</h2>
 <p>Mert a magas vérnyomás hátterében álló tényezők jelentős része táplálkozási eredetű. A sóbevitel, a testsúly, a kálium- és magnéziumellátottság, az alkohol, a vércukor-ingadozás és az inzulinrezisztencia mind közvetlenül befolyásolja a vérnyomást.</p>
 <p>Ez nem azt jelenti, hogy az étrend helyettesíti a gyógyszert. Azt jelenti, hogy az étrenddel elért csökkenés <strong>hozzáadódik</strong> a gyógyszeres kezelés hatásához – és nem ritka, hogy az orvos emiatt tudja később alacsonyabb dózisra állítani a beteget. Ezt a döntést mindig ő hozza meg, de a feltételeket az étrend teremti meg.</p>
@@ -342,15 +355,22 @@
 <p>A gyakorlatban ezek hozzák a legtöbbet – nagyjából ebben a sorrendben:</p>
 <ol>
 <li><strong>Sómegvonás.</strong> A magyar átlagos sóbevitel a többszöröse az ajánlottnak, és ennek a nagy része nem a sótartóból jön, hanem kenyérből, felvágottakból, sajtokból, készételekből, levesporokból.</li>
-<li><strong>Kálium növelése.</strong> A kálium a nátrium ellenpólusa. Zöldségek, gyümölcsök, hüvelyesek, burgonya – erről szól a <a href="/vernyomascsokkento-etelek">vérnyomáscsökkentő ételek</a> oldal.</li>
+<li><strong>Kálium növelése.</strong> A kálium a nátrium ellenpólusa. Zöldségek, gyümölcsök, hüvelyesek, burgonya – erről szól a <a href="/magas-vernyomas/vernyomascsokkento-etelek">vérnyomáscsökkentő ételek</a> oldal.</li>
 <li><strong>Testsúlycsökkenés.</strong> Túlsúly mellett minden leadott kiló mérhetően csökkenti a vérnyomást. Ez az egyik legerősebb eszköz, amivel rendelkezünk.</li>
 <li><strong>Alkohol mérséklése.</strong> Gyakran alábecsült tényező – a rendszeres esti bor önmagában is tartósan emelheti az értékeket.</li>
 <li><strong>A vércukor stabilizálása.</strong> Az inzulinrezisztencia és a magas vérnyomás gyakran együtt jár; a <a href="/dietetikus-hormonalis-problemak">hormonális háttér</a> rendezése nélkül az étrend fele annyit ér.</li>
 <li><strong>Rost és mozgás.</strong> A rost a bélflórán és a koleszterinen keresztül hat, a rendszeres mozgás pedig önmagában is vérnyomáscsökkentő.</li>
 </ol>
-<p>A konkrét ételekről és egy mintanapról a <a href="/mit-egyek-magas-vernyomas-ellen">mit egyek magas vérnyomás ellen</a> oldalon írok részletesen.</p>
+<p>A konkrét ételekről és egy mintanapról a <a href="/magas-vernyomas/mit-egyek-ellene">mit egyek magas vérnyomás ellen</a> oldalon írok részletesen.</p>
+<div class="midcta">
+  <p class="midcta__t">Foglalj időpontot, és nézzük meg együtt a te helyzetedet.</p>
+  <div class="midcta__b">
+    <a href="#idopont" class="btn btn--primary">Foglalj időpontot konzultációra</a>
+    <a href="/arak#arak" target="_blank" rel="noopener" class="btn btn--outline">Kezdd a Start csomaggal (29.000 Ft)</a>
+  </div>
+</div>
 <h2 id="mikor-fordulj-orvoshoz">Mikor fordulj orvoshoz?</h2>
-<p>Mindig, ha az otthoni mérések tartósan 140/90 fölött vannak – akkor is, ha egyáltalán nincs panaszod. A diagnózis és a gyógyszeres kezelés orvosi kompetencia. A <a href="/magas-vernyomas-tunetei">magas vérnyomás tüneteiről</a> és arról, <a href="/mi-a-teendo-magas-vernyomas-eseten">mi a teendő magas vérnyomás esetén</a>, külön oldalon írok.</p>
+<p>Mindig, ha az otthoni mérések tartósan 140/90 fölött vannak – akkor is, ha egyáltalán nincs panaszod. A diagnózis és a gyógyszeres kezelés orvosi kompetencia. A <a href="/magas-vernyomas/tunetei">magas vérnyomás tüneteiről</a> és arról, <a href="/magas-vernyomas/mi-a-teendo">mi a teendő magas vérnyomás esetén</a>, külön oldalon írok.</p>
 <div class="sos">
 <p class="sos__t">Mikor hívj azonnal mentőt (112)?</p>
 <p>Ha a vérnyomás <strong>180/120 fölött</strong> van, <em>és</em> emellett az alábbiak bármelyike jelentkezik: erős mellkasi fájdalom, nehézlégzés, hirtelen látászavar, beszédzavar, egyoldali gyengeség vagy zsibbadás, zavartság, erős fejfájás hányással. Ezek nem étrendi kérdések – azonnali orvosi ellátást igényelnek.</p>
@@ -364,7 +384,7 @@
       <details class="faq2"><summary>Melyik orvoshoz forduljak magas vérnyomással?</summary><p>Először a háziorvosodhoz. Ő dönti el, szükséges-e kardiológiai vagy belgyógyászati kivizsgálás. A dietetikus a táplálkozási oldalon csatlakozik a kezeléshez.</p></details>
       <nav class="cluster" aria-label="A magas vérnyomás témakör oldalai">
       <p class="cluster__t">A magas vérnyomás témakör további oldalai</p>
-      <ul class="cluster__l"><li><a href="/magas-vernyomas-tunetei">A magas vérnyomás tünetei</a></li><li><a href="/mit-egyek-magas-vernyomas-ellen">Mit egyek magas vérnyomás ellen?</a></li><li><a href="/vernyomascsokkento-etelek">Vérnyomáscsökkentő ételek</a></li><li><a href="/magas-vernyomas-okai">A magas vérnyomás okai</a></li><li><a href="/magas-vernyomas-csokkentese-gyogyszer-nelkul">Magas vérnyomás csökkentése gyógyszer nélkül</a></li><li><a href="/vernyomas-also-ertek-magas">Mit jelent, ha a vérnyomás alsó értéke magas?</a></li><li><a href="/mi-a-teendo-magas-vernyomas-eseten">Mi a teendő magas vérnyomás esetén?</a></li><li><a href="/mennyi-a-magas-vernyomas">Mennyi a magas vérnyomás?</a></li></ul>
+      <ul class="cluster__l"><li><a href="/magas-vernyomas/tunetei">A magas vérnyomás tünetei</a></li><li><a href="/magas-vernyomas/mit-egyek-ellene">Mit egyek magas vérnyomás ellen?</a></li><li><a href="/magas-vernyomas/vernyomascsokkento-etelek">Vérnyomáscsökkentő ételek</a></li><li><a href="/magas-vernyomas/okai">A magas vérnyomás okai</a></li><li><a href="/magas-vernyomas/csokkentese-gyogyszer-nelkul">Magas vérnyomás csökkentése gyógyszer nélkül</a></li><li><a href="/magas-vernyomas/also-ertek-magas">Mit jelent, ha a vérnyomás alsó értéke magas?</a></li><li><a href="/magas-vernyomas/mi-a-teendo">Mi a teendő magas vérnyomás esetén?</a></li><li><a href="/magas-vernyomas/mennyi-szamit-magasnak">Mennyi a magas vérnyomás?</a></li></ul>
     </nav>
 <p class="med-note"><strong>Tájékoztatás:</strong> ez az oldal általános tájékoztató jellegű, és nem helyettesíti az orvosi vizsgálatot, diagnózist vagy kezelést. A magas vérnyomás diagnózisát és gyógyszeres kezelését kizárólag orvos állíthatja fel, illetve rendelheti el – a felírt gyógyszert soha ne hagyd el és ne módosítsd saját elhatározásból. Dietetikusként a táplálkozási oldalon tudok segíteni, az orvosi kezelés mellett.</p>
     </div>
@@ -387,19 +407,19 @@
     <p class="eyebrow">A témakör további oldalai</p>
     <h2 style="font-family:var(--serif);color:var(--brand-dark);font-size:1.6rem">Magas vérnyomás – kapcsolódó oldalak</h2>
   </div>
-  <div class="blog-grid"><a class="post" href="/magas-vernyomas-tunetei">
+  <div class="blog-grid"><a class="post" href="/magas-vernyomas/tunetei">
         <img class="post__thumb" src="/images/blog/tartos-faradtsag-etrend-vercukor.webp" alt="Fáradt, fejfájással küzdő nő – a magas vérnyomás tünetei gyakran nem egyértelműek" width="640" height="360" loading="lazy" />
         <div class="post__b"><span class="post__cat">Magas vérnyomás</span><h3>A magas vérnyomás tünetei</h3></div>
-      </a><a class="post" href="/mit-egyek-magas-vernyomas-ellen">
+      </a><a class="post" href="/magas-vernyomas/mit-egyek-ellene">
         <img class="post__thumb" src="/images/blog/eletmodvaltas-kiegyensulyozott-etkezes.webp" alt="Kiegyensúlyozott, sószegény tányér zöldségekkel és halral – mit egyél magas vérnyomás ellen" width="640" height="360" loading="lazy" />
         <div class="post__b"><span class="post__cat">Magas vérnyomás</span><h3>Mit egyek magas vérnyomás ellen?</h3></div>
-      </a><a class="post" href="/vernyomascsokkento-etelek">
+      </a><a class="post" href="/magas-vernyomas/vernyomascsokkento-etelek">
         <img class="post__thumb" src="/images/blog/rostfogyasztas-noveles-zoldsegek.webp" alt="Káliumban gazdag friss zöldségek és gyümölcsök – természetes vérnyomáscsökkentő ételek" width="640" height="360" loading="lazy" />
         <div class="post__b"><span class="post__cat">Magas vérnyomás</span><h3>Vérnyomáscsökkentő ételek</h3></div>
-      </a><a class="post" href="/magas-vernyomas-okai">
+      </a><a class="post" href="/magas-vernyomas/okai">
         <img class="post__thumb" src="/images/blog/ki-az-a-dietetikus-egeszseges-etrend.webp" alt="Kiegyensúlyozott étrend friss alapanyagokból – a magas vérnyomás étrendi okai és kezelése" width="640" height="360" loading="lazy" />
         <div class="post__b"><span class="post__cat">Magas vérnyomás</span><h3>A magas vérnyomás okai</h3></div>
-      </a><a class="post" href="/magas-vernyomas-csokkentese-gyogyszer-nelkul">
+      </a><a class="post" href="/magas-vernyomas/csokkentese-gyogyszer-nelkul">
         <img class="post__thumb" src="/images/blog/holisztikus-taplalkozas-egeszseg.webp" alt="Friss, tápláló étel – a magas vérnyomás csökkentése életmóddal és étrenddel" width="640" height="360" loading="lazy" />
         <div class="post__b"><span class="post__cat">Magas vérnyomás</span><h3>Magas vérnyomás csökkentése gyógyszer nélkül</h3></div>
       </a></div>
@@ -510,7 +530,7 @@
         <span style="font-size:.9rem">1097 Budapest, Vágóhíd utca 12-16.</span>
       </div>
     </div>
-    <div class="footer-areas"><h4>Magas vérnyomás – tudástár</h4><div class="footer-areas__grid"><a href="/magas-vernyomas-tunetei">A magas vérnyomás tünetei</a><a href="/mit-egyek-magas-vernyomas-ellen">Mit egyek magas vérnyomás ellen?</a><a href="/vernyomascsokkento-etelek">Vérnyomáscsökkentő ételek</a><a href="/magas-vernyomas-okai">A magas vérnyomás okai</a><a href="/magas-vernyomas-csokkentese-gyogyszer-nelkul">Magas vérnyomás csökkentése gyógyszer nélkül</a><a href="/vernyomas-also-ertek-magas">Mit jelent, ha a vérnyomás alsó értéke magas?</a><a href="/mi-a-teendo-magas-vernyomas-eseten">Mi a teendő magas vérnyomás esetén?</a><a href="/mennyi-a-magas-vernyomas">Mennyi a magas vérnyomás?</a></div></div>
+    <div class="footer-areas"><h4>Magas vérnyomás – tudástár</h4><div class="footer-areas__grid"><a href="/magas-vernyomas/tunetei">A magas vérnyomás tünetei</a><a href="/magas-vernyomas/mit-egyek-ellene">Mit egyek magas vérnyomás ellen?</a><a href="/magas-vernyomas/vernyomascsokkento-etelek">Vérnyomáscsökkentő ételek</a><a href="/magas-vernyomas/okai">A magas vérnyomás okai</a><a href="/magas-vernyomas/csokkentese-gyogyszer-nelkul">Magas vérnyomás csökkentése gyógyszer nélkül</a><a href="/magas-vernyomas/also-ertek-magas">Mit jelent, ha a vérnyomás alsó értéke magas?</a><a href="/magas-vernyomas/mi-a-teendo">Mi a teendő magas vérnyomás esetén?</a><a href="/magas-vernyomas/mennyi-szamit-magasnak">Mennyi a magas vérnyomás?</a></div></div>
     <div class="footer-areas"><h4>Blog – tudástár</h4><div class="footer-areas__grid"><a href="/blog/mi-a-dietetikus">Mi a dietetikus?</a><a href="/blog/ki-a-dietetikus">Ki a dietetikus?</a><a href="/blog/mi-a-dietetikus-feladata">Mi a dietetikus feladata?</a><a href="/blog/5-ok-amiert-kialakulhat-az-etelintolerancia">5 meglepő ok, amiért kialakulhat az ételintolerancia</a><a href="/blog/5-tipp-a-rostfogyasztas-noveleshez">5 tipp a rostfogyasztás növeléséhez</a><a href="/blog/gyerekek-immunerositese">Gyerekek immunerősítése – így támogasd a bélflórát</a><a href="/blog/hisztaminerzekenyseg">Hisztaminérzékenység – tünetek, okok és étrend</a><a href="/blog/holisztikus-szemlelettel-az-egeszsegert">Holisztikus szemlélettel az egészségért</a><a href="/blog/immunerosites-gyerekeknek-betegseg-utan">Immunerősítés gyerekeknek betegség után</a><a href="/blog/miert-erdemes-az-eletmodon-valtoztatni">Miért érdemes az életmódon változtatni a divatdiéták helyett?</a><a href="/blog/mikrobiom-az-uj-szerv">Mikrobiom – a bélflóra, az egészség új kulcsa</a><a href="/blog/puffadas-etelintolerancia-mikor-gyanakodj">Puffadás és ételintolerancia – mikor gyanakodj?</a></div></div>
     <div class="footer-areas"><h4>Területek – dietetikus Budapesten és környékén</h4><div class="footer-areas__grid"><a href="/dietetikus-budapest-1-kerulet">Dietetikus I. kerület</a><a href="/dietetikus-budapest-2-kerulet">Dietetikus II. kerület</a><a href="/dietetikus-budapest-3-kerulet">Dietetikus III. kerület</a><a href="/dietetikus-budapest-4-kerulet">Dietetikus IV. kerület</a><a href="/dietetikus-budapest-5-kerulet">Dietetikus V. kerület</a><a href="/dietetikus-budapest-6-kerulet">Dietetikus VI. kerület</a><a href="/dietetikus-budapest-7-kerulet">Dietetikus VII. kerület</a><a href="/dietetikus-budapest-8-kerulet">Dietetikus VIII. kerület</a><a href="/dietetikus-budapest-9-kerulet">Dietetikus IX. kerület</a><a href="/dietetikus-budapest-10-kerulet">Dietetikus X. kerület</a><a href="/dietetikus-budapest-11-kerulet">Dietetikus XI. kerület</a><a href="/dietetikus-budapest-12-kerulet">Dietetikus XII. kerület</a><a href="/dietetikus-budapest-13-kerulet">Dietetikus XIII. kerület</a><a href="/dietetikus-budapest-14-kerulet">Dietetikus XIV. kerület</a><a href="/dietetikus-budapest-15-kerulet">Dietetikus XV. kerület</a><a href="/dietetikus-budapest-16-kerulet">Dietetikus XVI. kerület</a><a href="/dietetikus-budapest-17-kerulet">Dietetikus XVII. kerület</a><a href="/dietetikus-budapest-18-kerulet">Dietetikus XVIII. kerület</a><a href="/dietetikus-budapest-19-kerulet">Dietetikus XIX. kerület</a><a href="/dietetikus-budapest-20-kerulet">Dietetikus XX. kerület</a><a href="/dietetikus-budapest-21-kerulet">Dietetikus XXI. kerület</a><a href="/dietetikus-budapest-22-kerulet">Dietetikus XXII. kerület</a><a href="/dietetikus-budapest-23-kerulet">Dietetikus XXIII. kerület</a><a href="/dietetikus-alsonemedi">Dietetikus Alsónémedi</a><a href="/dietetikus-aszod">Dietetikus Aszód</a><a href="/dietetikus-biatorbagy">Dietetikus Biatorbágy</a><a href="/dietetikus-budakalasz">Dietetikus Budakalász</a><a href="/dietetikus-budakeszi">Dietetikus Budakeszi</a><a href="/dietetikus-budaors">Dietetikus Budaörs</a><a href="/dietetikus-csomor">Dietetikus Csömör</a><a href="/dietetikus-diosd">Dietetikus Diósd</a><a href="/dietetikus-dunaharaszti">Dietetikus Dunaharaszti</a><a href="/dietetikus-dunakeszi">Dietetikus Dunakeszi</a><a href="/dietetikus-dunavarsany">Dietetikus Dunavarsány</a><a href="/dietetikus-erd">Dietetikus Érd</a><a href="/dietetikus-erdokertes">Dietetikus Erdőkertes</a><a href="/dietetikus-fot">Dietetikus Fót</a><a href="/dietetikus-god">Dietetikus Göd</a><a href="/dietetikus-godollo">Dietetikus Gödöllő</a><a href="/dietetikus-gyal">Dietetikus Gyál</a><a href="/dietetikus-gyomro">Dietetikus Gyömrő</a><a href="/dietetikus-halasztelek">Dietetikus Halásztelek</a><a href="/dietetikus-isaszeg">Dietetikus Isaszeg</a><a href="/dietetikus-kerepes">Dietetikus Kerepes</a><a href="/dietetikus-kistarcsa">Dietetikus Kistarcsa</a><a href="/dietetikus-maglod">Dietetikus Maglód</a><a href="/dietetikus-mogyorod">Dietetikus Mogyoród</a><a href="/dietetikus-monor">Dietetikus Monor</a><a href="/dietetikus-nagykovacsi">Dietetikus Nagykovácsi</a><a href="/dietetikus-nagytarcsa">Dietetikus Nagytarcsa</a><a href="/dietetikus-ocsa">Dietetikus Ócsa</a><a href="/dietetikus-orbottyan">Dietetikus Őrbottyán</a><a href="/dietetikus-paty">Dietetikus Páty</a><a href="/dietetikus-pecel">Dietetikus Pécel</a><a href="/dietetikus-pilis">Dietetikus Pilis</a><a href="/dietetikus-pilisvorosvar">Dietetikus Pilisvörösvár</a><a href="/dietetikus-pomaz">Dietetikus Pomáz</a><a href="/dietetikus-solymar">Dietetikus Solymár</a><a href="/dietetikus-sulysap">Dietetikus Sülysáp</a><a href="/dietetikus-szazhalombatta">Dietetikus Százhalombatta</a><a href="/dietetikus-szentendre">Dietetikus Szentendre</a><a href="/dietetikus-szigethalom">Dietetikus Szigethalom</a><a href="/dietetikus-szigetszentmiklos">Dietetikus Szigetszentmiklós</a><a href="/dietetikus-taksony">Dietetikus Taksony</a><a href="/dietetikus-tarnok">Dietetikus Tárnok</a><a href="/dietetikus-tokol">Dietetikus Tököl</a><a href="/dietetikus-torokbalint">Dietetikus Törökbálint</a><a href="/dietetikus-ullo">Dietetikus Üllő</a><a href="/dietetikus-urom">Dietetikus Üröm</a><a href="/dietetikus-vac">Dietetikus Vác</a><a href="/dietetikus-vecses">Dietetikus Vecsés</a><a href="/dietetikus-veresegyhaz">Dietetikus Veresegyház</a></div></div>
     <p class="footer__copy">&copy; 2001–2026 Rónay Barbara · Naturmed Health. Minden jog fenntartva. · <a href="/adatkezelesi-tajekoztato" style="color:rgba(255,255,255,.6)">Adatkezelési tájékoztató</a></p>

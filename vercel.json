@@ -44,6 +44,46 @@
       "source": "/blog/ki-az-a-dietetikus",
       "destination": "/blog/ki-a-dietetikus",
       "permanent": true
+    },
+    {
+      "source": "/magas-vernyomas-csokkentese-gyogyszer-nelkul",
+      "destination": "/magas-vernyomas/csokkentese-gyogyszer-nelkul",
+      "permanent": true
+    },
+    {
+      "source": "/mi-a-teendo-magas-vernyomas-eseten",
+      "destination": "/magas-vernyomas/mi-a-teendo",
+      "permanent": true
+    },
+    {
+      "source": "/mit-egyek-magas-vernyomas-ellen",
+      "destination": "/magas-vernyomas/mit-egyek-ellene",
+      "permanent": true
+    },
+    {
+      "source": "/vernyomas-also-ertek-magas",
+      "destination": "/magas-vernyomas/also-ertek-magas",
+      "permanent": true
+    },
+    {
+      "source": "/vernyomascsokkento-etelek",
+      "destination": "/magas-vernyomas/vernyomascsokkento-etelek",
+      "permanent": true
+    },
+    {
+      "source": "/mennyi-a-magas-vernyomas",
+      "destination": "/magas-vernyomas/mennyi-szamit-magasnak",
+      "permanent": true
+    },
+    {
+      "source": "/magas-vernyomas-tunetei",
+      "destination": "/magas-vernyomas/tunetei",
+      "permanent": true
+    },
+    {
+      "source": "/magas-vernyomas-okai",
+      "destination": "/magas-vernyomas/okai",
+      "permanent": true
     }
   ]
 }
