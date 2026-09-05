@@ -99,7 +99,8 @@
     .about ul li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
 
     /* PACKAGES */
-    .pkg-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .pkg-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+    .pkg-grid>*{flex:0 1 calc((100% - 48px)/3);min-width:0}
     .pkg{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
     .pkg:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .pkg--featured{border:2px solid var(--brand);position:relative}
@@ -135,7 +136,8 @@
 
     /* BLOG */
     .blog{background:var(--brand-tint)}
-    .blog-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .blog-grid{max-width:1120px;margin:0 auto;padding:0 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+    .blog-grid>*{flex:0 1 calc((100% - 48px)/3);min-width:0}
     .post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}
     .post:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .post__thumb{height:180px;width:100%;object-fit:cover;display:block;background:var(--brand-tint)}
@@ -263,7 +265,8 @@
       .hero__in,.about__in,.booking__in{grid-template-columns:1fr;gap:38px}
       .hero__media{order:-1;max-width:420px;margin:0 auto}
       .about__img{max-width:360px;margin:0 auto}
-      .cards,.pkg-grid,.rev-grid,.blog-grid{grid-template-columns:repeat(2,1fr)}
+      .cards,.rev-grid{grid-template-columns:repeat(2,1fr)}
+      .pkg-grid>*,.blog-grid>*{flex-basis:calc((100% - 24px)/2)}
       .media__in{grid-template-columns:1fr}
       .footer__top{grid-template-columns:1fr}
     }
@@ -274,7 +277,8 @@
       .nav__links a{display:block;padding:14px 8px;width:100%}
       .nav__cta{margin-top:6px;text-align:center;justify-content:center}
       .burger{display:inline-flex}
-      .cards,.pkg-grid,.rev-grid,.blog-grid,.about ul{grid-template-columns:1fr}
+      .cards,.rev-grid,.about ul{grid-template-columns:1fr}
+      .pkg-grid>*,.blog-grid>*{flex-basis:100%}
       section{padding:58px 0}
       .hero{padding:52px 5%}
       .hero__ctas .btn{width:100%}
@@ -335,6 +339,16 @@
     .prose ul{margin:0 0 18px 20px;color:var(--ink)}
     .prose li{margin-bottom:7px;line-height:1.7}
     .prose strong{color:var(--brand-dark)}
+    /* szovegkozi linkek a cikktorzsben: lathato, alahuzott, markaszinu */
+    .prose p a,.prose li a,.prose td a,.prose .faq2 a{
+      color:var(--brand-dark);text-decoration:underline;
+      text-decoration-color:rgba(100,112,74,.45);text-underline-offset:3px;
+      text-decoration-thickness:1.5px;font-weight:600;
+      transition:color .15s,text-decoration-color .15s}
+    .prose p a:hover,.prose li a:hover,.prose td a:hover,.prose .faq2 a:hover{
+      color:var(--brand);text-decoration-color:var(--brand)}
+    .prose p a:focus-visible,.prose li a:focus-visible,.prose td a:focus-visible{
+      outline:2px solid var(--brand);outline-offset:2px;border-radius:2px}
     .article__cta{background:var(--brand-tint);border-radius:var(--radius);padding:26px 24px;margin:30px 0 8px;text-align:center}
     .article__cta p{margin-bottom:16px;color:var(--ink)}
     .related{background:var(--brand-tint)}

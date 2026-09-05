@@ -21,7 +21,7 @@
   <meta property="og:image" content="https://www.budapest-dietetikus.hu/images/allapotfelmeres.jpg" />
   <meta name="geo.region" content="HU-BU" />
   <meta name="geo.placename" content="Budapest" />
-  <link rel="stylesheet" href="/styles.css?v=160" />
+  <link rel="stylesheet" href="/styles.css?v=162" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -268,7 +268,9 @@
     .conv ul{margin:0 0 16px;padding-left:1.15em}
     .conv li{margin:.3em 0}
     .social{margin:40px 0 0}
-    .social__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:14px}
+    .social__grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:14px}
+    .social__grid>.rev{flex:0 1 calc(50% - 7px);min-width:0}
+    @media(max-width:560px){.social__grid>.rev{flex-basis:100%}}
     .social .rev{background:#fff;border:1px solid var(--line,#e2e4d8);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;box-shadow:none}
     .social .rev__body{font-size:.92rem;line-height:1.6;font-style:italic;margin:0 0 12px}
     .social .rev__by{font-weight:700;font-size:.86rem;margin-top:auto;color:var(--brand-dark,#1f4a37)}
@@ -278,17 +280,18 @@
     .rev--lead .rev__body{font-size:1rem}
     .rev__lead{font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-dark,#1f4a37);font-weight:700;margin:0 0 8px}
     .social__note{font-size:.8rem;color:var(--muted,#6b7280);margin:14px 0 0;line-height:1.5}
-    .medialogos{margin:26px 0 0;padding:18px 20px;border-top:1px solid var(--line,#e2e4d8)}
-    .medialogos__t{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#6b7280);margin:0 0 12px;text-align:center}
-    .medialogos__l{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:center}
-    .medialogos__l img{height:34px;width:auto;object-fit:contain;opacity:.75;transition:opacity .2s}
-    .medialogos__l a:hover img{opacity:1}
-    .medialogos__m{text-align:center;margin:12px 0 0;font-size:.84rem}
     .prose h2{scroll-margin-top:92px}
     .midcta{margin:34px 0;padding:20px 24px;background:#fff;border:1px solid var(--line,#e2e4d8);border-left:4px solid var(--brand,#64704a);border-radius:12px}
     .midcta__t{margin:0 0 16px;font-weight:700;color:var(--brand-dark,#1f4a37);font-size:1.03rem;line-height:1.4;text-align:center}
     .midcta__b{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
     .midcta__b .btn{margin:0;flex:1 1 0;min-width:270px;max-width:340px;text-align:center;justify-content:center}
+    @media(max-width:560px){
+      .midcta{padding:18px 14px;margin:26px 0}
+      .midcta__t{font-size:.97rem;margin-bottom:14px}
+      .midcta__b{gap:10px}
+      .midcta__b .btn{flex:1 1 100%;min-width:0;max-width:none;width:100%;
+        font-size:.92rem;padding:12px 10px;white-space:normal;line-height:1.3;min-height:46px}
+    }
   </style>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Testösszetétel-mérés Budapesten – testzsírszázalék, izomtömeg, zsigeri zsír | Rónay Barbara" />
@@ -461,15 +464,7 @@
         </article>
       </div>
       <p class="social__note">Valódi, a Google cégprofilon közzétett értékelések. Az eredmények egyénenként eltérnek – a leírt tapasztalat nem jelent ígért eredményt.</p>
-      <div class="medialogos">
-      <p class="medialogos__t">Szakértőként szerepeltem</p>
-      <ul class="medialogos__l">
-        <li><a href="/media/ronay-barbara-trendmania"><img src="/images/media/tv2.webp" alt="TV2 logó – Rónay Barbara dietetikus médiaszereplése" width="320" height="448" loading="lazy" /></a></li>
-        <li><a href="/media/ronay-barbara-trendmania"><img src="/images/media/trendmania.webp" alt="Trendmánia logó – Rónay Barbara a TV2 Trendmánia műsorában" width="257" height="110" loading="lazy" /></a></li>
-        <li><a href="/media/hormonalis-bortunetek-beauty-forum"><img src="/images/media/beautyforum.webp" alt="Beauty Fórum logó – Rónay Barbara szakmai megjelenése" width="243" height="105" loading="lazy" /></a></li>
-      </ul>
-      <p class="medialogos__m"><a href="/mediamegjelenesek">Összes médiamegjelenés →</a></p>
-    </div>
+
     </section>
     <div class="conv">
       <h3>Nézzük meg, mi áll a te vérnyomásod hátterében</h3>
