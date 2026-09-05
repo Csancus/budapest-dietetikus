@@ -94,6 +94,24 @@
       },
       "image": "https://www.budapest-dietetikus.hu/images/ronay-barbara.jpg",
       "url": "https://www.budapest-dietetikus.hu/",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Dietetikus diploma",
+          "educationalLevel": "Felsőfokú alapképzés (BSc)",
+          "dateCreated": "2006",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Semmelweis Egyetem"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Funkcionális Táplálkozási Referens"
+        }
+      ],
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
@@ -215,12 +233,28 @@
     .toc__list li{margin:.3em 0;line-height:1.4}
     .toc__list a{color:var(--brand-dark,#1f4a37);text-decoration:none}
     .toc__list a:hover{text-decoration:underline}
+    .social{margin:40px 0 0}
+    .social__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:14px}
+    .social .rev{background:#fff;border:1px solid var(--line,#e2e4d8);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;box-shadow:none}
+    .social .rev__body{font-size:.92rem;line-height:1.6;font-style:italic;margin:0 0 12px}
+    .social .rev__by{font-weight:700;font-size:.86rem;margin-top:auto;color:var(--brand-dark,#1f4a37)}
+    .social .rev__src{font-size:.72rem;color:var(--muted,#6b7280);margin-top:2px}
+    .social .rev__stars{color:#e8a21a;letter-spacing:2px;margin-bottom:10px}
+    .rev--lead{border-left:4px solid var(--brand,#64704a)!important;background:var(--brand-tint,#eef5f0)!important}
+    .rev--lead .rev__body{font-size:1rem}
+    .rev__lead{font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-dark,#1f4a37);font-weight:700;margin:0 0 8px}
+    .social__note{font-size:.8rem;color:var(--muted,#6b7280);margin:14px 0 0;line-height:1.5}
+    .medialogos{margin:26px 0 0;padding:18px 20px;border-top:1px solid var(--line,#e2e4d8)}
+    .medialogos__t{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#6b7280);margin:0 0 12px;text-align:center}
+    .medialogos__l{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:center}
+    .medialogos__l img{height:34px;width:auto;object-fit:contain;opacity:.75;transition:opacity .2s}
+    .medialogos__l a:hover img{opacity:1}
+    .medialogos__m{text-align:center;margin:12px 0 0;font-size:.84rem}
     .prose h2{scroll-margin-top:92px}
     .midcta{margin:34px 0;padding:20px 24px;background:#fff;border:1px solid var(--line,#e2e4d8);border-left:4px solid var(--brand,#64704a);border-radius:12px}
-    .midcta__t{margin:0 0 14px;font-weight:700;color:var(--brand-dark,#1f4a37);font-size:1.03rem;line-height:1.4}
-    .midcta__b{display:flex;gap:10px;flex-wrap:wrap}
-    .midcta__b .btn{margin:0}
-    @media(max-width:520px){.midcta__b .btn{width:100%;text-align:center;justify-content:center}}
+    .midcta__t{margin:0 0 16px;font-weight:700;color:var(--brand-dark,#1f4a37);font-size:1.03rem;line-height:1.4;text-align:center}
+    .midcta__b{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .midcta__b .btn{margin:0;flex:1 1 0;min-width:270px;max-width:340px;text-align:center;justify-content:center}
     .fig{margin:26px 0;padding:0}
     .fig img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 30%;border-radius:14px}
     @media(max-width:640px){.fig img{aspect-ratio:16/9}}
@@ -331,6 +365,45 @@
 <p>Ha kíváncsi vagy, nálam hogyan néz ki mindez a gyakorlatban, a <a href="/blog/mi-a-dietetikus-feladata">Mi a dietetikus feladata?</a> cikkben lépésről lépésre végigvezetlek egy konzultáción.</p>
 <p class="med-note"><strong>Tájékoztatás:</strong> ez a cikk általános tájékoztató jellegű, és nem helyettesíti az orvosi vizsgálatot, diagnózist vagy kezelést. Diagnózist és gyógykezelést kizárólag orvos állíthat fel, illetve rendelhet el. Dietetikusként a táplálkozási oldalon tudok segíteni – ha panaszod van, először keresd fel a háziorvosodat vagy szakorvosodat.</p>
     </div>
+    <section class="social" aria-label="Vélemények">
+      <div class="rev rev--lead">
+        <div class="rev__stars">★★★★★</div>
+        <p class="rev__lead">Több mint 13 éve jár hozzám</p>
+        <p class="rev__body">„Barbihoz több mint 13 éve járok és szívből ajánlom mindenkinek, mert végtelen kedvességgel, szenvedéllyel végzi a munkáját. Folyamatosan képzi magát, így mindig biztonságérzetet kelt bennem.”</p>
+        <div class="rev__by">Kata P.</div>
+        <div class="rev__src">Google értékelés</div>
+      </div>
+      <div class="social__grid">
+        <article class="rev">
+          <div class="rev__stars">★★★★★</div>
+          <p class="rev__body">„Életem egyik legjobb döntése volt, mikor először mentem el Barbarához. Nem csak egy dologra fókuszál, hanem egyben nézi a testet, keresi a problémát és a megoldást. A kezelések hatékonyak, a gyógymódok személyre szabottak.”</p>
+          <div class="rev__by">Mária</div>
+          <div class="rev__src">Google értékelés</div>
+        </article>
+        <article class="rev">
+          <div class="rev__stars">★★★★★</div>
+          <p class="rev__body">„Emésztési panaszokkal fordultam Barbihoz. Már az első vizsgálatnál láttam, hogy a legjobb helyre jöttem! Hamar kiderítette, honnan erednek a panaszaim. Sokkal energikusabban, egészségesebben érzem magam!”</p>
+          <div class="rev__by">Mariann</div>
+          <div class="rev__src">Google értékelés</div>
+        </article>
+        <article class="rev">
+          <div class="rev__stars">★★★★★</div>
+          <p class="rev__body">„Régóta voltak problémáim, már az első vizsgálat során kiderült, melyik hormon működik helytelenül. A javaslatokat követve nagyjából egy hónap alatt teljesen rendbe jöttem és 7 kilót fogytam.”</p>
+          <div class="rev__by">Évi Juhász-Szabó</div>
+          <div class="rev__src">Google értékelés</div>
+        </article>
+      </div>
+      <p class="social__note">Valódi, a Google cégprofilon közzétett értékelések. Az eredmények egyénenként eltérnek – a leírt tapasztalat nem jelent ígért eredményt.</p>
+      <div class="medialogos">
+      <p class="medialogos__t">Szakértőként szerepeltem</p>
+      <ul class="medialogos__l">
+        <li><a href="/media/ronay-barbara-trendmania"><img src="/images/media/tv2.webp" alt="TV2 logó – Rónay Barbara dietetikus médiaszereplése" width="320" height="448" loading="lazy" /></a></li>
+        <li><a href="/media/ronay-barbara-trendmania"><img src="/images/media/trendmania.webp" alt="Trendmánia logó – Rónay Barbara a TV2 Trendmánia műsorában" width="257" height="110" loading="lazy" /></a></li>
+        <li><a href="/media/hormonalis-bortunetek-beauty-forum"><img src="/images/media/beautyforum.webp" alt="Beauty Fórum logó – Rónay Barbara szakmai megjelenése" width="243" height="105" loading="lazy" /></a></li>
+      </ul>
+      <p class="medialogos__m"><a href="/mediamegjelenesek">Összes médiamegjelenés →</a></p>
+    </div>
+    </section>
     <div class="article__cta">
       <p><strong>Ismerd meg a valódi okokat!</strong> Kérj komplex állapotfelmérést és személyre szabott terápiás tervet – nézzük meg együtt, mi áll a panaszaid hátterében.</p>
       <a href="#idopont" class="btn btn--primary">Időpontot foglalok</a>
