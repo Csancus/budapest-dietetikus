@@ -88,7 +88,7 @@ var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@peld
         })
         .catch(function(){
           btn.disabled=false;btn.textContent=orig;
-          if(st){st.className='cform__status err';st.textContent='Hiba történt a küldés során. Kérjük, próbálja újra, vagy hívjon minket telefonon.';}
+          if(st){st.className='cform__status err';st.textContent='Hiba történt a küldés során. Kérlek, próbáld újra, vagy hívj telefonon.';}
         });
     });
   }
@@ -109,10 +109,10 @@ var WEB3FORMS_CC=''; /* opcionális további címzettek, vesszővel: 'masik@peld
     }
     function msgFor(el){
       var v=el.validity;
-      if(el.type==='checkbox') return 'Kérjük, fogadja el az adatkezelési tájékoztatót a folytatáshoz.';
-      if(v.valueMissing) return 'Kérjük, töltse ki ezt a mezőt.';
-      if(v.typeMismatch&&el.type==='email') return 'Adjon meg egy érvényes e-mail címet (pl. nev@example.hu) – ne maradjon ki a @ jel.';
-      return 'Kérjük, ellenőrizze ezt a mezőt.';
+      if(el.type==='checkbox') return 'Kérlek, fogadd el az adatkezelési tájékoztatót a folytatáshoz.';
+      if(v.valueMissing) return 'Kérlek, töltsd ki ezt a mezőt.';
+      if(v.typeMismatch&&el.type==='email') return 'Adj meg egy érvényes e-mail címet (pl. nev@example.hu) – ne maradjon ki a @ jel.';
+      return 'Kérlek, ellenőrizd ezt a mezőt.';
     }
     function mark(el,msg){
       var span=document.createElement('span');span.className='f-err';span.textContent=msg;
