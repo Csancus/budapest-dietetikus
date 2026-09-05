@@ -25,11 +25,39 @@ Honnan jön a forgalom:
 
 ---
 
-## ✅ 1. A helyi oldalak MŰKÖDNEK – korrigálom a korábbi ajánlásomat
+## ⚖️ 1. A helyi oldalak – KÉT ELEMZÉS, KÉT KÖVETKEZTETÉS
 
-Az audit első verziójában azt írtam, hogy a 78 helyi oldal 61–69%-os
-szövegazonossága doorway-kockázat, és javasoltam a részleges kigyomlálást.
-**A GSC-adat ezt megcáfolja. Ne nyúlj hozzájuk.**
+> **Mindkettőt itt hagyom, mert nem ugyanazt mérik és nem ugyanazt mondják.**
+> A döntés a tiéd. Amíg nem szólsz, semmit nem nyúlok hozzá.
+
+### 🅰️ Oldalelemzés (on-page): a 78 helyi oldal túl hasonló
+
+**Mit mértem:** 5-szavas szövegblokk-egyezést (shingle Jaccard) minden párra,
+a repó fájljaiból, ma.
+
+| Csoport | Oldal | Átlagos hasonlóság | Legrosszabb pár |
+|---|---|---|---|
+| Budapesti kerületek | 23 | **69,3%** | 82,7% (XV. ↔ IV.) |
+| Agglomeráció | 55 | **61,4%** | 84,0% (Kerepes ↔ Kistarcsa) |
+
+Konkrét bontás (Kerepes vs. Kistarcsa): **71 szövegblokkból 12 egyedi (17%)** —
+és annak nagy része is csak névcsere („Kerepesen" → „Kistarcsán").
+Valóban egyedi tartalom: 1 bekezdés a közlekedésről.
+
+**Amit ebből következtettem:** a Google ezt doorway page mintázatként ismerheti
+fel. A helyi oldalak a site **51%-át** teszik ki, tehát a minőségi jelzés az
+egész domainre visszahathat. Tünete jellemzően: „Feltérképezve – jelenleg nincs
+indexelve" a Search Console-ban.
+
+**Amit ez az elemzés javasolna:**
+- Tartsd meg a ~15-20 valós keresletű oldalt, írd át 60-70%-ban egyedire
+- A maradékot 301-eld a `/dietetikus-budapest-es-kornyeke` gyűjtőoldalra
+
+---
+
+### 🅱️ Forgalmi elemzés (GSC, 28 nap): a helyi oldalak működnek
+
+**Mit mértem:** a Search Console 2026-09-05-i exportját, elmúlt 28 nap.
 
 | Mérőszám | Érték |
 |---|---|
@@ -38,36 +66,53 @@ szövegazonossága doorway-kockázat, és javasoltam a részleges kigyomlálást
 | Top 5-ben | 11 |
 | Súlyozott átlagpozíció | **7,8** |
 | CTR | **4,86%** (a site átlaga 3,72%) |
-| Kattintás | **52 az 56-ból** |
+| Kattintás | **52 az 56-ból = 93%** |
 
-A Google tehát mindegyiket indexelte, top 10-be sorolta, és ezek adják a
-forgalom 93%-át. A hasonlóság önmagában nem büntetés – itt valós, eltérő
-keresési szándékot szolgálnak ki („dietetikus dunakeszi" ≠ „dietetikus vác").
+Egyetlen „Feltérképezve, nincs indexelve" tünet sem látszik: a Google
+mindegyiket indexelte és top 10-be sorolta.
 
-**Amit ehelyett csinálj:**
-- A jól futó oldalakat erősítsd: `/dietetikus-dunakeszi` (6 katt.),
-  `/dietetikus-vac` (93 megjelenés, de csak 3,2% CTR – rossz a SERP-szövege),
-  `/dietetikus-szentendre` (52 megjelenés, **0 kattintás**, poz. 9,3).
-- **Bővítsd a kört** azokra a településekre, amik még nincsenek meg.
-  Ez a site egyetlen bizonyítottan működő növekedési iránya.
+**Amit ez az elemzés javasol:**
+- Ne nyúlj hozzájuk – ezek adják a forgalom 93%-át
+- Bővítsd a kört a még hiányzó településekre
+- A 43 nulla-kattintásos oldalon a **SERP-szöveget** javítsd, ne a tartalmat
 
-### 🟡 Kivétel: 43 helyi oldal 0 kattintás
+---
 
-70-ből 27 hoz kattintást. A maradék 43 megjelenik, de nem kattintják.
-A legfájóbbak (jó pozíció, sok megjelenés, nulla kattintás):
+### 🔍 Hol a különbség – és mit jelent
 
-| Oldal | Megjelenés | Pozíció | CTR |
+| | 🅰️ On-page | 🅱️ Forgalmi |
+|---|---|---|
+| Adatforrás | a repó HTML-jei | Google Search Console |
+| Mit lát | mennyire hasonlóak egymásra | mit csinál velük a Google |
+| Időtáv | pillanatkép, ma | elmúlt 28 nap tényleges viselkedése |
+| Verdikt | 🔴 kockázat | ✅ működik |
+| Javaslat | ritkítás + átírás | békén hagyás + bővítés |
+
+**A lényegi eltérés:** az 🅰️ azt méri, **milyenek az oldalak**; a 🅱️ azt, hogy
+**a Google hogyan bánik velük**. A hasonlóság kockázati *jelzés*, nem büntetés.
+A GSC megmutatja, hogy ez a kockázat ebben az esetben **nem valósult meg** –
+mert a helyi oldalak valós, eltérő keresési szándékot szolgálnak ki
+(„dietetikus dunakeszi" ≠ „dietetikus vác"), és a Google ezt így is kezeli.
+
+**Amit egyik elemzés sem tud:** hogy ez így marad-e. A Google minőségi
+frissítései (helpful content jellegű kiigazítások) pontosan az ilyen
+sablonos, alacsony egyediségű oldalcsoportokat szokták utólag visszasorolni.
+Vagyis a 🅱️ a **jelen** állapotról szól, az 🅰️ a **jövőbeli** kitettségről.
+
+### A három út, amiből választhatsz
+
+| | Mit csinálunk | Kockázat | Nyereség |
 |---|---|---|---|
-| `/dietetikus-szentendre` | 52 | 9,3 | 0% |
-| `/dietetikus-erd` | 45 | 9,2 | 0% |
-| `/dietetikus-budapest-18-kerulet` | 36 | 7,6 | 0% |
-| `/dietetikus-gyal` | 28 | 5,3 | 0% |
-| `/dietetikus-budaors` | 23 | 12,1 | 0% |
+| **1. Nem nyúlunk hozzá** | semmi | ha jön egy minőségi frissítés, a forgalom 93%-a egyszerre eshet | 0 munka |
+| **2. Csak a SERP-szöveget javítjuk** | a 43 nulla-kattintásos oldal title/description-je | nincs – a tartalom marad | gyors kattintás-növekedés, az egyediség viszont nem nő |
+| **3. Egyediség-növelés fokozatosan** | a top 20 oldal törzsszövegének átírása egyedire, a többi marad | alacsony, ha lépésenként és mérve csináljuk | a kockázat csökken, a mostani rangsor megmarad |
 
-Ez **nem rangsor-, hanem SERP-szöveg-probléma**. Pozíció 5–9 mellett a 0% CTR
-azt jelenti, hogy a cím/leírás nem elég vonzó a versenytársakéhoz képest.
-Összevetésül `/dietetikus-paty`: ugyanaz a sablon, poz. 4,7 → **33% CTR**.
-→ Ezeknek a title/description-jét át tudom írni, szólj.
+**SEO-szakértőként a 3.-at javaslom, a 2.-kal kezdve** – de mivel a 🅱️ adat
+azt mutatja, hogy most minden működik, ez nem sürgős, és semmiképp nem
+tömeges 301-ezéssel kezdődik. Az eredeti 🅰️ javaslatomat (ritkítás) az adat
+fényében **visszavonom**.
+
+**Most nem csinálok semmit. Szólj, melyik utat választod.**
 
 ---
 
@@ -202,19 +247,24 @@ Az utóbbit javaslom — kevesebb, de erősebb oldal.
 5. **Értékelés-gyűjtés.** 5 Google-vélemény kevés, és a lokális rangsor
    közvetlenül ettől függ – a forgalmad 93%-a lokális keresésből jön.
 
+### ⏸️ Ami a te döntésedre vár (én addig nem nyúlok hozzá)
+- **A helyi oldalak ügye** – az 1. szakasz három útja közül melyik legyen.
+  Amíg nem szólsz, egyetlen helyi oldal sem változik.
+
 ### Utána (én, szólj melyiket)
 6. **A 43 nulla-kattintásos helyi oldal SERP-szövegének átírása.**
    Ezek jó pozíción állnak, csak nem kattintják. A legnagyobb gyors nyereség.
-7. **Új helyi oldalak** a még hiányzó településekre – ez a bizonyítottan
-   működő növekedési irány.
+   *(= az 1. szakasz 2. útja)*
+7. **Új helyi oldalak** a még hiányzó településekre.
+   *(Csak akkor, ha az 1. vagy 2. utat választod – a 3.-nál előbb az egyediség.)*
 8. Title/description rövidítés a top 20 oldalon (58 title vágódik).
 9. Médiaoldalak összevonása.
 10. Új klaszterek: **epe diéta (~6500 SV)** → koleszterin (~3200) →
     hasmenés (~1700) → hasnyálmirigy-gyulladás.
 
 ### Amit NE csinálj
-- ❌ **Ne nyúlj a helyi oldalakhoz** – korrigáltam a korábbi ajánlásomat,
-  ezek hozzák a forgalom 93%-át
+- ❌ **Ne 301-ezd tömegesen a helyi oldalakat** – ezt az eredeti javaslatomat
+  az adat fényében visszavontam; ezek hozzák a forgalom 93%-át
 - ❌ Ne várd 4-6 hétnél hamarabb az új klaszterek eredményét
 - ❌ Ne hajszold a `dietetikus budapest` fejterminust tartalommal –
   poz. 26, ide linkprofil kell
