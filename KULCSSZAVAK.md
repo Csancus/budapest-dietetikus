@@ -175,13 +175,13 @@ Kulcsszó szövegben érkezett: **„enyhe hasnyálmirigy gyulladás diéta"** �
 |---|---|---|
 | gyulladáscsökkentő étrend | 600 | ✅ megvan |
 | gyulladáscsökkentő ételek | 2000 | ✅ megvan |
-| **legerősebb gyulladáscsökkentő ételek** | 200 | ❌ pontos kifejezés hiányzik |
-| **gyulladáscsökkentő diéta** | 150 | ❌ pontos kifejezés hiányzik |
-| **gyulladást okozó ételek** | 100 | ❌ hiányzik |
+| **legerősebb gyulladáscsökkentő ételek** | 200 | ✅ **kész** – `/autoimmun-betegsegek/gyulladascsokkento-etrend` H2 + rangsoroló bekezdés + GYIK |
+| **gyulladáscsökkentő diéta** | 150 | ✅ **kész** – ugyanott: külön GYIK a diéta/étrend különbségről (HTML + FAQPage schema) |
+| **gyulladást okozó ételek** | 100 | ✅ **kész** – ugyanott: „Gyulladást okozó ételek – amit érdemes mérsékelni” H2 |
 | inzulinrezisztencia étrend | 1800 | ✅ megvan |
-| **inzulinrezisztencia étrend receptek** | 20 | ❌ pontos kifejezés hiányzik |
+| **inzulinrezisztencia étrend receptek** | 20 | ✅ **kész** – `/ir-dieta/receptek` reggeli H2 + TOC + keywords |
 
-→ Ezekhez **nem kell új oldal**, elég a meglévőket kiegészíteni. Gyors nyereség.
+→ Ezekhez **nem kellett új oldal**, a meglévőket egészítettem ki. **Mind a 4 kész** (commit `b16c2e4`).
 
 ---
 
