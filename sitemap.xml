@@ -51,7 +51,13 @@
   <url><loc>https://www.budapest-dietetikus.hu/taplalkozasi-szokasok</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/testosszetetel-meres</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/testosszetetel-meres/modszerek</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.budapest-dietetikus.hu/dietetikai-tanacsadas</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <url>
+    <loc>https://www.budapest-dietetikus.hu/online-dietetikai-konzultacio</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url><loc>https://www.budapest-dietetikus.hu/dietetikai-tanacsadas</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/szemelyre-szabott-etrend</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/sziv-es-errendszeri-betegsegek</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/reflux</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -148,6 +154,90 @@
   <url><loc>https://www.budapest-dietetikus.hu/dietetikus-vac</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/dietetikus-vecses</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/dietetikus-veresegyhaz</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-esztergom</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-hatvan</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-tatabanya</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-dunaujvaros</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-szekesfehervar</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-tata</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-jaszbereny</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-cegled</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-nagykoros</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-gyongyos</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-kecskemet</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-komarom</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-salgotarjan</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.budapest-dietetikus.hu/dietetikus-szolnok</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url><loc>https://www.budapest-dietetikus.hu/dietetikus-zsirbonto-kezelesek</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.budapest-dietetikus.hu/magan-dietetikus</loc><lastmod>2026-09-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
